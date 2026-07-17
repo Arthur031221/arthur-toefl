@@ -1,0 +1,58 @@
+{
+"grade_email": {
+  "title": "Email 批改",
+  "template": "你是新制 TOEFL(2026)Write an Email 的評分官。評分量尺 0–5,對標 ETS rubric。學生已知系統性弱點:可數名詞裸用、三單 -s、時態、所有格 's、拼寫(favorite/assignment/chocolate/appreciate/receive)、swamped with、it is hard for sb to、比較級 than——請特別檢查。任務點:①解釋原因 ②描述『題目指定的全部』任務 ③提議日期時間。字數 100–150 為佳。題目:{prompt}。學生作答:{answer}。請以 JSON 回傳:{\"score\":n,\"score100\":n,\"task_check\":[{\"task\":\"...\",\"done\":bool}],\"word_count\":n,\"errors\":[{\"category\":\"單複數/冠詞|時態/三單|拼寫|固定搭配\",\"wrong\":\"...\",\"correct\":\"...\",\"note\":\"...\"}],\"improved_version\":\"...\",\"comment\":\"繁體中文,150字內,先講最該修的一件事\"}。其中 score100 = 以現行新制 TOEFL 評分標準把這次表現換算成百分制的 0–100 整數(概念上約 band/6×100,再依任務完成度、文法清潔度、字數整體微調)。"
+},
+"grade_discussion": {
+  "title": "Discussion 批改",
+  "template": "你是新制 TOEFL Academic Discussion 評分官(0–5,ETS rubric)。硬性檢查:第一句是否明確選邊、是否有具體例子、是否點名回應另一位學生、是否 ≥100 字。同時檢查該生系統性弱點:可數名詞裸用、三單 -s、時態、所有格 's、拼寫(favorite/assignment/chocolate/appreciate/receive)、swamped with、it is hard for sb to、比較級 than。題目與兩位學生發言:{prompt}。學生作答:{answer}。請以 JSON 回傳:{\"score\":n,\"score100\":n,\"task_check\":[{\"task\":\"明確選邊\",\"done\":bool},{\"task\":\"具體例子\",\"done\":bool},{\"task\":\"點名回應另一位學生\",\"done\":bool},{\"task\":\"字數≥100\",\"done\":bool}],\"word_count\":n,\"errors\":[{\"category\":\"單複數/冠詞|時態/三單|拼寫|固定搭配\",\"wrong\":\"...\",\"correct\":\"...\",\"note\":\"...\"}],\"improved_version\":\"...\",\"comment\":\"繁體中文,150字內,先講最該修的一件事\"}。其中 score100 = 以現行新制 TOEFL 評分標準把這次表現換算成百分制的 0–100 整數(概念上約 band/6×100,再依任務完成度、文法清潔度、論證品質整體微調)。"
+},
+"speaking_feedback": {
+  "title": "口說逐字稿回饋",
+  "template": "學生在練新制 TOEFL Take an Interview(45 秒/題)。以下是逐字稿(語音轉文字,可能有轉錄雜訊,聚焦明顯的文法與表達)。給:①3 個最該修的文法點(對照該生弱點清單:可數名詞裸用、三單 -s、時態、所有格 's、拼寫、swamped with、it is hard for sb to、比較級 than)②同樣內容『更自然的說法』全文改寫(口語體,45 秒長度≈100 字)③一個 ARE 結構建議(Answer/Reason/Example 哪段缺)④完句率(講完而未棄船的句子比例)⑤以現行新制 TOEFL 口說評分標準給百分制分數。題目:{question}。逐字稿:{transcript}。請以 JSON 回傳:{\"score100\":n,\"errors\":[{\"category\":\"單複數/冠詞|時態/三單|拼寫|固定搭配\",\"wrong\":\"...\",\"correct\":\"...\",\"note\":\"...\"}],\"natural_version\":\"...\",\"are_advice\":\"...\",\"sentence_completion\":\"如 4/5 句完整,約80%\",\"comment\":\"繁中100字內\"}。其中 score100 = 0–100 整數(概念上約 band/6×100,再依內容完整度、長度是否講滿、流暢與文法整體微調;逐字稿明顯過短要反映在分數上)。"
+},
+"gen_email": {
+  "title": "AI 出題:Email",
+  "template": "你是新制 TOEFL(2026)出題官。請生成一題全新的 Write an Email 題目,格式對標官方:一段情境(向朋友/室友/同學/社團幹部求助)、明確收件人名字、三個具體任務點、要求提議見面日期時間。情境要日常校園生活相關,難度與官方一致,不要與這些主題重複:{exclude}。請以 JSON 回傳:{\"title\":\"中文短標題(含收件人名)\",\"prompt\":\"完整英文題目,結尾註明 You have 7 minutes. A good response is about 100–150 words.\"}"
+},
+"gen_discussion": {
+  "title": "AI 出題:Discussion",
+  "template": "你是新制 TOEFL(2026)出題官。請生成一題全新的 Academic Discussion 題目,格式對標官方:教授提出一個二選一或利弊型問題,接著兩位學生(用不同的英文名字)各發表一段 2–3 句的對立立場短評。主題要適合大學生討論,不要與這些主題重複:{exclude}。請以 JSON 回傳:{\"title\":\"中文短標題\",\"prompt\":\"完整英文題目(含 Professor 段與兩位學生段,開頭註明 An effective response will contain at least 100 words. You have 10 minutes.)\"}"
+},
+"gen_repeat": {
+  "title": "AI 出題:Listen & Repeat 跟讀句",
+  "template": "你是新制 TOEFL(2026)Listen and Repeat 訓練素材出題官。請生成 {count} 句適合跟讀複誦的英文句子:校園情境與學術內容混合,每句 8–16 個單字(唸出來約 6–12 秒),難度對標新制 TOEFL 聽力,刻意包含常見連音、弱讀與功能詞(如 want to、going to、could have、of the)讓學生練清晰度。主題參考:{topic}。不要編號、不要引號以外的裝飾。請以 JSON 回傳:{\"title\":\"中文短標題(含主題)\",\"sentences\":[\"句子1\",\"句子2\"]}"
+},
+"gen_ctw": {
+  "title": "AI 出題:Complete the Words",
+  "template": "你是新制 TOEFL(2026)閱讀 Complete the Words 出題官。生成一篇原創學術短文:第一句完整(intro),其餘內文(text)恰好 10 個字被挖空。挖空標記格式 {顯示前半:隱藏後半},例如 Factories {app:eared} in cities;顯示+隱藏拼起來必須是正確單字,隱藏 2–6 個字母,大約每隔一個實詞挖一次,混合實詞與功能詞;全篇 70–100 字;挖空的字要能靠語意+文法推出。主題避開:{exclude}。請以 JSON 回傳:{\"title\":\"英文短標題\",\"topic\":\"history|art|business|life_science|physical_science|social_science 之一\",\"intro\":\"完整第一句\",\"text\":\"含恰好 10 個 {a:b} 標記的其餘內文\"}"
+},
+"gen_daily_life": {
+  "title": "AI 出題:Reading in Daily Life",
+  "template": "你是新制 TOEFL(2026)Reading in Daily Life 出題官。生成一個原創日常閱讀素材(kind 從 poster/notice/menu/text_thread/email/schedule/receipt/ad/social_post/form 挑一種,避免與最近重複)+2–3 題四選一。素材 15–150 字,用 \\n 分行呈現非線性排版;考點涵蓋訊息目的、細節、電報式語言或語氣推論。避開主題:{exclude}。請以 JSON 回傳:{\"kind\":\"...\",\"title\":\"...\",\"body\":\"素材全文\",\"questions\":[{\"q\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"answer\":0,\"why\":\"繁中一句解析\"}]}"
+},
+"gen_academic": {
+  "title": "AI 出題:Academic Passage",
+  "template": "你是新制 TOEFL(2026)學術閱讀出題官。生成一篇原創 180–230 字學術短文(不需背景知識)+恰好 5 題四選一,qtype 盡量涵蓋 fact/vocab/inference/logic/purpose(vocab 題問 The word \\\"X\\\" is closest in meaning to)。干擾項要對應常見誤讀,answer 索引分布隨機。主題避開:{exclude}。請以 JSON 回傳:{\"title\":\"...\",\"topic\":\"...\",\"passage\":\"...\",\"questions\":[{\"q\":\"...\",\"options\":[4個],\"answer\":0,\"qtype\":\"fact\",\"why\":\"繁中一句\"}]}"
+},
+"gen_lcr": {
+  "title": "AI 出題:Listen and Choose a Response",
+  "template": "你是新制 TOEFL(2026)聽力 Listen and Choose a Response 出題官。生成一題:一句口語問題或陳述(將由 TTS 唸出),考生選最合適的回應。考點是語用——表面問句實為抱怨、委婉請求、驚訝、建議;干擾項要有「字面相關但語用錯誤」的選項。情境校園或日常,避開:{exclude}。請以 JSON 回傳:{\"stimulus\":\"要唸的那句\",\"tone_note\":\"語用意圖\",\"options\":[4個回應],\"answer\":0,\"why\":\"繁中一句\"}"
+},
+"gen_conversation": {
+  "title": "AI 出題:聆聽二人對話",
+  "template": "你是新制 TOEFL(2026)聽力對話出題官。生成一段原創二人對話(5–8 輪,唸出來 30–60 秒,spk 只能 M/W 交替)+恰好 2 題四選一,考身分/目的推論、下一步行動或細節。情境從校園到飲食/購物/健康/旅行,避開:{exclude}。請以 JSON 回傳:{\"setting\":\"場景一句英文\",\"turns\":[{\"spk\":\"M\",\"text\":\"...\"},{\"spk\":\"W\",\"text\":\"...\"}],\"questions\":[{\"q\":\"...\",\"options\":[4個],\"answer\":0,\"why\":\"繁中一句\"}]}"
+},
+"gen_announcement": {
+  "title": "AI 出題:聆聽公告",
+  "template": "你是新制 TOEFL(2026)聽力公告出題官。生成一則原創學術場域公告(課堂提醒/校園廣播,40–85 字,含至少兩個具體細節:時間/地點/數字/星期)+1–2 題四選一,考具體細節(截止時間/對象/地點更動)。內容型態:行程變動/指示/規定/表揚擇一,避開:{exclude}。請以 JSON 回傳:{\"setting\":\"場景一句英文\",\"text\":\"公告全文\",\"questions\":[{\"q\":\"...\",\"options\":[4個],\"answer\":0,\"why\":\"繁中一句\"}]}"
+},
+"gen_talk": {
+  "title": "AI 出題:聆聽學術演講",
+  "template": "你是新制 TOEFL(2026)學術短講出題官。生成一篇原創 100–250 字口語學術講稿(口語風:Now, what's interesting is...)+恰好 4 題四選一,覆蓋主旨/細節/推論/組織結構(Why does the professor mention X?)。主題避開:{exclude}。請以 JSON 回傳:{\"topic\":\"主題\",\"text\":\"講稿全文\",\"questions\":[{\"q\":\"...\",\"options\":[4個],\"answer\":0,\"why\":\"繁中一句\"}]}"
+},
+"gen_build_sentence": {
+  "title": "AI 出題:Build a Sentence",
+  "template": "你是新制 TOEFL(2026)寫作 Build a Sentence 出題官。生成一題:context 是 A 說的完整一句話,answer 是 B 回應句的正確語序(5–14 個字,不含結尾標點,重排後只有一種語法+語境皆正確的順序,避免可互換的並列結構),兩句構成自然對話。情境校園或日常,避開:{exclude}。請以 JSON 回傳:{\"context\":\"A 的完整句\",\"answer\":\"B 回應正確語序\",\"punct\":\".\",\"hint_zh\":\"繁中一句提示\"}"
+}
+}

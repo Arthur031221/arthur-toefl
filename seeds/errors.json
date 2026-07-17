@@ -1,0 +1,22 @@
+[
+{"cat":"單複數/冠詞","wrong":"city build more chance","correct":"cities build more chances / a city builds","note":"可數名詞不可裸用"},
+{"cat":"單複數/冠詞","wrong":"connect with stranger","correct":"connect with strangers","note":""},
+{"cat":"單複數/冠詞","wrong":"in small town","correct":"in a small town","note":""},
+{"cat":"時態/三單","wrong":"it also bring","correct":"it also brings","note":"三單-s"},
+{"cat":"時態/三單","wrong":"I know no one (過去事)","correct":"I knew no one","note":"過去式"},
+{"cat":"時態/三單","wrong":"who are already have","correct":"who already have","note":"be動詞+一般動詞不可疊用"},
+{"cat":"時態/三單","wrong":"you could built","correct":"you could build","note":"助動詞後接原形"},
+{"cat":"拼寫","wrong":"favorate","correct":"favorite","note":"已錯2次"},
+{"cat":"拼寫","wrong":"asignments","correct":"assignments","note":""},
+{"cat":"拼寫","wrong":"chocalate","correct":"chocolate","note":""},
+{"cat":"拼寫","wrong":"appreiaciate","correct":"appreciate","note":""},
+{"cat":"拼寫","wrong":"recieve","correct":"receive","note":"i before e except after c"},
+{"cat":"拼寫","wrong":"Chaire","correct":"Claire","note":"專有名詞照題目抄"},
+{"cat":"拼寫","wrong":"moring","correct":"morning","note":""},
+{"cat":"固定搭配","wrong":"swamped in / busy in","correct":"swamped with / busy with","note":""},
+{"cat":"固定搭配","wrong":"you are hard to join","correct":"it is hard for you to join","note":"it is hard for sb to do"},
+{"cat":"固定搭配","wrong":"more easy ... rather than","correct":"easier ... than","note":"比較用than;-y結尾變-ier"},
+{"cat":"固定搭配","wrong":"if this is work on you","correct":"if that works for you","note":"整句背死"},
+{"cat":"固定搭配","wrong":"in that day","correct":"on that day","note":"日期用on"},
+{"cat":"固定搭配","wrong":"Emma birthday","correct":"Emma's birthday","note":"所有格's"}
+]

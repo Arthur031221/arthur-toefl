@@ -1,0 +1,916 @@
+{
+  "lcr": [
+    {
+      "id": "lcr-001",
+      "stimulus": "Can you believe the cafeteria is closed again?",
+      "tone_note": "complaint / 表面問句實為抱怨",
+      "options": [
+        "Yes, it usually closes around nine in the evening.",
+        "I know, it's so frustrating. Let's eat somewhere else.",
+        "Great, I really love the food they serve there.",
+        "No, I don't believe anything you ever say."
+      ],
+      "answer": 1,
+      "why": "這句是抱怨而非真的詢問,應同理並提出替代方案,不能照字面回答。"
+    },
+    {
+      "id": "lcr-002",
+      "stimulus": "Would you mind passing me that stapler on your desk?",
+      "tone_note": "request / 委婉請求",
+      "options": [
+        "Not at all, here it is for you.",
+        "Yes, actually I would mind that a lot.",
+        "The stapler seems to be made of metal.",
+        "I'm not really sure where your desk is."
+      ],
+      "answer": 0,
+      "why": "委婉請求應答應並遞出,回答否定詞反而顯得無禮。"
+    },
+    {
+      "id": "lcr-003",
+      "stimulus": "Wait, you're telling me the exam got moved to Monday?",
+      "tone_note": "surprise / 驚訝確認",
+      "options": [
+        "Yes, the professor announced it this morning.",
+        "Mondays are usually pretty busy for me.",
+        "I'm not really telling you anything at all.",
+        "The exam has fifty multiple-choice questions."
+      ],
+      "answer": 0,
+      "why": "說話者在驚訝地求證,應直接確認消息屬實。"
+    },
+    {
+      "id": "lcr-004",
+      "stimulus": "Why don't we take the express bus instead of the local one?",
+      "tone_note": "suggestion / 建議",
+      "options": [
+        "The bus is usually painted blue and white.",
+        "Because I have never ridden a bus before.",
+        "Good idea, it'll save us about twenty minutes.",
+        "I don't know why you always ask me that."
+      ],
+      "answer": 2,
+      "why": "Why don't we 是提議,應答應並補充好處,而非照字面解釋原因。"
+    },
+    {
+      "id": "lcr-005",
+      "stimulus": "This soup is completely cold, and we've been waiting forever.",
+      "tone_note": "complaint / 抱怨",
+      "options": [
+        "Cold soup is actually a specialty in some places.",
+        "Yes, forever really is a very long time.",
+        "The restaurant does have a lovely view outside.",
+        "I'll tell the waiter now and ask for a fresh bowl."
+      ],
+      "answer": 3,
+      "why": "對方在抱怨餐點,應回應並著手處理問題。"
+    },
+    {
+      "id": "lcr-006",
+      "stimulus": "Excuse me, could you check if you have this jacket in a medium?",
+      "tone_note": "request / 請求",
+      "options": [
+        "This jacket comes in three different colors.",
+        "Sure, let me go look in the back for you.",
+        "A medium is a fairly common size, I think.",
+        "I actually bought a jacket like that last winter."
+      ],
+      "answer": 1,
+      "why": "這是請店員查庫存的請求,應答應去查。"
+    },
+    {
+      "id": "lcr-007",
+      "stimulus": "Hold on, did you seriously walk all the way here in the rain?",
+      "tone_note": "surprise / 驚訝",
+      "options": [
+        "Yeah, my umbrella broke, so I had no choice.",
+        "Rain forms when water vapor cools and condenses.",
+        "No, I have honestly never been serious once.",
+        "Walking is really good exercise for your legs."
+      ],
+      "answer": 0,
+      "why": "對方驚訝地確認,應回答並解釋原因。"
+    },
+    {
+      "id": "lcr-008",
+      "stimulus": "You've been coughing all week. Maybe you should see a doctor?",
+      "tone_note": "suggestion / 建議",
+      "options": [
+        "Doctors usually train for many years first.",
+        "A cough is a reflex controlled by the brain.",
+        "You're right, I'll make an appointment tomorrow.",
+        "I have actually been to that clinic once before."
+      ],
+      "answer": 2,
+      "why": "對方建議就醫,應接受建議並表示會行動。"
+    },
+    {
+      "id": "lcr-009",
+      "stimulus": "The library Wi-Fi keeps dropping every five minutes today.",
+      "tone_note": "complaint / 抱怨",
+      "options": [
+        "Wi-Fi actually stands for wireless fidelity.",
+        "The library holds over a million books inside.",
+        "Five minutes is just enough time to boil an egg.",
+        "Same here, I can barely load anything. Let's report it."
+      ],
+      "answer": 3,
+      "why": "對方抱怨網路問題,應表達同感並提出解決辦法。"
+    },
+    {
+      "id": "lcr-010",
+      "stimulus": "Do you think you could drop me off at the station on your way?",
+      "tone_note": "request / 請求",
+      "options": [
+        "The station was built about fifty years ago.",
+        "Of course, hop in. It's right on my way.",
+        "Trains are generally faster than the buses.",
+        "I think train stations are usually quite crowded."
+      ],
+      "answer": 1,
+      "why": "這是請求搭便車,應答應並說順路。"
+    },
+    {
+      "id": "lcr-011",
+      "stimulus": "Wait, they're charging us twenty dollars just for parking?",
+      "tone_note": "surprise / 驚訝不滿",
+      "options": [
+        "Yes, unfortunately the rate went up last month.",
+        "Parking lots are usually made of thick concrete.",
+        "Twenty is an even number, if you think about it.",
+        "I really do enjoy going for drives on weekends."
+      ],
+      "answer": 0,
+      "why": "對方驚訝地確認高價,應證實並補充說明。"
+    },
+    {
+      "id": "lcr-012",
+      "stimulus": "How about we grab coffee after class and go over the notes?",
+      "tone_note": "suggestion / 邀約建議",
+      "options": [
+        "Coffee contains a chemical known as caffeine.",
+        "Notes really should always be written neatly.",
+        "Sounds perfect, I could use a break anyway.",
+        "Our class ends at exactly three o'clock today."
+      ],
+      "answer": 2,
+      "why": "對方提議一起讀書,應接受邀約。"
+    },
+    {
+      "id": "lcr-013",
+      "stimulus": "I ordered this online two weeks ago and it still hasn't arrived.",
+      "tone_note": "complaint / 抱怨",
+      "options": [
+        "Online shopping has grown very popular lately.",
+        "Two weeks is exactly fourteen days, you know.",
+        "I really love getting packages in the mail.",
+        "That's unacceptable. You should ask for a refund."
+      ],
+      "answer": 3,
+      "why": "對方抱怨延遲到貨,應同理並建議退款。"
+    },
+    {
+      "id": "lcr-014",
+      "stimulus": "Could we get the check whenever you have a moment?",
+      "tone_note": "request / 請求",
+      "options": [
+        "Checks were once more common than credit cards.",
+        "The dessert menu has some lovely options too.",
+        "Of course, I'll bring it right over for you.",
+        "A moment is really just a very short time."
+      ],
+      "answer": 2,
+      "why": "這是請服務生結帳的請求,應答應馬上處理。"
+    },
+    {
+      "id": "lcr-015",
+      "stimulus": "You mean the whole lecture was cancelled and nobody told us?",
+      "tone_note": "surprise / 驚訝惱怒",
+      "options": [
+        "Lectures here usually last about ninety minutes.",
+        "Nobody is a pronoun, grammatically speaking.",
+        "I really do admire that professor's research.",
+        "Afraid so. The email must have gone to spam."
+      ],
+      "answer": 3,
+      "why": "對方驚訝地確認課程取消,應證實並解釋原因。"
+    },
+    {
+      "id": "lcr-016",
+      "stimulus": "If you're feeling that tired, why not just call it a night?",
+      "tone_note": "suggestion / 建議",
+      "options": [
+        "Nighttime is when most people tend to sleep.",
+        "Yeah, you're right. I'll head to bed early.",
+        "I called an old friend on the phone last night.",
+        "Being tired can really affect your concentration."
+      ],
+      "answer": 1,
+      "why": "對方建議早點休息,應接受建議。"
+    }
+  ],
+  "conversation": [
+    {
+      "id": "cv-001",
+      "setting": "A student talks with an academic advisor about changing her class schedule.",
+      "turns": [
+        {"spk": "W", "text": "Hi, I was hoping to switch out of my Tuesday morning chemistry lab. Is that still possible?"},
+        {"spk": "M", "text": "Let me check. The add-drop deadline is this Friday, so you still have time. What section were you thinking of moving to?"},
+        {"spk": "W", "text": "Ideally the Thursday afternoon one. The morning slot conflicts with my part-time job."},
+        {"spk": "M", "text": "Thursday afternoon does have two open seats right now, but it fills up fast. I'd really recommend registering today if you can."},
+        {"spk": "W", "text": "Great. Do I need my professor's signature for that?"},
+        {"spk": "M", "text": "Not for a lab section swap. You can do it yourself through the online portal, but make sure you submit before midnight Friday."},
+        {"spk": "W", "text": "Perfect. I'll do it as soon as I get back to my dorm. Thanks so much."}
+      ],
+      "questions": [
+        {
+          "q": "Why does the student come to see the advisor?",
+          "options": [
+            "To drop out of her chemistry course entirely.",
+            "To switch her lab to a different time slot.",
+            "To ask for an extension on the deadline.",
+            "To get a signature from her professor."
+          ],
+          "answer": 1,
+          "why": "學生想把週二早上的實驗課換到別的時段。"
+        },
+        {
+          "q": "What does the advisor tell her to do?",
+          "options": [
+            "Register for the new section before Friday midnight.",
+            "Wait until after the add-drop deadline.",
+            "Get her professor's signature first.",
+            "Call her job to change her work hours."
+          ],
+          "answer": 0,
+          "why": "顧問要她在週五午夜前透過線上系統完成登記。"
+        }
+      ]
+    },
+    {
+      "id": "cv-002",
+      "setting": "A waiter takes an order from a customer at a small restaurant.",
+      "turns": [
+        {"spk": "M", "text": "Good evening. Have you had a chance to look at the menu, or do you need a few more minutes?"},
+        {"spk": "W", "text": "I think I'm ready. I'll have the grilled salmon, but could I get the vegetables instead of the fries?"},
+        {"spk": "M", "text": "Absolutely. The salmon comes with a lemon butter sauce. Is that all right, or would you prefer it on the side?"},
+        {"spk": "W", "text": "On the side would be great, thanks. I'm trying to watch how much butter I eat."},
+        {"spk": "M", "text": "No problem at all. And can I get you anything to drink?"},
+        {"spk": "W", "text": "Just water for now. Oh, and how long does the salmon usually take? I'm meeting a friend at eight."},
+        {"spk": "M", "text": "It's only about fifteen minutes, so you'll be finished with plenty of time to spare."}
+      ],
+      "questions": [
+        {
+          "q": "What change does the customer make to her order?",
+          "options": [
+            "She asks for fries instead of vegetables.",
+            "She asks for vegetables instead of fries.",
+            "She orders the chicken instead of the salmon.",
+            "She adds extra butter sauce to the dish."
+          ],
+          "answer": 1,
+          "why": "顧客把附餐的薯條換成蔬菜。"
+        },
+        {
+          "q": "Why does the customer ask about the cooking time?",
+          "options": [
+            "She has plans to meet someone at eight.",
+            "She thinks the food is taking too long.",
+            "She wants to cancel her order.",
+            "She is worried the kitchen is closing soon."
+          ],
+          "answer": 0,
+          "why": "她八點要和朋友碰面,想確認是否來得及。"
+        }
+      ]
+    },
+    {
+      "id": "cv-003",
+      "setting": "A customer tries to return a pair of headphones at an electronics store.",
+      "turns": [
+        {"spk": "M", "text": "Hi, I'd like to return these headphones. They stopped working after only three days."},
+        {"spk": "W", "text": "I'm sorry to hear that. Do you happen to have the receipt with you?"},
+        {"spk": "M", "text": "I do, right here. I bought them last Saturday."},
+        {"spk": "W", "text": "Thank you. Since it's within our thirty-day window, I can offer you a full refund or an exchange. Which would you prefer?"},
+        {"spk": "M", "text": "Honestly, I really liked the sound quality, so I'd rather just exchange them for the same model."},
+        {"spk": "W", "text": "Sure. Let me grab a new pair from the stockroom. If you'd like, I can also test them at the counter before you leave."},
+        {"spk": "M", "text": "That would be great, actually. I'd hate to walk out with another broken pair."}
+      ],
+      "questions": [
+        {
+          "q": "What is the man's problem?",
+          "options": [
+            "He lost the receipt for his headphones.",
+            "He was charged the wrong price at checkout.",
+            "He bought the wrong model by mistake.",
+            "His headphones stopped working after a few days."
+          ],
+          "answer": 3,
+          "why": "他的耳機用了三天就故障了。"
+        },
+        {
+          "q": "What will the man most likely do next?",
+          "options": [
+            "Ask for a full refund and leave.",
+            "Go find the receipt in his car.",
+            "Test a new pair at the counter.",
+            "Choose a completely different model."
+          ],
+          "answer": 2,
+          "why": "他同意在櫃檯測試店員拿來的新耳機。"
+        }
+      ]
+    },
+    {
+      "id": "cv-004",
+      "setting": "A patient talks with a nurse at a campus health center.",
+      "turns": [
+        {"spk": "W", "text": "Hi there, what brings you in to the health center today?"},
+        {"spk": "M", "text": "I've had a sore throat and a bit of a fever since the weekend. It doesn't seem to be getting better."},
+        {"spk": "W", "text": "Let's take your temperature first. Have you been drinking plenty of fluids and getting rest?"},
+        {"spk": "M", "text": "I've been trying to, but I have three midterms this week, so I haven't slept much."},
+        {"spk": "W", "text": "That's understandable, but rest really is the best medicine right now. Your temperature is slightly high, so I'd like the doctor to take a quick look."},
+        {"spk": "M", "text": "Is it going to take long? My next exam is at two."},
+        {"spk": "W", "text": "It shouldn't. The doctor has an opening in about ten minutes, so you'll make it with time to spare."}
+      ],
+      "questions": [
+        {
+          "q": "What symptoms does the man describe?",
+          "options": [
+            "A headache and an upset stomach.",
+            "A cough and a runny nose.",
+            "Dizziness and blurred vision.",
+            "A sore throat and a fever."
+          ],
+          "answer": 3,
+          "why": "他說自己喉嚨痛又發燒。"
+        },
+        {
+          "q": "Why hasn't the man been getting enough rest?",
+          "options": [
+            "He has been working a night shift.",
+            "He has been traveling all week.",
+            "He has three midterm exams this week.",
+            "He lives with very noisy roommates."
+          ],
+          "answer": 2,
+          "why": "他這週有三場期中考,所以睡得很少。"
+        }
+      ]
+    },
+    {
+      "id": "cv-005",
+      "setting": "Two friends discuss plans for an upcoming weekend trip to the coast.",
+      "turns": [
+        {"spk": "W", "text": "So, are we still driving up to the coast this Saturday, or taking the train?"},
+        {"spk": "M", "text": "I was thinking the train, actually. Parking near the beach is a nightmare, and it's twenty-five dollars a day."},
+        {"spk": "W", "text": "Good point. The train is only twelve dollars each way, and we could both just relax instead of driving."},
+        {"spk": "M", "text": "Exactly. The earliest one leaves at seven-thirty, though. Do you think that's too early?"},
+        {"spk": "W", "text": "Not at all. If we catch that one, we'll have the whole day there. Should I book the tickets tonight?"},
+        {"spk": "M", "text": "Please do. And let's pack sandwiches so we don't spend a fortune on food once we arrive."},
+        {"spk": "W", "text": "Deal. I'll bring the drinks too. This is going to be a great trip."}
+      ],
+      "questions": [
+        {
+          "q": "Why do they decide to take the train instead of driving?",
+          "options": [
+            "The train is much faster than the car.",
+            "Neither of them owns a car.",
+            "The road to the coast is closed.",
+            "Parking is expensive and hard to find."
+          ],
+          "answer": 3,
+          "why": "海邊停車又貴又難找,所以他們改搭火車。"
+        },
+        {
+          "q": "What does the woman agree to do?",
+          "options": [
+            "Drive everyone to the station.",
+            "Pack the sandwiches for lunch.",
+            "Book the train tickets tonight.",
+            "Wake everyone up early tomorrow."
+          ],
+          "answer": 2,
+          "why": "她答應今晚就把火車票訂好。"
+        }
+      ]
+    },
+    {
+      "id": "cv-006",
+      "setting": "A student invites a classmate to join a study group and a party.",
+      "turns": [
+        {"spk": "M", "text": "Hey, a few of us are forming a study group for the statistics final. Would you want to join?"},
+        {"spk": "W", "text": "I'd love to. That class has been really tough on me, honestly. When are you all meeting?"},
+        {"spk": "M", "text": "Wednesday evenings at the library, starting at six. We usually go for about two hours."},
+        {"spk": "W", "text": "That works perfectly with my schedule. Should I bring anything, like practice problems?"},
+        {"spk": "M", "text": "If you have the old quizzes, that would be super helpful. Oh, and we're throwing a small get-together Friday night to celebrate finishing exams. You're welcome to come."},
+        {"spk": "W", "text": "That sounds fun. Text me the address and I'll definitely try to stop by after my last exam."},
+        {"spk": "M", "text": "Will do. It should be a great way to unwind after such a stressful week."}
+      ],
+      "questions": [
+        {
+          "q": "What is the man mainly inviting the woman to do?",
+          "options": [
+            "Join a study group for a final exam.",
+            "Help him tutor a statistics class.",
+            "Sign up for a new course together.",
+            "Meet with a professor after class."
+          ],
+          "answer": 0,
+          "why": "男生主要邀她加入統計期末考的讀書會。"
+        },
+        {
+          "q": "What does the man ask the woman to bring?",
+          "options": [
+            "Snacks and drinks for the group.",
+            "Old quizzes and practice problems.",
+            "Her laptop and a calculator.",
+            "The address of the Friday party."
+          ],
+          "answer": 1,
+          "why": "他請她帶舊考卷和練習題。"
+        }
+      ]
+    }
+  ],
+  "announcement": [
+    {
+      "id": "an-001",
+      "setting": "A professor makes an announcement at the start of a biology lecture.",
+      "text": "Before we begin, a quick note about next week. Thursday's lecture will be moved from this room to Hall B, which is just across the hallway. Also, because of the campus holiday on Monday, our lab session will shift to Wednesday at three o'clock instead. Please update your calendars, and email me if that new lab time creates any conflicts.",
+      "questions": [
+        {
+          "q": "Where will Thursday's lecture be held?",
+          "options": [
+            "In the same room as usual.",
+            "In Hall B across the hallway.",
+            "In the main science library.",
+            "In the lab downstairs."
+          ],
+          "answer": 1,
+          "why": "教授說週四改到走廊對面的 B 廳。"
+        },
+        {
+          "q": "Why is the lab session being moved?",
+          "options": [
+            "Because of a campus holiday on Monday.",
+            "Because the lab is being renovated.",
+            "Because too many students enrolled.",
+            "Because the professor will be traveling."
+          ],
+          "answer": 0,
+          "why": "因為週一是校園假日,實驗課才改到週三。"
+        }
+      ]
+    },
+    {
+      "id": "an-002",
+      "setting": "A teaching assistant explains the rules before a final exam.",
+      "text": "Please listen carefully before we hand out the exam. You'll have exactly ninety minutes, and no one may leave during the first thirty. Put your bags and phones at the front of the room. You may use a calculator, but not the one on your phone. When you finish, stay seated and raise your hand, and a proctor will come collect your paper.",
+      "questions": [
+        {
+          "q": "How long do students have to complete the exam?",
+          "options": [
+            "Thirty minutes.",
+            "Sixty minutes.",
+            "Ninety minutes.",
+            "A full two hours."
+          ],
+          "answer": 2,
+          "why": "助教說考試時間剛好九十分鐘。"
+        },
+        {
+          "q": "What are students allowed to use?",
+          "options": [
+            "A calculator, but not one on a phone.",
+            "Their phones for calculations.",
+            "A textbook and their notes.",
+            "Any device they bring in."
+          ],
+          "answer": 0,
+          "why": "可以用計算機,但不能用手機上的計算機。"
+        }
+      ]
+    },
+    {
+      "id": "an-003",
+      "setting": "A recorded message plays over the speakers in the university library.",
+      "text": "Attention, library visitors. As a reminder, the third floor is a designated silent study zone, so please keep all conversations and phone calls in the lobby or the group rooms on the second floor. The library closes at eleven tonight, but during finals week it will stay open until two in the morning. Thank you for helping us keep the space quiet.",
+      "questions": [
+        {
+          "q": "Where should visitors take phone calls?",
+          "options": [
+            "On the third floor, if they whisper.",
+            "Outside the building entirely.",
+            "Anywhere, as long as it is brief.",
+            "In the lobby or second-floor group rooms."
+          ],
+          "answer": 3,
+          "why": "電話要在大廳或二樓的討論室講。"
+        },
+        {
+          "q": "When does the library close during finals week?",
+          "options": [
+            "At eleven at night.",
+            "At exactly midnight.",
+            "At one in the morning.",
+            "At two in the morning."
+          ],
+          "answer": 3,
+          "why": "期末週圖書館會開到凌晨兩點。"
+        }
+      ]
+    },
+    {
+      "id": "an-004",
+      "setting": "A department head speaks at a student awards ceremony.",
+      "text": "It's my great pleasure to recognize this year's outstanding students. First, congratulations to Maria Chen, whose research on coral reefs won first place at the regional science fair last month. I'd also like to thank the twelve volunteers who ran our community tutoring program every Saturday. Because of their work, over two hundred local children received free math help this year. Please join me in applauding them.",
+      "questions": [
+        {
+          "q": "What did Maria Chen do?",
+          "options": [
+            "She organized the tutoring program.",
+            "She volunteered every single Saturday.",
+            "She donated money to the school.",
+            "She won first place for coral reef research."
+          ],
+          "answer": 3,
+          "why": "Maria Chen 的珊瑚礁研究拿了地區科展第一名。"
+        },
+        {
+          "q": "How many volunteers are being thanked?",
+          "options": [
+            "Two hundred of them.",
+            "Around fifty of them.",
+            "Twelve of them.",
+            "Just two of them."
+          ],
+          "answer": 2,
+          "why": "有十二位志工每週六參與義務輔導。"
+        }
+      ]
+    },
+    {
+      "id": "an-005",
+      "setting": "An announcement is broadcast across the campus recreation center.",
+      "text": "Good afternoon, everyone. Please note that the swimming pool will be closed this Friday for its annual cleaning, reopening Saturday at six in the morning. In the meantime, the fitness center and the indoor track remain open as usual. Members who reserved a Friday swim lesson can rebook online, and the front desk will refund your session fee if you prefer.",
+      "questions": [
+        {
+          "q": "Why will the swimming pool be closed on Friday?",
+          "options": [
+            "Because of a swim competition.",
+            "Due to a broken water heater.",
+            "For a private members' event.",
+            "For its annual cleaning."
+          ],
+          "answer": 3,
+          "why": "泳池週五要進行年度清潔。"
+        }
+      ]
+    },
+    {
+      "id": "an-006",
+      "setting": "A professor gives instructions about an upcoming museum field trip.",
+      "text": "A few reminders about our museum trip on Friday. The bus leaves from the main gate at eight sharp, so please arrive by seven forty-five. Bring your student ID for the group discount, and wear comfortable shoes, since we'll be walking for most of the morning. Lunch is not provided, but there's a café inside where you can buy sandwiches and coffee.",
+      "questions": [
+        {
+          "q": "What time should students arrive at the main gate?",
+          "options": [
+            "At seven forty-five.",
+            "At eight fifteen.",
+            "At seven o'clock sharp.",
+            "At eight thirty."
+          ],
+          "answer": 0,
+          "why": "巴士八點準時出發,學生要在七點四十五分前到。"
+        },
+        {
+          "q": "Why should students bring their student ID?",
+          "options": [
+            "To be allowed onto the bus.",
+            "To buy lunch at the café.",
+            "To receive the group discount.",
+            "To enter the classroom later."
+          ],
+          "answer": 2,
+          "why": "帶學生證是為了拿團體折扣。"
+        }
+      ]
+    },
+    {
+      "id": "an-007",
+      "setting": "A resident advisor posts a spoken reminder in a dormitory.",
+      "text": "Hi everyone, just a couple of housekeeping reminders. Quiet hours begin at ten on weeknights and midnight on weekends, so please keep the volume down after those times. Also, the laundry room now takes only the campus card, not coins, so load your card at the machine near the entrance. Maintenance will inspect the smoke detectors next Tuesday between nine and noon.",
+      "questions": [
+        {
+          "q": "When do quiet hours begin on weekends?",
+          "options": [
+            "At ten in the evening.",
+            "At eleven at night.",
+            "At midnight.",
+            "At nine in the evening."
+          ],
+          "answer": 2,
+          "why": "週末的安靜時段從午夜開始。"
+        },
+        {
+          "q": "What is now required to use the laundry room?",
+          "options": [
+            "Coins only.",
+            "The campus card.",
+            "A mobile app.",
+            "A special token."
+          ],
+          "answer": 1,
+          "why": "洗衣間現在只收校園卡,不收硬幣。"
+        }
+      ]
+    },
+    {
+      "id": "an-008",
+      "setting": "The president of a student club makes an announcement at a meeting.",
+      "text": "Thanks for coming, everyone. First, a big congratulations to our debate team, who placed second at the national tournament this weekend, beating over forty other schools. Next, our meeting time is changing: starting in April, we'll gather on Tuesdays at five instead of Mondays. Finally, we still need three more people to help run the spring charity event, so see me afterward if you're interested.",
+      "questions": [
+        {
+          "q": "How did the debate team perform at the tournament?",
+          "options": [
+            "They won first place overall.",
+            "They placed second.",
+            "They failed to qualify.",
+            "They came in dead last."
+          ],
+          "answer": 1,
+          "why": "辯論隊在全國賽拿了第二名。"
+        },
+        {
+          "q": "What change to the meeting schedule is announced?",
+          "options": [
+            "Meetings will move to Tuesdays at five.",
+            "Meetings will be canceled during April.",
+            "Meetings will move to Mondays at six.",
+            "Meetings will now be held twice a week."
+          ],
+          "answer": 0,
+          "why": "四月起社團聚會改到週二五點。"
+        }
+      ]
+    }
+  ],
+  "talk": [
+    {
+      "id": "tk-001",
+      "topic": "Biology (animal navigation)",
+      "text": "Okay, let's pick up where we left off, with one of the great mysteries of the animal world: how migrating birds find their way across thousands of miles. First, consider the Arctic tern. Every year, this small seabird flies from the Arctic all the way to Antarctica and back, a round trip of nearly forty thousand miles. Now, what's interesting is that young terns can make this journey even when they've never done it before. So how do they know where to go? Well, researchers have found that birds rely on several different tools at once. During the day, they use the position of the sun. At night, they read the patterns of the stars. But here's the really surprising part: birds can also sense the Earth's magnetic field. Tiny particles in their beaks act almost like a built-in compass, telling them which direction is north. Think of it as having several backup maps. If clouds hide the stars, the magnetic sense simply takes over. This layering of systems is exactly why migration is so reliable, and why these birds so rarely get lost.",
+      "questions": [
+        {
+          "q": "What is the talk mainly about?",
+          "options": [
+            "Why the Arctic tern is an endangered species.",
+            "How migrating birds find their way over long distances.",
+            "How birds build their nests in the Arctic.",
+            "Why some birds fail to complete migration."
+          ],
+          "answer": 1,
+          "why": "全文主旨是候鳥如何在長途遷徙中辨識方向。"
+        },
+        {
+          "q": "According to the professor, how far does the Arctic tern travel round trip?",
+          "options": [
+            "About four thousand miles.",
+            "About ten thousand miles.",
+            "About forty thousand miles.",
+            "About one hundred thousand miles."
+          ],
+          "answer": 2,
+          "why": "教授說北極燕鷗來回一趟將近四萬英里。"
+        },
+        {
+          "q": "What can be inferred about a bird flying on a cloudy night?",
+          "options": [
+            "It will most likely become lost.",
+            "It will stop flying until morning.",
+            "It will simply follow other birds.",
+            "It can still navigate using its magnetic sense."
+          ],
+          "answer": 3,
+          "why": "星星被雲遮住時,鳥仍能靠磁場感應繼續導航。"
+        },
+        {
+          "q": "Why does the professor mention the young terns?",
+          "options": [
+            "To show that navigation does not depend on experience.",
+            "To explain why young birds often die in migration.",
+            "To compare terns with other kinds of seabirds.",
+            "To describe how adult terns teach their young."
+          ],
+          "answer": 0,
+          "why": "提到幼鳥是為了說明導航能力不需靠經驗學習。"
+        }
+      ]
+    },
+    {
+      "id": "tk-002",
+      "topic": "History (the printing press)",
+      "text": "Today I want to talk about a single invention that reshaped the world: the printing press. Now, before the fifteenth century, books in Europe were copied by hand, usually by monks. As you can imagine, this was incredibly slow. A single Bible might take a scribe more than a year to complete, and the finished book was so expensive that only the wealthy or the church could own one. Then, around 1440, a German craftsman named Johannes Gutenberg developed a press that used movable metal type. Here's why that mattered: instead of carving a whole page at once, you could arrange individual letters, print hundreds of copies, and then rearrange those same letters for the next page. Suddenly, a book that once took a year could be produced in a matter of days. What's really interesting is the ripple effect. As books became cheaper, more people learned to read. Ideas spread faster than ever before, crossing borders in weeks rather than decades. Many historians argue that without the printing press, later movements like the scientific revolution simply could not have happened so quickly.",
+      "questions": [
+        {
+          "q": "What is the main topic of the lecture?",
+          "options": [
+            "The daily life of medieval monks.",
+            "How the printing press changed the world.",
+            "The history of the Bible in Europe.",
+            "The biography of Johannes Gutenberg."
+          ],
+          "answer": 1,
+          "why": "主旨是印刷術如何改變了世界。"
+        },
+        {
+          "q": "Before the printing press, how were books in Europe produced?",
+          "options": [
+            "They were copied by hand.",
+            "They were printed with wooden blocks.",
+            "They were imported from Asia.",
+            "They were dictated aloud to crowds."
+          ],
+          "answer": 0,
+          "why": "印刷術之前,歐洲的書多由僧侶手抄。"
+        },
+        {
+          "q": "What does the professor suggest about the scientific revolution?",
+          "options": [
+            "It was actually delayed by printing.",
+            "It had no connection to printing at all.",
+            "It happened faster because of the printing press.",
+            "It replaced the need for printed books."
+          ],
+          "answer": 2,
+          "why": "教授暗示印刷術讓科學革命等運動得以更快發生。"
+        },
+        {
+          "q": "Why does the professor mention that a Bible could take over a year to copy?",
+          "options": [
+            "To praise the great skill of medieval scribes.",
+            "To explain why monks disliked their daily work.",
+            "To argue that old handmade books were better.",
+            "To show how slow and costly book-making once was."
+          ],
+          "answer": 3,
+          "why": "舉聖經抄寫要一年多,是為了凸顯過去製書的緩慢與昂貴。"
+        }
+      ]
+    },
+    {
+      "id": "tk-003",
+      "topic": "Psychology (the bystander effect)",
+      "text": "Let's turn now to a classic finding in social psychology: the bystander effect. The idea is a little unsettling. It says that the more people who witness an emergency, the less likely any single person is to step in and help. Now, you might expect the opposite, right? More people should mean more help. But research shows the reverse. Why does this happen? Psychologists point to something called diffusion of responsibility. When you're the only witness, you feel that helping is entirely up to you. But in a crowd, that responsibility gets spread out. Everyone assumes someone else will act, and so, often, no one does. There's also a second factor: people look to others for cues. If everyone around you seems calm, you may decide the situation isn't really an emergency after all. Now, what's encouraging is that simply knowing about this effect can change your behavior. Studies show that people who've learned about the bystander effect are more likely to help. So if you ever need assistance in a crowd, the advice is clear: don't just shout for help in general. Point to one specific person and ask them directly.",
+      "questions": [
+        {
+          "q": "What is the lecture mainly about?",
+          "options": [
+            "Why large crowds form during emergencies.",
+            "How to become a professional first responder.",
+            "Why people simply enjoy watching others.",
+            "Why people in groups often fail to help in emergencies."
+          ],
+          "answer": 3,
+          "why": "主旨是旁觀者效應,即人在群體中較不會出手相助。"
+        },
+        {
+          "q": "What is diffusion of responsibility?",
+          "options": [
+            "The belief that helping is someone else's job.",
+            "The fear of being blamed for a mistake.",
+            "The tendency to panic inside a crowd.",
+            "The habit of copying calm people nearby."
+          ],
+          "answer": 0,
+          "why": "責任分散指人在群體中認為救助是別人的責任。"
+        },
+        {
+          "q": "Why does the professor advise pointing to one specific person?",
+          "options": [
+            "Because that person is usually a doctor.",
+            "To make the whole crowd feel calmer.",
+            "To place the responsibility on that individual.",
+            "Because shouting is considered quite rude."
+          ],
+          "answer": 2,
+          "why": "指定特定的人,是為了把責任落在那個人身上,避免責任分散。"
+        },
+        {
+          "q": "Why does the professor mention that people look to others for cues?",
+          "options": [
+            "To give a second reason for the bystander effect.",
+            "To prove that crowds are usually very friendly.",
+            "To describe how most emergencies first begin.",
+            "To explain why people enjoy being in crowds."
+          ],
+          "answer": 0,
+          "why": "提到人會看別人反應,是要補充旁觀者效應的第二個成因。"
+        }
+      ]
+    },
+    {
+      "id": "tk-004",
+      "topic": "Astronomy (why stars twinkle)",
+      "text": "Have you ever wondered why stars seem to twinkle, but planets usually don't? It's a great question, and the answer has almost nothing to do with the stars themselves. First, let's remember one key fact: stars are enormously far away. Even the closest ones are so distant that they appear as single, tiny points of light. Now, here's what happens. As that thin beam of starlight travels down through Earth's atmosphere, it passes through layers of air at different temperatures, all moving and swirling. Each layer bends the light slightly, and because the air keeps shifting, the light gets bent this way and that. To our eyes, that rapid bending looks like twinkling. So why don't planets twinkle the same way? Well, planets are much closer to us, so instead of a single point, they appear as a tiny disk. Think of it as many points of light bunched together. The atmosphere still bends each point, but the flickers average out, and the planet shines steadily. This is also why telescopes placed in space produce such sharp images: above the atmosphere, there's nothing left to make the light dance.",
+      "questions": [
+        {
+          "q": "What does the talk mainly explain?",
+          "options": [
+            "Why the stars are so far from Earth.",
+            "Why stars twinkle but planets usually do not.",
+            "How large telescopes are built in space.",
+            "How planets manage to produce their own light."
+          ],
+          "answer": 1,
+          "why": "主旨在解釋為何星星閃爍而行星通常不閃。"
+        },
+        {
+          "q": "According to the professor, what causes starlight to twinkle?",
+          "options": [
+            "Sudden changes in the star's brightness.",
+            "The enormous physical size of the stars.",
+            "Moving layers of air in the atmosphere.",
+            "The steady rotation of the Earth."
+          ],
+          "answer": 2,
+          "why": "星光閃爍是因為大氣中不斷流動的空氣層使光線偏折。"
+        },
+        {
+          "q": "Why do telescopes in space produce sharper images?",
+          "options": [
+            "They are much closer to the stars.",
+            "They are used only to observe planets.",
+            "They rely on much larger mirrors.",
+            "There is no atmosphere to bend the light."
+          ],
+          "answer": 3,
+          "why": "太空望遠鏡在大氣層之上,沒有空氣使光線偏折,所以影像更清晰。"
+        },
+        {
+          "q": "Why does the professor mention that planets appear as a tiny disk?",
+          "options": [
+            "To show that planets are larger than stars.",
+            "To explain why planets do not twinkle much.",
+            "To prove planets are closer than the moon.",
+            "To describe the different colors of planets."
+          ],
+          "answer": 1,
+          "why": "提到行星呈小圓盤,是為了解釋為何它們的閃爍會被平均掉。"
+        }
+      ]
+    },
+    {
+      "id": "tk-005",
+      "topic": "Economics (opportunity cost)",
+      "text": "Alright, let's start with one of the most fundamental ideas in economics: opportunity cost. Now, the term sounds technical, but the concept is something you deal with every single day. Simply put, the opportunity cost of any choice is the value of the next best thing you gave up to make it. Let me give you an example. Imagine you have one free evening. You could spend it working a shift that pays sixty dollars, or you could go to a concert. If you choose the concert, the opportunity cost isn't just the price of the ticket. It also includes the sixty dollars you didn't earn. So the real cost of that concert is higher than it first appears. Here's why this matters. Good decision-making, whether for a person or a whole country, means weighing not just what you gain, but what you give up. A government that spends heavily on one program has less to spend elsewhere. Economists like to say there's no such thing as a free lunch. Every choice, no matter how small, closes the door on something else, and recognizing that is the first step toward thinking like an economist.",
+      "questions": [
+        {
+          "q": "What is the main topic of the lecture?",
+          "options": [
+            "The concept of opportunity cost.",
+            "How to save money on entertainment.",
+            "Why concert tickets are so expensive.",
+            "How governments raise their taxes."
+          ],
+          "answer": 0,
+          "why": "主旨是介紹經濟學中的機會成本概念。"
+        },
+        {
+          "q": "In the example, what is the opportunity cost of going to the concert?",
+          "options": [
+            "Only the price of the ticket.",
+            "The cost of getting transportation.",
+            "The ticket price plus the wages not earned.",
+            "Nothing, because the evening was free."
+          ],
+          "answer": 2,
+          "why": "去演唱會的機會成本包含門票錢加上沒賺到的六十元工資。"
+        },
+        {
+          "q": "What does the professor imply about a government's spending?",
+          "options": [
+            "It should always avoid very large programs.",
+            "Spending on one thing leaves less for others.",
+            "Governments never face any opportunity costs.",
+            "Free programs truly cost nothing in the end."
+          ],
+          "answer": 1,
+          "why": "教授暗示政府把錢花在某項計畫,就少了錢用在別處。"
+        },
+        {
+          "q": "Why does the professor mention that there is no free lunch?",
+          "options": [
+            "To recommend cooking more meals at home.",
+            "To criticize overpriced local restaurants.",
+            "To introduce a new and unrelated topic.",
+            "To sum up the idea that every choice has a cost."
+          ],
+          "answer": 3,
+          "why": "引用「天下沒有白吃的午餐」是為了總結每個選擇都有代價的概念。"
+        }
+      ]
+    }
+  ]
+}

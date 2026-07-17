@@ -1,0 +1,868 @@
+{
+  "ctw": [
+    {
+      "id": "ctw-001",
+      "title": "Canals and the Young Nation",
+      "topic": "history",
+      "intro": "In the early 1800s, canals reshaped how goods moved across the young United States.",
+      "text": "Before railroads existed, water was the {che:apest} way to carry heavy cargo. The Erie Canal, {fin:ished} in 1825, linked the Great Lakes {wi:th} the Atlantic coast. Farmers who lived {ne:ar} it could suddenly {se:nd} their crops to distant {mar:kets} once thought {impo:ssible} to reach. New towns {gr:ew} rapidly along the route, {a:nd} shipping prices fell {sha:rply} within just a few years."
+    },
+    {
+      "id": "ctw-002",
+      "title": "Painting Outdoors",
+      "topic": "art",
+      "intro": "The invention of cheap metal paint tubes in the 1840s freed artists from their studios.",
+      "text": "Until then, artists had to {gr:ind} their own colors and use them {qui:ckly} before they dried. The new tubes could be {se:aled} and carried outdoors {wit:hout} spilling. This small change {all:owed} painters to work {di:rectly} in front of nature. Many young artists in France {be:gan} painting rivers, gardens, {a:nd} busy streets. Their loose brushwork often {sho:cked} critics, {w:ho} preferred smooth, traditional scenes."
+    },
+    {
+      "id": "ctw-003",
+      "title": "A Shop's Cold Season",
+      "topic": "business",
+      "intro": "Every autumn, a small ice cream shop in Vermont faces the same difficult problem.",
+      "text": "When the weather turns cold, {cus:tomers} stop buying frozen treats, {a:nd} sales drop sharply. To survive the winter, the owners {de:cided} to add hot drinks {du:ring} the slow months. They began selling coffee, {h:ot} chocolate, and warm pastries, {whi:ch} kept the shop busy. This clever {ch:ange} brought {en:ough} money to cover the rent. Now the business earns a steady {pro:fit} all year {ro:und}."
+    },
+    {
+      "id": "ctw-004",
+      "title": "More Than Honey",
+      "topic": "life_science",
+      "intro": "Honeybees do far more for a farm than simply produce sweet honey.",
+      "text": "As they move from flower to flower, bees carry {po:llen} on their tiny legs. This process, called pollination, helps plants {pro:duce} fruits and seeds. Without it, many crops {wo:uld} fail completely. A single hive can visit {mil:lions} of flowers in one {se:ason}. Farmers often rent hives {du:ring} spring to make sure their orchards {a:re} pollinated. When bee populations {dr:op}, harvests may {be:come} smaller and food prices {ri:se}."
+    },
+    {
+      "id": "ctw-005",
+      "title": "Thunder and Lightning",
+      "topic": "physical_science",
+      "intro": "Lightning is one of the most powerful and dangerous forces in the natural world.",
+      "text": "A single bolt can heat the surrounding air to temperatures {ho:tter} than the surface of the sun. This sudden heating makes the air expand {vio:lently}, creating the loud sound we {ca:ll} thunder. Because light travels faster {th:an} sound, we always see the flash {be:fore} we hear the noise. By counting the seconds {be:tween} them, you can {es:timate} how far away the storm {li:es}. Tall buildings use metal rods {th:at} guide the electricity safely {in:to} the ground."
+    },
+    {
+      "id": "ctw-006",
+      "title": "Lost in the Crowd",
+      "topic": "social_science",
+      "intro": "Researchers have long wondered why people behave differently when they are in large crowds.",
+      "text": "In a big group, a single person often feels less {respons:ible} for his or her actions. This feeling, known as deindividuation, can {ex:plain} why crowds sometimes act in ways {th:at} individuals never would alone. For example, fans might shout or push {du:ring} a game, {al:though} they are polite at home. Psychologists believe the crowd {hi:des} each person's identity, making them feel {ano:nymous}. Understanding this {be:havior} helps cities plan safer events {a:nd} avoid dangerous {situ:ations}."
+    }
+  ],
+  "daily_life": [
+    {
+      "id": "dl-001",
+      "kind": "poster",
+      "title": "Spring Coding Marathon",
+      "body": "SPRING CODING MARATHON\n------------------------\nBuild an app in 24 hours!\n\nWHEN: Saturday, April 12, 9 AM\nWHERE: Engineering Hall, Room 204\nWHO: All students welcome - no experience needed\n\nFree pizza & energy drinks\nPrizes for the top 3 teams\n\nSign up by April 10 at cs.university.edu/marathon\nQuestions? Email coding.club@university.edu",
+      "questions": [
+        {
+          "q": "What is the main purpose of this poster?",
+          "options": [
+            "To advertise a 24-hour app-building competition",
+            "To announce a new computer science course",
+            "To sell tickets for a technology conference",
+            "To recruit teachers for a coding club"
+          ],
+          "answer": 0,
+          "why": "標題「Build an app in 24 hours」與「Prizes for the top 3 teams」顯示這是程式競賽宣傳。"
+        },
+        {
+          "q": "Who is allowed to join the event?",
+          "options": [
+            "Only engineering students",
+            "Only students with coding experience",
+            "Any student, even beginners",
+            "Only members of the coding club"
+          ],
+          "answer": 2,
+          "why": "「All students welcome - no experience needed」表示歡迎任何學生,含初學者。"
+        },
+        {
+          "q": "What must someone do before April 10?",
+          "options": [
+            "Pay a registration fee",
+            "Register on the website",
+            "Email the coding club for approval",
+            "Form a team of three"
+          ],
+          "answer": 1,
+          "why": "「Sign up by April 10 at cs.university.edu/marathon」指出須在該日前上網報名。"
+        }
+      ]
+    },
+    {
+      "id": "dl-002",
+      "kind": "notice",
+      "title": "Library Hours Change",
+      "body": "NOTICE - Library Hours Change\n\nThe main library will close early at 5 PM this Friday for annual system maintenance.\n\nAll books due Friday may be returned the following Monday with no late fee.\n\nStudy rooms on the 3rd floor remain open until 9 PM through the side entrance.\n\nWe apologize for any inconvenience.\n- Facilities Team",
+      "questions": [
+        {
+          "q": "Why was this notice written?",
+          "options": [
+            "To inform readers about a temporary change in library hours",
+            "To announce that the library will close permanently",
+            "To remind students to pay their late fees",
+            "To advertise new study rooms on the third floor"
+          ],
+          "answer": 0,
+          "why": "標題「Library Hours Change」與內文說明週五提早關門,屬臨時異動通知。"
+        },
+        {
+          "q": "A book is due this Friday. What does the notice say will happen if it is returned on Monday?",
+          "options": [
+            "The reader will be charged a small fee",
+            "No late fee will be charged",
+            "The book cannot be returned",
+            "The reader must renew it online first"
+          ],
+          "answer": 1,
+          "why": "「returned the following Monday with no late fee」明說週一還書免逾期費。"
+        },
+        {
+          "q": "How can students reach the study rooms on Friday evening?",
+          "options": [
+            "Through the main entrance",
+            "Through the third-floor elevator only",
+            "They cannot enter after 5 PM",
+            "Through the side entrance"
+          ],
+          "answer": 3,
+          "why": "「remain open until 9 PM through the side entrance」指明由側門進入。"
+        }
+      ]
+    },
+    {
+      "id": "dl-003",
+      "kind": "menu",
+      "title": "Corner Cafe Lunch Menu",
+      "body": "CORNER CAFE - Lunch Menu\n\nSANDWICHES\nGrilled Cheese ......... $5.50\nTurkey Club ............ $7.75\nVeggie Wrap ............ $6.25\n\nSIDES\nSoup of the Day ........ $3.00\nHouse Salad ............ $4.50\n\nDRINKS\nCoffee / Tea ........... $2.00\nFresh Lemonade ......... $2.75\n\nCombo: any sandwich + one side + a drink for $10.00\nAdd $1 for iced drinks.",
+      "questions": [
+        {
+          "q": "How much does a Turkey Club cost by itself?",
+          "options": [
+            "$5.50",
+            "$6.25",
+            "$7.75",
+            "$10.00"
+          ],
+          "answer": 2,
+          "why": "菜單列「Turkey Club ... $7.75」,單點價格為 7.75 美元。"
+        },
+        {
+          "q": "A student orders the combo with an iced coffee. How much will she pay?",
+          "options": [
+            "$10.00",
+            "$11.00",
+            "$12.00",
+            "$12.75"
+          ],
+          "answer": 1,
+          "why": "Combo 為 $10,冰飲加 $1,故共 $11。"
+        },
+        {
+          "q": "Which item is the cheapest on the menu?",
+          "options": [
+            "Soup of the Day",
+            "Coffee / Tea",
+            "House Salad",
+            "Fresh Lemonade"
+          ],
+          "answer": 1,
+          "why": "Coffee/Tea $2.00 為全單最低價,低於 Soup $3.00。"
+        }
+      ]
+    },
+    {
+      "id": "dl-004",
+      "kind": "text_thread",
+      "title": "Study Group Tonight",
+      "body": "Maya: Hey! Still on for the study group tonight?\nJordan: Ugh, I totally forgot. I have a shift til 8 :(\nMaya: No worries. We're starting at 8:30 anyway.\nJordan: Perfect. Can u send me the notes from Tuesday?\nMaya: Sure. Also we're meeting at the coffee shop, NOT the library this time.\nJordan: Got it. Thx! I'll grab a table.\nMaya: Cool, see u there. Don't be late lol",
+      "questions": [
+        {
+          "q": "Why does Jordan say 'I totally forgot'?",
+          "options": [
+            "He does not want to join the study group",
+            "He had not remembered the study group was tonight",
+            "He forgot to bring his notes",
+            "He forgot where the coffee shop is"
+          ],
+          "answer": 1,
+          "why": "由「Still on for tonight?」後回「I totally forgot」可知他忘了今晚有讀書會。"
+        },
+        {
+          "q": "Where will they meet tonight?",
+          "options": [
+            "At the library",
+            "At Jordan's workplace",
+            "At the coffee shop",
+            "At Maya's home"
+          ],
+          "answer": 2,
+          "why": "Maya 強調「at the coffee shop, NOT the library this time」。"
+        },
+        {
+          "q": "What does 'Thx' most likely mean?",
+          "options": [
+            "Thanks",
+            "This",
+            "Text",
+            "Thursday"
+          ],
+          "answer": 0,
+          "why": "「Thx」為 Thanks 的縮寫,回應 Maya 幫忙傳筆記。"
+        }
+      ]
+    },
+    {
+      "id": "dl-005",
+      "kind": "email",
+      "title": "Lab Report Deadline Moved",
+      "body": "From: Prof. Delgado\nTo: BIO 210 Students\nSubject: Lab Report Deadline Moved\n\nHi everyone,\n\nBecause the equipment in Lab B broke down last week, I'm moving the lab report deadline from Wednesday to next Monday.\n\nYou now have the weekend to finish your data analysis. Please submit through the course website as a single PDF.\n\nIf you already finished, you may still turn it in early.\n\nBest,\nProf. Delgado",
+      "questions": [
+        {
+          "q": "Why did Professor Delgado send this email?",
+          "options": [
+            "To cancel the lab report assignment",
+            "To change the due date of the lab report",
+            "To announce that Lab B is now fixed",
+            "To ask students to buy new equipment"
+          ],
+          "answer": 1,
+          "why": "主旨「Lab Report Deadline Moved」及內文將截止日改到下週一。"
+        },
+        {
+          "q": "Why was the deadline changed?",
+          "options": [
+            "Because too many students were absent",
+            "Because the professor was traveling",
+            "Because equipment in Lab B broke down",
+            "Because the website was not working"
+          ],
+          "answer": 2,
+          "why": "「Because the equipment in Lab B broke down last week」為改期原因。"
+        },
+        {
+          "q": "How should students submit the report?",
+          "options": [
+            "As a printed copy in class",
+            "By email to the professor",
+            "As several separate files",
+            "As a single PDF on the course website"
+          ],
+          "answer": 3,
+          "why": "「submit through the course website as a single PDF」明確指示繳交方式。"
+        }
+      ]
+    },
+    {
+      "id": "dl-006",
+      "kind": "schedule",
+      "title": "Campus Shuttle Schedule",
+      "body": "CAMPUS SHUTTLE - Weekday Schedule\n\nStop            | Morning | Afternoon\nNorth Gate      |  8:00   |  1:00\nLibrary         |  8:10   |  1:10\nScience Center  |  8:20   |  1:20\nDorms           |  8:35   |  1:35\n\nNote: The shuttle does not run on weekends.\nShuttle is free with a student ID.",
+      "questions": [
+        {
+          "q": "What time does the morning shuttle reach the Science Center?",
+          "options": [
+            "8:00",
+            "8:10",
+            "8:20",
+            "8:35"
+          ],
+          "answer": 2,
+          "why": "表格中 Science Center 的 Morning 欄為 8:20。"
+        },
+        {
+          "q": "A student wants to ride the shuttle on Saturday. What does the schedule tell her?",
+          "options": [
+            "The shuttle runs but costs extra on weekends",
+            "The shuttle does not run on weekends",
+            "The shuttle only stops at the Library",
+            "The shuttle runs one hour later"
+          ],
+          "answer": 1,
+          "why": "註記「does not run on weekends」表示週六停駛。"
+        },
+        {
+          "q": "How much does the shuttle cost for a student?",
+          "options": [
+            "It is free with a student ID",
+            "It costs one dollar",
+            "It is free only in the morning",
+            "It requires a monthly pass"
+          ],
+          "answer": 0,
+          "why": "「free with a student ID」說明持學生證免費。"
+        }
+      ]
+    },
+    {
+      "id": "dl-007",
+      "kind": "receipt",
+      "title": "Campus Bookstore Receipt",
+      "body": "CAMPUS BOOKSTORE\n123 University Ave\n----------------------\nIntro Chemistry (used) ... $42.00\nSafety Goggles .......... $8.50\nHighlighter Pack ........ $3.50\n----------------------\nSubtotal ............... $54.00\nStudent Discount (10%) . -$5.40\nTotal .................. $48.60\n\nPaid: Credit Card\n----------------------\nNo returns without receipt.\nReturns accepted within 14 days.",
+      "questions": [
+        {
+          "q": "What was the price of the used chemistry book before any discount?",
+          "options": [
+            "$8.50",
+            "$42.00",
+            "$48.60",
+            "$54.00"
+          ],
+          "answer": 1,
+          "why": "收據列「Intro Chemistry (used) ... $42.00」為書本折扣前價格。"
+        },
+        {
+          "q": "How much did the student save with the discount?",
+          "options": [
+            "$3.50",
+            "$5.40",
+            "$8.50",
+            "$48.60"
+          ],
+          "answer": 1,
+          "why": "「Student Discount (10%) -$5.40」即折扣省下的金額。"
+        },
+        {
+          "q": "What does 'No returns without receipt' mean for a customer?",
+          "options": [
+            "Items can never be returned",
+            "A receipt is required to return an item",
+            "Returns are free for all customers",
+            "Only books can be returned"
+          ],
+          "answer": 1,
+          "why": "電報式語言意為退貨必須出示收據,否則不受理。"
+        }
+      ]
+    },
+    {
+      "id": "dl-008",
+      "kind": "ad",
+      "title": "Gym Student Special",
+      "body": "GET FIT - STUDENT SPECIAL!\n\nJoin RiverSide Gym today and pay NOTHING for your first month.\n\n[+] Open 24/7\n[+] Free fitness classes\n[+] Brand-new equipment\n\nNormally $30/month - students pay just $19/month after the free trial.\n\nBring a friend and you BOTH get an extra week free!\n\nOffer ends July 31. Show your student ID to sign up.",
+      "questions": [
+        {
+          "q": "What is the purpose of this advertisement?",
+          "options": [
+            "To encourage students to join a gym",
+            "To announce that a gym is closing",
+            "To sell used exercise equipment",
+            "To hire fitness class instructors"
+          ],
+          "answer": 0,
+          "why": "標題「Join RiverSide Gym today」與優惠內容旨在吸引學生入會。"
+        },
+        {
+          "q": "How much do students pay each month after the free trial?",
+          "options": [
+            "Nothing",
+            "$19",
+            "$30",
+            "$49"
+          ],
+          "answer": 1,
+          "why": "「students pay just $19/month after the free trial」列明試用後月費。"
+        },
+        {
+          "q": "What happens if a student brings a friend?",
+          "options": [
+            "Only the friend joins for free",
+            "The monthly price rises to $30",
+            "They must sign a one-year contract",
+            "Both people get one extra free week"
+          ],
+          "answer": 3,
+          "why": "「Bring a friend and you BOTH get an extra week free」表示兩人各多一週免費。"
+        }
+      ]
+    },
+    {
+      "id": "dl-009",
+      "kind": "social_post",
+      "title": "Beach Cleanup Thanks",
+      "body": "@campus_life - 2h\n\nHUGE thanks to everyone who showed up for the beach cleanup this morning!\n\n60+ volunteers filled 40 bags of trash in just 3 hours. You all rock!\n\nMissed it? Don't worry - our next cleanup is May 5. Link in bio to sign up.\n\n#GoGreen #CampusLife\n\nLikes 342   Comments 28   Shares 55",
+      "questions": [
+        {
+          "q": "What is the main tone of this post?",
+          "options": [
+            "Grateful and encouraging",
+            "Angry and disappointed",
+            "Worried and uncertain",
+            "Formal and serious"
+          ],
+          "answer": 0,
+          "why": "「HUGE thanks」「You all rock!」語氣感謝且鼓勵。"
+        },
+        {
+          "q": "How many volunteers took part in the cleanup?",
+          "options": [
+            "About 28",
+            "About 40",
+            "More than 60",
+            "About 342"
+          ],
+          "answer": 2,
+          "why": "「60+ volunteers」表示超過 60 人參加(342 為按讚數)。"
+        },
+        {
+          "q": "What should someone do if they want to join the next cleanup?",
+          "options": [
+            "Comment on the post",
+            "Use the link in the bio to sign up",
+            "Bring 40 bags of trash",
+            "Wait until June"
+          ],
+          "answer": 1,
+          "why": "「Link in bio to sign up」指引報名下次活動。"
+        }
+      ]
+    },
+    {
+      "id": "dl-010",
+      "kind": "form",
+      "title": "Club Fair Table Request",
+      "body": "CLUB FAIR - TABLE REQUEST FORM\n\nPlease complete all fields. Deadline: Sept 1.\n\nClub Name: ______________________\nContact Person: __________________\nEmail: __________________________\nNumber of Tables Needed (max 2): ___\nWill you need electricity? Yes / No\n\nNote: Late forms will not be accepted.\nOnly one form per club.",
+      "questions": [
+        {
+          "q": "What is this form used for?",
+          "options": [
+            "Requesting a table at the club fair",
+            "Applying to start a new club",
+            "Signing up for electricity in a dorm",
+            "Registering for a fair as a visitor"
+          ],
+          "answer": 0,
+          "why": "標題「TABLE REQUEST FORM」說明用途是為社團博覽會申請攤位桌。"
+        },
+        {
+          "q": "What is the maximum number of tables a club can request?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "There is no limit"
+          ],
+          "answer": 1,
+          "why": "「Number of Tables Needed (max 2)」限制最多兩張。"
+        },
+        {
+          "q": "What will happen to a form submitted on September 3?",
+          "options": [
+            "It will be accepted with a fee",
+            "It will not be accepted",
+            "It will be given extra tables",
+            "It will be reviewed first"
+          ],
+          "answer": 1,
+          "why": "截止日為 9/1,且「Late forms will not be accepted」,9/3 已逾期。"
+        }
+      ]
+    }
+  ],
+  "academic": [
+    {
+      "id": "ap-001",
+      "title": "The Birth of Standard Time",
+      "topic": "history",
+      "passage": "Before the 1880s, towns across the United States kept their own local time, setting clocks by the position of the sun. When it was noon in one city, it might be 12:12 in a town just a short distance to the east. For centuries this caused little trouble, since people rarely traveled far or fast. The spread of railroads, however, made the confusion impossible to ignore. Each railroad company followed its own clock, and a single station might display several different times at once. Passengers missed trains, and schedules became a puzzle that few could solve. In 1883, the major railroad companies agreed on a solution. They divided the country into four zones, each one hour apart, and reset their clocks to match. The public did not vote on the change; the railroads simply adopted it, and most towns quickly followed because doing business required it. Some critics complained that companies had no right to decide something as basic as time. Yet the convenience was so great that resistance faded within a few years. The federal government did not officially confirm the zones until 1918, long after they had already become part of everyday American life.",
+      "questions": [
+        {
+          "q": "According to the passage, how did towns set their clocks before the 1880s?",
+          "options": [
+            "By following the nearest railroad company's clock",
+            "By using the position of the sun",
+            "By waiting for a federal government signal",
+            "By copying the time in the largest city"
+          ],
+          "answer": 1,
+          "qtype": "fact",
+          "why": "第一句「setting clocks by the position of the sun」直接說明。"
+        },
+        {
+          "q": "The word 'confusion' in the passage is closest in meaning to",
+          "options": [
+            "disorder",
+            "excitement",
+            "distance",
+            "silence"
+          ],
+          "answer": 0,
+          "qtype": "vocab",
+          "why": "由多家鐵路各自計時導致的混亂,confusion 最接近 disorder。"
+        },
+        {
+          "q": "What can be inferred about travel before the spread of railroads?",
+          "options": [
+            "It was mostly done for business reasons",
+            "It required knowing several different clocks",
+            "It was slow enough that time differences rarely mattered",
+            "It was more common than travel today"
+          ],
+          "answer": 2,
+          "qtype": "inference",
+          "why": "「people rarely traveled far or fast」故時差影響不大,可推知旅行慢到時差無妨。"
+        },
+        {
+          "q": "Why does the author mention that 'a single station might display several different times at once'?",
+          "options": [
+            "To show how confusing the old system had become",
+            "To praise the railroads for offering choices",
+            "To explain how sunlight was measured",
+            "To prove that trains were usually late"
+          ],
+          "answer": 0,
+          "qtype": "logic",
+          "why": "此例用來說明舊制混亂到難以忽視,呼應前句 confusion。"
+        },
+        {
+          "q": "What is the author's main purpose in the passage?",
+          "options": [
+            "To argue that the government should control time",
+            "To describe how and why standard time zones were adopted",
+            "To compare train travel in different countries",
+            "To explain how clocks measure the position of the sun"
+          ],
+          "answer": 1,
+          "qtype": "purpose",
+          "why": "全文敘述時區制度出現的原因與過程,屬說明性目的。"
+        }
+      ]
+    },
+    {
+      "id": "ap-002",
+      "title": "The Discovery of Perspective",
+      "topic": "art_music",
+      "passage": "For most of human history, painters struggled to make flat surfaces appear deep. Medieval European artists often placed important figures in the center and drew them larger than everything else, regardless of where they stood. A king might tower over a distant mountain simply because he mattered more. These paintings could be beautiful, but they did not look like the world the eye actually sees. During the early 1400s in Florence, an architect named Filippo Brunelleschi worked out a mathematical method now called linear perspective. The idea was simple but powerful: parallel lines, such as the edges of a road, appear to meet at a single point on the horizon. Objects shrink in a regular, predictable way as they move farther from the viewer. By following these rules, a painter could create a convincing illusion of depth on a flat wall or panel. The technique spread rapidly among Italian artists, who treated it almost as a science. Perspective did more than improve realism; it changed how people thought about space itself. A painting was no longer a flat decoration but a window opening onto an imagined world. Later artists would sometimes break these rules on purpose, but only because Brunelleschi had first shown how to follow them.",
+      "questions": [
+        {
+          "q": "According to the passage, how did medieval European artists often decide the size of a figure?",
+          "options": [
+            "By how far away the figure stood",
+            "By how important the figure was",
+            "By the mathematical rules of perspective",
+            "By the color the figure wore"
+          ],
+          "answer": 1,
+          "qtype": "fact",
+          "why": "「drew them larger ... because he mattered more」表示依重要性決定大小。"
+        },
+        {
+          "q": "The word 'convincing' in the passage is closest in meaning to",
+          "options": [
+            "colorful",
+            "believable",
+            "temporary",
+            "expensive"
+          ],
+          "answer": 1,
+          "qtype": "vocab",
+          "why": "convincing illusion 指令人信服的深度錯覺,最接近 believable。"
+        },
+        {
+          "q": "What can be inferred about paintings made before linear perspective?",
+          "options": [
+            "They were never considered beautiful",
+            "They were painted only by architects",
+            "They always placed figures near the horizon",
+            "They did not show depth in a realistic way"
+          ],
+          "answer": 3,
+          "qtype": "inference",
+          "why": "文中說舊畫「did not look like the world the eye actually sees」,可推知缺乏寫實深度。"
+        },
+        {
+          "q": "Why does the author mention the edges of a road in the second part of the passage?",
+          "options": [
+            "To give an example of parallel lines meeting at one point",
+            "To show that roads were a popular subject for painters",
+            "To explain why Brunelleschi was an architect",
+            "To prove that perspective was difficult to learn"
+          ],
+          "answer": 0,
+          "qtype": "logic",
+          "why": "道路邊緣是「parallel lines ... meet at a single point」的具體例子。"
+        },
+        {
+          "q": "Why does the author state that later artists broke the rules 'only because Brunelleschi had first shown how to follow them'?",
+          "options": [
+            "To criticize later artists for being lazy",
+            "To suggest that perspective was eventually forgotten",
+            "To emphasize how important Brunelleschi's method was",
+            "To argue that rules in art should never be broken"
+          ],
+          "answer": 2,
+          "qtype": "purpose",
+          "why": "此句強調後人破格也建立在他先確立規則之上,凸顯其重要性。"
+        }
+      ]
+    },
+    {
+      "id": "ap-003",
+      "title": "The Loss Leader",
+      "topic": "business_economics",
+      "passage": "Walk into almost any large supermarket and you will find a few items priced surprisingly low - a gallon of milk, perhaps, or a roast chicken sold for less than it cost the store to make. At first this seems like a mistake. Why would a business deliberately lose money on the things it sells? The answer lies in a strategy known as the loss leader. A loss leader is a product priced below cost in order to attract customers into the store. The store does not expect to profit from that single item. Instead, it counts on shoppers buying many other products once they are inside. A customer who comes for cheap milk may leave with bread, coffee, and a magazine, all sold at a normal markup. The small loss on the milk is easily covered by the profit on everything else. This strategy works best when the discounted item is something people buy often and can easily compare across stores. Shoppers rarely remember the price of every product, but they do notice when milk or eggs are cheaper than at a rival. Placement matters too. Stores usually put loss leaders at the back, forcing customers to walk past shelves of tempting, full-priced goods before they reach the bargain.",
+      "questions": [
+        {
+          "q": "According to the passage, what is a loss leader?",
+          "options": [
+            "A product priced below cost to attract customers",
+            "A manager who leads the sales team",
+            "An item that a store has failed to sell",
+            "The most profitable product in a store"
+          ],
+          "answer": 0,
+          "qtype": "fact",
+          "why": "文中定義「priced below cost in order to attract customers」。"
+        },
+        {
+          "q": "The word 'markup' in the passage is closest in meaning to",
+          "options": [
+            "an added amount above cost",
+            "a printed label",
+            "a sudden discount",
+            "a shopping list"
+          ],
+          "answer": 0,
+          "qtype": "vocab",
+          "why": "「sold at a normal markup」指正常加價,即高於成本的加成。"
+        },
+        {
+          "q": "Why do stores place loss leaders at the back of the store?",
+          "options": [
+            "Because those items are hard to keep fresh",
+            "So customers must pass many full-priced goods first",
+            "Because customers prefer shopping at the back",
+            "To hide the low prices from rival stores"
+          ],
+          "answer": 1,
+          "qtype": "inference",
+          "why": "末句說此舉「forcing customers to walk past ... full-priced goods」,可推知目的。"
+        },
+        {
+          "q": "Why does the author describe a customer leaving with 'bread, coffee, and a magazine'?",
+          "options": [
+            "To show the store lost money on those items too",
+            "To prove that milk is the most popular product",
+            "To illustrate how the store makes back its loss on other goods",
+            "To suggest customers forget what they came to buy"
+          ],
+          "answer": 2,
+          "qtype": "logic",
+          "why": "此例說明顧客購買其他正常加價商品彌補牛奶虧損。"
+        },
+        {
+          "q": "What is the main purpose of the passage?",
+          "options": [
+            "To warn shoppers against buying cheap milk",
+            "To explain why some stores sell certain items below cost",
+            "To compare supermarkets with other kinds of stores",
+            "To describe how milk and eggs are produced"
+          ],
+          "answer": 1,
+          "qtype": "purpose",
+          "why": "全文旨在解釋「賠本商品」策略及其運作原因。"
+        }
+      ]
+    },
+    {
+      "id": "ap-004",
+      "title": "How Birds Find Their Way",
+      "topic": "life_science",
+      "passage": "Every autumn, billions of birds leave their northern homes and fly thousands of kilometers to warmer regions. Many travel at night, crossing oceans and deserts where there are no landmarks to guide them. How these animals find their way has puzzled scientists for generations, and the answer appears to involve not one tool but several. Some birds rely on the sun, using its position to hold a steady direction during the day. Others watch the pattern of stars at night, much as early human sailors once did. Perhaps the most surprising ability is the detection of Earth's magnetic field. Tiny particles in a bird's body seem to respond to this field, giving the animal a kind of built-in compass that works even under a cloudy sky. Young birds making their first journey are especially remarkable. In many species, they travel without any experienced adult to follow, yet still reach a destination they have never seen. This suggests that at least part of the route is inherited rather than learned. Scientists continue to study how these separate senses are combined, but it is already clear that migration depends on a flexible system, one that allows a bird to switch methods when clouds, weather, or landscape hide its usual signs.",
+      "questions": [
+        {
+          "q": "According to the passage, which of the following do some birds use to navigate at night?",
+          "options": [
+            "Landmarks such as rivers",
+            "The position of the sun",
+            "The calls of other birds",
+            "The pattern of the stars"
+          ],
+          "answer": 3,
+          "qtype": "fact",
+          "why": "「Others watch the pattern of stars at night」明說夜間靠星象。"
+        },
+        {
+          "q": "The word 'detection' in the passage is closest in meaning to",
+          "options": [
+            "sensing",
+            "avoiding",
+            "creating",
+            "hiding"
+          ],
+          "answer": 0,
+          "qtype": "vocab",
+          "why": "detection of Earth's magnetic field 指察覺磁場,最接近 sensing。"
+        },
+        {
+          "q": "What does the behavior of young birds suggest about migration?",
+          "options": [
+            "It must be taught by older birds",
+            "Part of the route is inherited, not learned",
+            "It only works in clear weather",
+            "It is the same for every species"
+          ],
+          "answer": 1,
+          "qtype": "inference",
+          "why": "幼鳥無成鳥帶領仍能抵達,文中說「inherited rather than learned」。"
+        },
+        {
+          "q": "Why does the author mention that a bird's compass 'works even under a cloudy sky'?",
+          "options": [
+            "To show a limitation of using the stars and sun",
+            "To prove that birds prefer cloudy weather",
+            "To explain why birds travel only at night",
+            "To argue that magnetic fields are weak"
+          ],
+          "answer": 0,
+          "qtype": "logic",
+          "why": "此句對比日月星辰在陰天失效,凸顯磁場感知的優勢。"
+        },
+        {
+          "q": "What is the author's main point in the passage?",
+          "options": [
+            "Birds migrate only because of cold weather",
+            "Bird migration relies on several combined methods, not just one",
+            "Young birds are better navigators than adults",
+            "Scientists have fully explained how birds navigate"
+          ],
+          "answer": 1,
+          "qtype": "purpose",
+          "why": "全文論證候鳥導航「involve not one tool but several」的彈性系統。"
+        }
+      ]
+    },
+    {
+      "id": "ap-005",
+      "title": "Why Ice Floats",
+      "topic": "physical_science",
+      "passage": "Most substances become denser as they cool, so that their solid form sinks in their own liquid. Water breaks this rule in a way that has enormous consequences for life on Earth. As liquid water cools, it grows denser - but only down to about four degrees Celsius. Below that temperature, it begins to expand again, and when it finally freezes, the resulting ice is lighter than the water beneath it. That is why ice cubes float and why a frozen pond has a solid lid rather than a solid bottom. The reason lies in the shape of the water molecule and the way its molecules link together. As water freezes, each molecule bonds with its neighbors in an open, six-sided pattern. This arrangement holds the molecules slightly farther apart than they are in liquid water, so the same number of molecules takes up more space. More space for the same mass means lower density. This unusual behavior protects underwater life through the winter. Because ice forms on top, it acts as a blanket, slowing the loss of heat from the water below. Fish and other organisms can survive in the liquid water that remains beneath the frozen surface. If ice sank instead, lakes would freeze solid from the bottom up, and many would never fully thaw.",
+      "questions": [
+        {
+          "q": "According to the passage, at what temperature does water stop growing denser as it cools?",
+          "options": [
+            "At zero degrees Celsius",
+            "At about four degrees Celsius",
+            "At the moment it freezes",
+            "At room temperature"
+          ],
+          "answer": 1,
+          "qtype": "fact",
+          "why": "「denser - but only down to about four degrees Celsius」明確指出。"
+        },
+        {
+          "q": "The word 'enormous' in the passage is closest in meaning to",
+          "options": [
+            "very great",
+            "very strange",
+            "very sudden",
+            "very old"
+          ],
+          "answer": 0,
+          "qtype": "vocab",
+          "why": "enormous consequences 指極大的影響,最接近 very great。"
+        },
+        {
+          "q": "What can be inferred about most substances other than water?",
+          "options": [
+            "Their solid form floats in their liquid form",
+            "Their solid form sinks in their liquid form",
+            "They never freeze completely",
+            "They expand when they are cooled"
+          ],
+          "answer": 1,
+          "qtype": "inference",
+          "why": "首句說多數物質冷卻變密、固態下沉,水才是例外。"
+        },
+        {
+          "q": "Why does the author compare ice to a 'blanket'?",
+          "options": [
+            "To show that ice is soft and light",
+            "To suggest that ice keeps fish warm by touching them",
+            "To explain that ice slows heat loss from the water below",
+            "To describe the color of a frozen pond"
+          ],
+          "answer": 2,
+          "qtype": "logic",
+          "why": "blanket 比喻冰層「slowing the loss of heat」,保住下方液態水。"
+        },
+        {
+          "q": "What is the main purpose of the passage?",
+          "options": [
+            "To explain why water and its ice behave unusually and why it matters",
+            "To describe how fish breathe underwater in winter",
+            "To compare the density of many different liquids",
+            "To argue that lakes should not be allowed to freeze"
+          ],
+          "answer": 0,
+          "qtype": "purpose",
+          "why": "全文解釋水結冰反常的原因及其對生命的重要性。"
+        }
+      ]
+    },
+    {
+      "id": "ap-006",
+      "title": "The Unreliable Witness",
+      "topic": "social_science",
+      "passage": "People often imagine that human memory works like a video camera, faithfully recording events and playing them back on demand. Research in psychology, however, suggests that memory is far more active and far less reliable than this image implies. Rather than storing a perfect copy of an event, the mind reconstructs it each time we remember, filling in gaps with expectations, assumptions, and information gathered after the fact. This has serious consequences in courtrooms, where eyewitness testimony can send a person to prison. In a well-known series of experiments, participants watched a film of a car accident and were later asked questions about it. When researchers asked how fast the cars were going when they 'smashed' into each other, people gave higher speed estimates than when the milder word 'hit' was used. A single word had reshaped their memory of the same event. Even more striking, some participants later 'remembered' seeing broken glass at the scene, although there had been none in the film. Their memories had absorbed the suggestion contained in the question itself. Findings like these do not mean witnesses are dishonest. They mean that honest, confident people can remember things that never happened - a fact that legal systems around the world are still learning to take seriously.",
+      "questions": [
+        {
+          "q": "According to the passage, what happened when researchers used the word 'smashed' instead of 'hit'?",
+          "options": [
+            "Participants gave higher speed estimates",
+            "Participants refused to answer",
+            "Participants remembered the film perfectly",
+            "Participants gave lower speed estimates"
+          ],
+          "answer": 0,
+          "qtype": "fact",
+          "why": "「'smashed' ... gave higher speed estimates than ... 'hit'」直接對比。"
+        },
+        {
+          "q": "The word 'reconstructs' in the passage is closest in meaning to",
+          "options": [
+            "records",
+            "removes",
+            "repeats",
+            "rebuilds"
+          ],
+          "answer": 3,
+          "qtype": "vocab",
+          "why": "reconstructs 指每次回憶都重新建構記憶,最接近 rebuilds。"
+        },
+        {
+          "q": "What can be inferred from the fact that some participants 'remembered' broken glass?",
+          "options": [
+            "The film actually contained broken glass",
+            "A question can add false details to a memory",
+            "The participants were trying to lie",
+            "Broken glass is common in car accidents"
+          ],
+          "answer": 1,
+          "qtype": "inference",
+          "why": "影片並無碎玻璃卻被記得,可推知問題本身植入了假細節。"
+        },
+        {
+          "q": "Why does the author compare memory to a video camera at the beginning?",
+          "options": [
+            "To prove that cameras are more accurate than people",
+            "To present a common belief the passage then challenges",
+            "To explain how films of accidents are made",
+            "To argue that people should record important events"
+          ],
+          "answer": 1,
+          "qtype": "logic",
+          "why": "攝影機比喻是先立「常見迷思」,後文再加以推翻。"
+        },
+        {
+          "q": "What is the author's main purpose in the passage?",
+          "options": [
+            "To show that eyewitnesses usually lie in court",
+            "To explain that memory is reconstructive and can be unreliable",
+            "To describe how car accidents are studied",
+            "To argue that courtrooms should ban all testimony"
+          ],
+          "answer": 1,
+          "qtype": "purpose",
+          "why": "全文旨在說明記憶會重構且可能失真,而非攝影機式重播。"
+        }
+      ]
+    }
+  ]
+}

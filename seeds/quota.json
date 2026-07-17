@@ -1,0 +1,14 @@
+[
+{"item":"Write an Email","total":5,"used":0,"reserve":1,"planned":["2026-07-26","2026-08-16","2026-09-06","2026-09-13"]},
+{"item":"Academic Discussion","total":10,"used":0,"reserve":0,"rule":"每週日1題,平日用AI出題"},
+{"item":"Complete the Words","total":10,"used":0,"rule":"每週一1篇"},
+{"item":"Take an Interview","total":20,"used":0,"rule":"每週2題"},
+{"item":"Listen and Repeat","total":35,"used":0,"rule":"每週4題"},
+{"item":"Read in Daily Life","total":50,"used":0,"rule":"充足,日常刷"},
+{"item":"Academic Passage","total":40,"used":0,"rule":"充足"},
+{"item":"Listen and Choose a Response","total":80,"used":0,"rule":"充足"},
+{"item":"Conversation","total":30,"used":0,"rule":"中等"},
+{"item":"Announcement","total":20,"used":0,"rule":"中等,每週3–4題(弱點題型)"},
+{"item":"Academic Talk","total":40,"used":0,"rule":"充足"},
+{"item":"Build a Sentence","total":50,"used":0,"rule":"充足,每題限時60秒"}
+]

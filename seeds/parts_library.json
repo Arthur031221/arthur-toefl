@@ -1,0 +1,19 @@
+{
+"rule": "零件一字不改;自由發揮只放在填空處。",
+"email": [
+"I'm writing because ...",
+"Unfortunately, I'm swamped with ..., so I could really use your help.",
+"Specifically, there are three things: first, ...; second, ...; and third, ...",
+"Could we meet on [DAY] at [TIME] at [PLACE] to go over the plan?",
+"Let me know if that works for you.",
+"Thanks so much,"
+],
+"discussion": [
+"I side with X's view that ...",
+"In my opinion, ...",
+"For example, when ..., I ...",
+"X is right that ..., but ...",
+"While X makes a valid point about ..., I believe ...",
+"Overall, ..., not ..."
+]
+}

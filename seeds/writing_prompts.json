@@ -1,0 +1,57 @@
+[
+{
+  "kind": "email",
+  "title": "讀書會協調(寫給 Sarah)",
+  "prompt": "Your friend Sarah has offered to help you organize a study group for your final exam next week, and you need to divide up the work.\n\nWrite an email to Sarah. In your email, you should:\n• explain why you need her help\n• describe the three things that need to be done: book a study room at the library, prepare practice problems, and share the lecture notes\n• suggest a date and time to meet and discuss the plan\n\nYou have 7 minutes. A good response is about 100–150 words."
+},
+{
+  "kind": "email",
+  "title": "社團活動籌備(寫給幹部 Kevin)",
+  "prompt": "Your student club is holding a welcome party in two weeks, and you are in charge of the preparations. You need help from Kevin, another club officer.\n\nWrite an email to Kevin. In your email, you should:\n• explain why you need his help\n• describe the three things that need to be done: reserve a venue on campus, order food and drinks, and post a promotion on social media\n• suggest a date and time to meet and go over the plan\n\nYou have 7 minutes. A good response is about 100–150 words."
+},
+{
+  "kind": "email",
+  "title": "搬家求助(寫給朋友 Mike)",
+  "prompt": "You are moving to a new apartment this weekend, and there is too much work to do alone. Your friend Mike said he might be able to help.\n\nWrite an email to Mike. In your email, you should:\n• explain why you need his help\n• describe the three things that need to be done: pack your belongings into boxes, rent a small truck, and move the large furniture\n• suggest a date and time to meet\n\nYou have 7 minutes. A good response is about 100–150 words."
+},
+{
+  "kind": "email",
+  "title": "小組報告分工(寫給組員 Lisa)",
+  "prompt": "You and your classmate Lisa are doing a group presentation for your history class next Friday, and you need to divide the remaining work.\n\nWrite an email to Lisa. In your email, you should:\n• explain why you are writing and why you need her help\n• describe the three things that need to be done: organize the research materials, make the presentation slides, and rehearse the presentation together\n• suggest a date and time to meet\n\nYou have 7 minutes. A good response is about 100–150 words."
+},
+{
+  "kind": "email",
+  "title": "代收包裹與照顧(寫給室友 Tom)",
+  "prompt": "You will be away from your apartment for five days next week for a family visit, and you need your roommate Tom to take care of a few things while you are gone.\n\nWrite an email to Tom. In your email, you should:\n• explain why you need his help\n• describe the three things you need him to do: collect your packages, water the plants, and feed your cat\n• suggest a date and time to meet before you leave so you can show him everything\n\nYou have 7 minutes. A good response is about 100–150 words."
+},
+{
+  "kind": "discussion",
+  "title": "遠距 vs 實體上課",
+  "prompt": "Your professor is teaching a class on education. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: More and more universities now offer fully online courses alongside traditional in-person classes. Some educators believe online learning will eventually replace the classroom, while others insist that face-to-face instruction is irreplaceable. Which do you think is more effective for university students: online classes or in-person classes? Why?\n\nClaire: I think online classes are more effective. Students can rewatch the lectures anytime, and people who live far away or have part-time jobs can still attend. Flexibility helps more students succeed.\n\nPaul: I disagree. In a physical classroom, you can ask questions immediately and stay focused. At home there are too many distractions, and you lose the chance to build real relationships with classmates and professors."
+},
+{
+  "kind": "discussion",
+  "title": "社群媒體對人際關係利弊",
+  "prompt": "Your professor is teaching a class on sociology. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: Social media has fundamentally changed how people build and maintain relationships. Some researchers argue it strengthens our social connections, while others believe it makes relationships more superficial. In your view, does social media do more good or more harm to personal relationships?\n\nClaire: I believe it does more good. Social media lets me keep in touch with friends who moved abroad and even reconnect with people I had lost contact with. Without it, many relationships would simply fade away.\n\nPaul: I think it does more harm. People spend hours scrolling instead of actually talking to each other. Online interactions like clicking \"like\" feel social, but they are shallow compared to a real conversation."
+},
+{
+  "kind": "discussion",
+  "title": "大學是否該必修程式設計",
+  "prompt": "Your professor is teaching a class on education policy. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: Some universities are considering making basic computer programming a required course for all students, regardless of their major. Others argue that students should be free to choose the skills relevant to their own fields. Do you think universities should require all students to learn programming? Why or why not?\n\nClaire: I support the requirement. Technology is part of every industry now, and even art or history majors will work with data and software. Basic programming teaches logical thinking that benefits everyone.\n\nPaul: I don't think it should be required. University students already have heavy workloads in their own majors. Forcing someone who wants to be a nurse or a lawyer to write code wastes time they could spend on more relevant skills."
+},
+{
+  "kind": "discussion",
+  "title": "AI 工具在作業中的使用",
+  "prompt": "Your professor is teaching a class on academic ethics. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: Artificial intelligence tools can now write essays, solve math problems, and generate code. Universities are debating whether students should be allowed to use these tools for their assignments. Do you think students should be permitted to use AI tools for homework? Why or why not?\n\nClaire: I think students should be allowed to use them. AI tools are like calculators or search engines — they are part of the modern workplace, so students should learn to use them responsibly now.\n\nPaul: I disagree. If AI does the assignment, students skip the actual learning process. Homework exists to practice thinking, and letting a machine think for you defeats the whole purpose."
+},
+{
+  "kind": "discussion",
+  "title": "環保:個人責任 vs 政府政策",
+  "prompt": "Your professor is teaching a class on environmental studies. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: When it comes to protecting the environment, there are two common views: some say meaningful change depends on individuals changing their daily habits, while others say only government regulations can make a real difference. Which do you think matters more for solving environmental problems: individual action or government policy?\n\nClaire: I believe individual action matters more. Governments only respond when citizens care. When millions of people recycle, save energy, and buy eco-friendly products, companies and politicians have to follow.\n\nPaul: I think government policy is far more important. One factory can pollute more than thousands of households combined. Without laws and penalties, individual efforts are just a drop in the ocean."
+},
+{
+  "kind": "discussion",
+  "title": "大城市生活 vs 小鎮生活",
+  "prompt": "Your professor is teaching a class on urban studies. Write a post responding to the professor's question. In your response, you should express and support your opinion, and make a contribution to the discussion in your own words. An effective response will contain at least 100 words. You have 10 minutes.\n\nProfessor: Where people choose to live shapes almost every part of their lives. Some people prefer the energy and opportunities of big cities, while others prefer the calm and community of small towns. If you could choose, would you rather live in a big city or a small town? Why?\n\nClaire: I would choose a big city. Cities offer more job opportunities, better public transportation, and endless cultural events. For a young person starting a career, a city is clearly the better choice.\n\nPaul: I'd pick a small town. Life there is less stressful and less expensive, and neighbors actually know each other. In big cities, people live surrounded by crowds yet feel lonely."
+}
+]
