@@ -6,7 +6,7 @@
 
 | | 完整版(本機) | 網頁版(GitHub Pages) |
 |---|---|---|
-| 網址 | http://localhost:5173(`npm run dev`) | https://arthur031221.github.io |
+| 網址 | http://localhost:5173(`npm run dev`) | https://arthur031221.github.io/arthur-toefl/ |
 | 資料 | SQLite(`app/data/`) | 瀏覽器 localStorage(設定頁可匯出/匯入) |
 | 轉錄 | faster-whisper(準) | Web Speech 即時轉錄(Chrome) |
 | AI 批改 | Claude CLI(訂閱零費用)或 API | 自填 Anthropic API key(只存本機瀏覽器) |
