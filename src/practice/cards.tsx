@@ -53,6 +53,8 @@ export function CtwCard({ item, onDone }: { item: CtwItem; onDone: (r: CardResul
   const blanks = parts.filter((p) => p.t === 'blank') as { t: 'blank'; show: string; ans: string }[];
   const [values, setValues] = useState<string[]>(blanks.map(() => ''));
   const [checked, setChecked] = useState(false);
+  const [focused, setFocused] = useState<number | null>(null);
+  const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
   const sec = useElapsed(!checked);
   const secRef = useRef(0);
   secRef.current = sec;
@@ -73,31 +75,69 @@ export function CtwCard({ item, onDone }: { item: CtwItem; onDone: (r: CardResul
         <div className="font-semibold text-slate-800">{item.title}</div>
         <Timer sec={sec} limit={120} />
       </div>
+      <div className="mb-1 text-xs text-slate-400">底線格數 = 缺幾個字母(對標官方);打滿自動跳下一空,Enter 交卷</div>
       <div className="text-[15px] leading-loose text-slate-700">
         <span>{item.intro} </span>
         {parts.map((p, i) => {
           if (p.t === 'text') return <span key={i}>{p.s}</span>;
           blankIdx++;
           const bi = blankIdx;
-          const ok = checked && values[bi].trim().toLowerCase() === p.ans.toLowerCase();
+          const val = values[bi];
+          const ok = checked && val.trim().toLowerCase() === p.ans.toLowerCase();
           return (
             <span key={i} className="whitespace-nowrap">
               <span className="font-medium">{p.show}</span>
-              <input
-                className={`mx-0.5 inline-block border-b-2 bg-transparent px-0.5 text-center font-mono outline-none ${
-                  checked ? (ok ? 'border-emerald-500 text-emerald-700' : 'border-rose-500 text-rose-600') : 'border-brand-400'
+              {/* 一個缺字母一格:_ 未填、字母已填;隱形 input 收鍵盤 */}
+              <span
+                className={`relative mx-0.5 inline-flex cursor-text rounded-sm px-0.5 align-baseline font-mono ${
+                  checked
+                    ? ok
+                      ? 'bg-emerald-50 text-emerald-700'
+                      : 'bg-rose-50 text-rose-600'
+                    : focused === bi
+                      ? 'bg-brand-50 ring-1 ring-brand-400'
+                      : 'bg-slate-100'
                 }`}
-                style={{ width: `${Math.max(3, p.ans.length + 1)}ch` }}
-                value={values[bi]}
-                readOnly={checked}
-                onChange={(e) => {
-                  const v = e.target.value.replace(/[^A-Za-z'’-]/g, '');
-                  setValues((prev) => prev.map((x, j) => (j === bi ? v : x)));
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') submit();
-                }}
-              />
+                onClick={() => inputsRef.current[bi]?.focus()}
+              >
+                {Array.from({ length: p.ans.length }).map((_, ci) => (
+                  <span key={ci} className="inline-block w-[1.15ch] text-center">
+                    {val[ci] ?? <span className={checked ? 'opacity-40' : 'text-slate-400'}>_</span>}
+                  </span>
+                ))}
+                <input
+                  ref={(el) => {
+                    inputsRef.current[bi] = el;
+                  }}
+                  className="absolute inset-0 h-full w-full cursor-text opacity-0"
+                  value={val}
+                  maxLength={p.ans.length}
+                  readOnly={checked}
+                  autoCapitalize="off"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  onFocus={() => setFocused(bi)}
+                  onBlur={() => setFocused((f) => (f === bi ? null : f))}
+                  onChange={(e) => {
+                    const v = e.target.value.replace(/[^A-Za-z'’-]/g, '');
+                    setValues((prev) => prev.map((x, j) => (j === bi ? v : x)));
+                    if (v.length >= p.ans.length) inputsRef.current[bi + 1]?.focus(); // 打滿跳下一空
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') submit();
+                    if (e.key === 'Backspace' && val.length === 0) {
+                      e.preventDefault();
+                      inputsRef.current[bi - 1]?.focus();
+                    }
+                    if (e.key === 'ArrowRight' && (e.target as HTMLInputElement).selectionStart === val.length) {
+                      inputsRef.current[bi + 1]?.focus();
+                    }
+                    if (e.key === 'ArrowLeft' && (e.target as HTMLInputElement).selectionStart === 0) {
+                      inputsRef.current[bi - 1]?.focus();
+                    }
+                  }}
+                />
+              </span>
               {checked && !ok && <b className="text-emerald-600 text-xs">({p.ans})</b>}
             </span>
           );
