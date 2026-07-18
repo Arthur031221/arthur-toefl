@@ -1,170 +1,2006 @@
 {
-  "build_sentence": [
-    {
-      "id": "bs-001",
-      "context": "Are you ready to order?",
-      "answer": "I need a few minutes",
-      "punct": ".",
-      "hint_zh": "（點餐時）表示自己還需要幾分鐘才能決定。"
-    },
-    {
-      "id": "bs-002",
-      "context": "Do you know where the library is?",
-      "answer": "It's right behind the science building",
-      "punct": ".",
-      "hint_zh": "告訴對方圖書館就在科學館後面。"
-    },
-    {
-      "id": "bs-003",
-      "context": "I just finished my last exam.",
-      "answer": "How do you think it went",
-      "punct": "?",
-      "hint_zh": "問對方覺得這場考試考得怎麼樣。"
-    },
-    {
-      "id": "bs-004",
-      "context": "Should we meet before the study group?",
-      "answer": "Let's meet outside the coffee shop instead",
-      "punct": ".",
-      "hint_zh": "提議改約在咖啡店外面碰面。"
-    },
-    {
-      "id": "bs-005",
-      "context": "Why weren't you in class today?",
-      "answer": "I woke up with a bad cold",
-      "punct": ".",
-      "hint_zh": "說明自己起床時得了重感冒。"
-    },
-    {
-      "id": "bs-006",
-      "context": "I'm thinking about dropping the economics course.",
-      "answer": "Have you talked to your advisor about it",
-      "punct": "?",
-      "hint_zh": "問對方有沒有先跟指導教授談過這件事。"
-    },
-    {
-      "id": "bs-007",
-      "context": "The professor moved the deadline to Friday.",
-      "answer": "That takes a lot of pressure off me",
-      "punct": ".",
-      "hint_zh": "表示這（延後）幫自己減輕了不少壓力。"
-    },
-    {
-      "id": "bs-008",
-      "context": "Did you hear the campus shuttle is free now?",
-      "answer": "That will save a lot of students some money",
-      "punct": ".",
-      "hint_zh": "表示這會幫很多學生省下不少錢。"
-    },
-    {
-      "id": "bs-009",
-      "context": "I'm having trouble understanding the reading assignment.",
-      "answer": "Should we try going through it together after class",
-      "punct": "?",
-      "hint_zh": "提議下課後一起把這篇讀物弄懂。"
-    },
-    {
-      "id": "bs-010",
-      "context": "I can't decide which elective to take next semester.",
-      "answer": "You should pick the one that works with your schedule",
-      "punct": ".",
-      "hint_zh": "建議選能配合自己時間的那一門。"
-    },
-    {
-      "id": "bs-011",
-      "context": "The library is completely packed during finals week.",
-      "answer": "That's exactly why I reserve a study room ahead of time",
-      "punct": ".",
-      "hint_zh": "表示所以自己才會提前預約自習室。"
-    },
-    {
-      "id": "bs-012",
-      "context": "I've been feeling overwhelmed with all my coursework lately.",
-      "answer": "Have you thought about talking to someone at the counseling center",
-      "punct": "?",
-      "hint_zh": "問對方有沒有想過去諮商中心找人聊聊。"
-    },
-    {
-      "id": "bs-013",
-      "context": "I'm not sure I can finish this project by tomorrow.",
-      "answer": "You could ask the professor to give you a couple more days",
-      "punct": ".",
-      "hint_zh": "建議去請教授多給自己幾天時間。"
-    },
-    {
-      "id": "bs-014",
-      "context": "I heard the biology midterm is going to be really difficult.",
-      "answer": "That's exactly why I've been reviewing my notes for the past two weeks",
-      "punct": ".",
-      "hint_zh": "表示所以自己這兩週一直在複習筆記。"
-    },
-    {
-      "id": "bs-015",
-      "context": "I completely forgot to sign up for the campus tour.",
-      "answer": "Do you think there are any spots left for the tour this weekend",
-      "punct": "?",
-      "hint_zh": "問對方覺得這週末的導覽還有沒有名額。"
-    },
-    {
-      "id": "bs-016",
-      "context": "I still don't understand how to cite sources in this format.",
-      "answer": "The writing center offers free workshops that can walk you through the whole process",
-      "punct": ".",
-      "hint_zh": "告訴對方寫作中心有免費工作坊，能帶你走過整個流程。"
-    }
-  ],
-  "lnr_sets": [
-    {
-      "id": "lnr-001",
-      "title": "校園行政（註冊與選課）",
-      "sentences": [
-        "I need to update my address.",
-        "You have to fill out this form first.",
-        "I want to add a couple of new classes.",
-        "Could you tell me when the add-drop deadline is this term?",
-        "You're going to need to get your advisor's signature on this form.",
-        "If you miss the deadline, you will have to pay a late fee.",
-        "I could have submitted everything on time if I had known about the new deadline."
-      ]
-    },
-    {
-      "id": "lnr-002",
-      "title": "課堂學術（討論與作業）",
-      "sentences": [
-        "Let's look at the next chapter.",
-        "I want to focus on the main idea.",
-        "Most of the students seem to struggle with this concept.",
-        "You are going to write a short response paper for tomorrow.",
-        "We could have covered a couple of these topics a lot sooner.",
-        "The results of the experiment did not really match what we had expected.",
-        "If you want to do well on the exam, you have to review all of the readings."
-      ]
-    },
-    {
-      "id": "lnr-003",
-      "title": "日常生活（購物與雜事）",
-      "sentences": [
-        "I have to run some errands.",
-        "Do you want to come along with me?",
-        "I need to pick up a couple of things.",
-        "We are going to stop by the store on the way.",
-        "Most of the shops downtown are going to close early on Sunday.",
-        "I could have saved some money if I had brought a coupon along.",
-        "If we want to avoid the crowds, we should try to get there before noon."
-      ]
-    },
-    {
-      "id": "lnr-004",
-      "title": "社交活動（聚會與邀約）",
-      "sentences": [
-        "We are going to a party.",
-        "Do you want to join us later tonight?",
-        "A couple of my friends are coming over too.",
-        "We are going to meet up at the coffee shop first.",
-        "Most of the group wants to go see the new movie downtown.",
-        "You could have come with us if you had finished a little earlier.",
-        "If you want to come, we are going to leave around eight after we grab dinner."
-      ]
-    }
-  ]
+ "build_sentence": [
+  {
+   "id": "bs-001",
+   "context": "Are you ready to order?",
+   "answer": "I need a few minutes",
+   "punct": ".",
+   "hint_zh": "（點餐時）表示自己還需要幾分鐘才能決定。"
+  },
+  {
+   "id": "bs-002",
+   "context": "Do you know where the library is?",
+   "answer": "It's right behind the science building",
+   "punct": ".",
+   "hint_zh": "告訴對方圖書館就在科學館後面。"
+  },
+  {
+   "id": "bs-003",
+   "context": "I just finished my last exam.",
+   "answer": "How do you think it went",
+   "punct": "?",
+   "hint_zh": "問對方覺得這場考試考得怎麼樣。"
+  },
+  {
+   "id": "bs-004",
+   "context": "Should we meet before the study group?",
+   "answer": "Let's meet outside the coffee shop instead",
+   "punct": ".",
+   "hint_zh": "提議改約在咖啡店外面碰面。"
+  },
+  {
+   "id": "bs-005",
+   "context": "Why weren't you in class today?",
+   "answer": "I woke up with a bad cold",
+   "punct": ".",
+   "hint_zh": "說明自己起床時得了重感冒。"
+  },
+  {
+   "id": "bs-006",
+   "context": "I'm thinking about dropping the economics course.",
+   "answer": "Have you talked to your advisor about it",
+   "punct": "?",
+   "hint_zh": "問對方有沒有先跟指導教授談過這件事。"
+  },
+  {
+   "id": "bs-007",
+   "context": "The professor moved the deadline to Friday.",
+   "answer": "That takes a lot of pressure off me",
+   "punct": ".",
+   "hint_zh": "表示這（延後）幫自己減輕了不少壓力。"
+  },
+  {
+   "id": "bs-008",
+   "context": "Did you hear the campus shuttle is free now?",
+   "answer": "That will save a lot of students some money",
+   "punct": ".",
+   "hint_zh": "表示這會幫很多學生省下不少錢。"
+  },
+  {
+   "id": "bs-009",
+   "context": "I'm having trouble understanding the reading assignment.",
+   "answer": "Should we try going through it together after class",
+   "punct": "?",
+   "hint_zh": "提議下課後一起把這篇讀物弄懂。"
+  },
+  {
+   "id": "bs-010",
+   "context": "I can't decide which elective to take next semester.",
+   "answer": "You should pick the one that works with your schedule",
+   "punct": ".",
+   "hint_zh": "建議選能配合自己時間的那一門。"
+  },
+  {
+   "id": "bs-011",
+   "context": "The library is completely packed during finals week.",
+   "answer": "That's exactly why I reserve a study room ahead of time",
+   "punct": ".",
+   "hint_zh": "表示所以自己才會提前預約自習室。"
+  },
+  {
+   "id": "bs-012",
+   "context": "I've been feeling overwhelmed with all my coursework lately.",
+   "answer": "Have you thought about talking to someone at the counseling center",
+   "punct": "?",
+   "hint_zh": "問對方有沒有想過去諮商中心找人聊聊。"
+  },
+  {
+   "id": "bs-013",
+   "context": "I'm not sure I can finish this project by tomorrow.",
+   "answer": "You could ask the professor to give you a couple more days",
+   "punct": ".",
+   "hint_zh": "建議去請教授多給自己幾天時間。"
+  },
+  {
+   "id": "bs-014",
+   "context": "I heard the biology midterm is going to be really difficult.",
+   "answer": "That's exactly why I've been reviewing my notes for the past two weeks",
+   "punct": ".",
+   "hint_zh": "表示所以自己這兩週一直在複習筆記。"
+  },
+  {
+   "id": "bs-015",
+   "context": "I completely forgot to sign up for the campus tour.",
+   "answer": "Do you think there are any spots left for the tour this weekend",
+   "punct": "?",
+   "hint_zh": "問對方覺得這週末的導覽還有沒有名額。"
+  },
+  {
+   "id": "bs-016",
+   "context": "I still don't understand how to cite sources in this format.",
+   "answer": "The writing center offers free workshops that can walk you through the whole process",
+   "punct": ".",
+   "hint_zh": "告訴對方寫作中心有免費工作坊，能帶你走過整個流程。"
+  },
+  {
+   "id": "bs-b2-01",
+   "context": "Where are you going after class?",
+   "answer": "I'm heading to the library",
+   "punct": ".",
+   "hint_zh": "我要去圖書館。"
+  },
+  {
+   "id": "bs-b2-02",
+   "context": "Have you finished the reading assignment?",
+   "answer": "I have two chapters left to read",
+   "punct": ".",
+   "hint_zh": "我還有兩章要讀。"
+  },
+  {
+   "id": "bs-b2-03",
+   "context": "I'm throwing a party this weekend.",
+   "answer": "Can I bring a guest too",
+   "punct": "?",
+   "hint_zh": "我可以帶一位客人一起去嗎?"
+  },
+  {
+   "id": "bs-b2-04",
+   "context": "Why were you late this morning?",
+   "answer": "My alarm didn't go off",
+   "punct": ".",
+   "hint_zh": "我的鬧鐘沒有響。"
+  },
+  {
+   "id": "bs-b2-05",
+   "context": "This math problem is really confusing.",
+   "answer": "Do you want some help with it",
+   "punct": "?",
+   "hint_zh": "你需要我幫忙嗎?"
+  },
+  {
+   "id": "bs-b2-06",
+   "context": "How was the biology lecture today?",
+   "answer": "I learned a lot from it",
+   "punct": ".",
+   "hint_zh": "我從中學到很多。"
+  },
+  {
+   "id": "bs-b2-07",
+   "context": "I just got tickets to the concert.",
+   "answer": "Which band are you going to see",
+   "punct": "?",
+   "hint_zh": "你要去看哪個樂團?"
+  },
+  {
+   "id": "bs-b2-08",
+   "context": "Do you want to grab lunch now?",
+   "answer": "I'd rather eat after my meeting",
+   "punct": ".",
+   "hint_zh": "我寧願開完會再吃。"
+  },
+  {
+   "id": "bs-b2-09",
+   "context": "Can you help me move this weekend?",
+   "answer": "I have to work all weekend",
+   "punct": ".",
+   "hint_zh": "我整個週末都要工作。"
+  },
+  {
+   "id": "bs-b2-10",
+   "context": "I'm not sure which class to take.",
+   "answer": "Have you asked your academic advisor",
+   "punct": "?",
+   "hint_zh": "你問過指導教授了嗎?"
+  },
+  {
+   "id": "bs-b2-11",
+   "context": "The cafeteria is closed today.",
+   "answer": "Let's grab something from the vending machine",
+   "punct": ".",
+   "hint_zh": "我們去自動販賣機買點東西吧。"
+  },
+  {
+   "id": "bs-b2-12",
+   "context": "I found a great study spot on campus.",
+   "answer": "Where can I find that place",
+   "punct": "?",
+   "hint_zh": "我在哪裡可以找到那個地方?"
+  },
+  {
+   "id": "bs-b2-13",
+   "context": "Are you ready for the exam tomorrow?",
+   "answer": "I need one more day to prepare",
+   "punct": ".",
+   "hint_zh": "我還需要一天來準備。"
+  },
+  {
+   "id": "bs-b2-14",
+   "context": "What did you think of the movie?",
+   "answer": "I thought it was too long",
+   "punct": ".",
+   "hint_zh": "我覺得它太長了。"
+  },
+  {
+   "id": "bs-b2-15",
+   "context": "I'm planning a trip during spring break.",
+   "answer": "Where are you thinking of going",
+   "punct": "?",
+   "hint_zh": "你想去哪裡?"
+  },
+  {
+   "id": "bs-b2-16",
+   "context": "Could you lend me your notes?",
+   "answer": "I'll email them to you",
+   "punct": ".",
+   "hint_zh": "我會把筆記寄給你。"
+  },
+  {
+   "id": "bs-b2-17",
+   "context": "This coffee shop is always so crowded.",
+   "answer": "Let's try the one across the street",
+   "punct": ".",
+   "hint_zh": "我們去對街那家試試吧。"
+  },
+  {
+   "id": "bs-b2-18",
+   "context": "I got an A on my essay!",
+   "answer": "How did you manage to do that",
+   "punct": "?",
+   "hint_zh": "你是怎麼辦到的?"
+  },
+  {
+   "id": "bs-b2-19",
+   "context": "Do you understand this chemistry formula?",
+   "answer": "I find it confusing as well",
+   "punct": ".",
+   "hint_zh": "我也覺得它很難懂。"
+  },
+  {
+   "id": "bs-b2-20",
+   "context": "The library closes at nine tonight.",
+   "answer": "We should finish this before then",
+   "punct": ".",
+   "hint_zh": "我們應該在那之前完成。"
+  },
+  {
+   "id": "bs-b2-21",
+   "context": "I'm thinking about joining a club.",
+   "answer": "Which one interests you the most",
+   "punct": "?",
+   "hint_zh": "你對哪一個最有興趣?"
+  },
+  {
+   "id": "bs-b2-22",
+   "context": "Can we meet to discuss the group project?",
+   "answer": "I'm free any time after three",
+   "punct": ".",
+   "hint_zh": "我三點以後隨時有空。"
+  },
+  {
+   "id": "bs-b2-23",
+   "context": "I can't find my student ID card.",
+   "answer": "Check the pocket of your backpack",
+   "punct": ".",
+   "hint_zh": "檢查一下你背包的口袋。"
+  },
+  {
+   "id": "bs-b2-24",
+   "context": "I decided to change my major.",
+   "answer": "What made you change your mind",
+   "punct": "?",
+   "hint_zh": "是什麼讓你改變主意的?"
+  },
+  {
+   "id": "bs-b2-25",
+   "context": "The weather looks pretty bad outside.",
+   "answer": "Don't forget to bring an umbrella",
+   "punct": ".",
+   "hint_zh": "別忘了帶把傘。"
+  },
+  {
+   "id": "bs-b2-26",
+   "context": "Have you seen my textbook anywhere?",
+   "answer": "You left it in the classroom",
+   "punct": ".",
+   "hint_zh": "你把它忘在教室了。"
+  },
+  {
+   "id": "bs-b2-27",
+   "context": "I'm really nervous about my presentation.",
+   "answer": "Would you like to practice with me",
+   "punct": "?",
+   "hint_zh": "你想跟我一起練習嗎?"
+  },
+  {
+   "id": "bs-b2-28",
+   "context": "Thanks for helping me study last night.",
+   "answer": "I'm glad I could help you out",
+   "punct": ".",
+   "hint_zh": "很高興我能幫上你的忙。"
+  },
+  {
+   "id": "bs-b2-29",
+   "context": "Should we take the bus or walk?",
+   "answer": "Walking will take us too long",
+   "punct": ".",
+   "hint_zh": "走路會花太多時間。"
+  },
+  {
+   "id": "bs-b2-30",
+   "context": "I bought a new laptop yesterday.",
+   "answer": "How much did it cost you",
+   "punct": "?",
+   "hint_zh": "它花了你多少錢?"
+  },
+  {
+   "id": "bs-b2-31",
+   "context": "I don't know how to solve this.",
+   "answer": "Try asking the teaching assistant",
+   "punct": ".",
+   "hint_zh": "試著問問助教吧。"
+  },
+  {
+   "id": "bs-b2-32",
+   "context": "The dorm kitchen is a total mess.",
+   "answer": "We should clean it up together",
+   "punct": ".",
+   "hint_zh": "我們應該一起把它清乾淨。"
+  },
+  {
+   "id": "bs-b2-33",
+   "context": "I'm going to the bookstore now.",
+   "answer": "Could you get me a notebook",
+   "punct": "?",
+   "hint_zh": "你可以幫我買本筆記本嗎?"
+  },
+  {
+   "id": "bs-b2-34",
+   "context": "Why is everyone leaving the lecture hall?",
+   "answer": "The professor canceled today's afternoon session",
+   "punct": ".",
+   "hint_zh": "教授取消了今天下午的課。"
+  },
+  {
+   "id": "bs-b2-35",
+   "context": "I'm exhausted after that long hike.",
+   "answer": "Let's take a break over there",
+   "punct": ".",
+   "hint_zh": "我們去那邊休息一下吧。"
+  },
+  {
+   "id": "bs-b2-36",
+   "context": "I signed up for a morning yoga class.",
+   "answer": "When does the first class begin",
+   "punct": "?",
+   "hint_zh": "第一堂課什麼時候開始?"
+  },
+  {
+   "id": "bs-b2-37",
+   "context": "I left my charger at home again.",
+   "answer": "You can borrow mine for now",
+   "punct": ".",
+   "hint_zh": "你可以先借我的用。"
+  },
+  {
+   "id": "bs-b2-38",
+   "context": "There's a guest speaker in the auditorium.",
+   "answer": "Do you know what she's talking about",
+   "punct": "?",
+   "hint_zh": "你知道她在講什麼嗎?"
+  },
+  {
+   "id": "bs-b2-39",
+   "context": "My roommate keeps borrowing my things.",
+   "answer": "You should talk to him about it",
+   "punct": ".",
+   "hint_zh": "你應該找他談談這件事。"
+  },
+  {
+   "id": "bs-b2-40",
+   "context": "This recipe calls for three fresh eggs.",
+   "answer": "We are out of fresh eggs",
+   "punct": ".",
+   "hint_zh": "我們沒有新鮮雞蛋了。"
+  },
+  {
+   "id": "bs-b2-41",
+   "context": "I'm applying for a summer internship.",
+   "answer": "Have you finished your resume yet",
+   "punct": "?",
+   "hint_zh": "你的履歷寫好了嗎?"
+  },
+  {
+   "id": "bs-b2-42",
+   "context": "Thanks for inviting me to dinner.",
+   "answer": "You're welcome to join us anytime",
+   "punct": ".",
+   "hint_zh": "歡迎你隨時加入我們。"
+  },
+  {
+   "id": "bs-b3-01",
+   "context": "Why did you skip the study group yesterday afternoon?",
+   "answer": "I had to visit the dentist because my tooth was aching",
+   "punct": ".",
+   "hint_zh": "解釋你因牙齒疼痛必須去看牙醫。"
+  },
+  {
+   "id": "bs-b3-02",
+   "context": "What did the professor announce about the final research paper?",
+   "answer": "She wants us to submit our drafts before the winter break",
+   "punct": ".",
+   "hint_zh": "說明教授要你們在寒假前繳交草稿。"
+  },
+  {
+   "id": "bs-b3-03",
+   "context": "I really need a quiet spot to prepare for finals.",
+   "answer": "Have you tried the reading room on the library's top floor",
+   "punct": "?",
+   "hint_zh": "詢問對方是否試過圖書館頂樓的閱覽室。"
+  },
+  {
+   "id": "bs-b3-04",
+   "context": "My laptop keeps freezing whenever I open the presentation software.",
+   "answer": "You should ask the technician who staffs the campus help desk",
+   "punct": ".",
+   "hint_zh": "建議對方去問管理校園服務台的技術人員。"
+  },
+  {
+   "id": "bs-b3-05",
+   "context": "I honestly can't decide which elective to register for.",
+   "answer": "Why don't you pick the course that matches your career plans",
+   "punct": "?",
+   "hint_zh": "建議對方選擇符合職涯規劃的課程。"
+  },
+  {
+   "id": "bs-b3-06",
+   "context": "The dining hall was impossibly crowded at noon today.",
+   "answer": "That happens every time they serve the curry students really enjoy",
+   "punct": ".",
+   "hint_zh": "說明每次供應學生喜愛的咖哩時都會這樣。"
+  },
+  {
+   "id": "bs-b3-07",
+   "context": "I heard you finally moved into an off-campus apartment.",
+   "answer": "It takes me half an hour to reach the science building",
+   "punct": ".",
+   "hint_zh": "說明你要花半小時才能到理學院大樓。"
+  },
+  {
+   "id": "bs-b3-08",
+   "context": "Did you sign up for the weekend trip to the art museum?",
+   "answer": "I still need to register for it before this Friday's deadline",
+   "punct": ".",
+   "hint_zh": "說明你仍須在本週五截止前報名。"
+  },
+  {
+   "id": "bs-b3-09",
+   "context": "Do you want to grab coffee after the chemistry lab?",
+   "answer": "I can't because my advisor asked to meet this afternoon",
+   "punct": ".",
+   "hint_zh": "說明你不行因為指導教授約你下午見面。"
+  },
+  {
+   "id": "bs-b3-10",
+   "context": "How did your internship interview go this morning?",
+   "answer": "They asked several tough questions that I could barely answer",
+   "punct": ".",
+   "hint_zh": "說明他們問了幾個你幾乎答不出來的難題。"
+  },
+  {
+   "id": "bs-b3-11",
+   "context": "I'm thinking about joining the campus debate club.",
+   "answer": "Do you know when they hold their weekly practice sessions",
+   "punct": "?",
+   "hint_zh": "詢問他們每週何時舉行練習。"
+  },
+  {
+   "id": "bs-b3-12",
+   "context": "I left my umbrella somewhere in the student center.",
+   "answer": "Did you check the lost and found near the main entrance",
+   "punct": "?",
+   "hint_zh": "詢問對方是否查看過大門附近的失物招領處。"
+  },
+  {
+   "id": "bs-b3-13",
+   "context": "I'm exhausted from staying up to finish the lab report.",
+   "answer": "You should get some rest before your presentation tomorrow morning",
+   "punct": ".",
+   "hint_zh": "建議對方在明早報告前好好休息。"
+  },
+  {
+   "id": "bs-b3-14",
+   "context": "The bookstore says my textbook is out of stock.",
+   "answer": "Could you borrow a copy from someone in your seminar",
+   "punct": "?",
+   "hint_zh": "詢問對方能否向研討課的同學借一本。"
+  },
+  {
+   "id": "bs-b3-15",
+   "context": "I don't understand the feedback the professor wrote on my essay.",
+   "answer": "You could visit her office during the hours she posted online",
+   "punct": ".",
+   "hint_zh": "建議對方在教授公布的辦公時間去找她。"
+  },
+  {
+   "id": "bs-b3-16",
+   "context": "I want to improve my grade in statistics this term.",
+   "answer": "Have you considered hiring a tutor from the math department",
+   "punct": "?",
+   "hint_zh": "詢問對方是否考慮請數學系的家教。"
+  },
+  {
+   "id": "bs-b3-17",
+   "context": "The registration system rejected my course selection again.",
+   "answer": "You may need to clear the holds on your student account",
+   "punct": ".",
+   "hint_zh": "說明對方可能需要解除學生帳戶上的限制。"
+  },
+  {
+   "id": "bs-b3-18",
+   "context": "I'm nervous about presenting in front of the whole class.",
+   "answer": "Try to practice your speech until the words feel natural",
+   "punct": ".",
+   "hint_zh": "建議對方反覆練習演講直到說得自然。"
+  },
+  {
+   "id": "bs-b3-19",
+   "context": "My roommate plays loud music every single night.",
+   "answer": "Have you talked to the resident advisor about the noise",
+   "punct": "?",
+   "hint_zh": "詢問對方是否向宿舍輔導員反映噪音。"
+  },
+  {
+   "id": "bs-b3-20",
+   "context": "I can't decide whether to study abroad next year.",
+   "answer": "You should discuss the options with someone who studied overseas",
+   "punct": ".",
+   "hint_zh": "建議對方和曾出國留學的人討論選項。"
+  },
+  {
+   "id": "bs-b3-21",
+   "context": "The deadline for the scholarship application is approaching.",
+   "answer": "Do you know which documents the committee requires from applicants",
+   "punct": "?",
+   "hint_zh": "詢問委員會要求申請者提供哪些文件。"
+  },
+  {
+   "id": "bs-b3-22",
+   "context": "I keep falling behind in my morning economics lecture.",
+   "answer": "You could record the lectures so you can review them later",
+   "punct": ".",
+   "hint_zh": "建議對方錄下講課以便日後複習。"
+  },
+  {
+   "id": "bs-b3-23",
+   "context": "I spilled coffee all over my sociology notes.",
+   "answer": "Ask a classmate if you can photocopy the pages you lost",
+   "punct": ".",
+   "hint_zh": "建議對方問同學能否影印弄丟的頁面。"
+  },
+  {
+   "id": "bs-b3-24",
+   "context": "I've never used the printers in the computer lab.",
+   "answer": "Would you like me to show you how they work",
+   "punct": "?",
+   "hint_zh": "詢問對方是否要你示範印表機的使用方式。"
+  },
+  {
+   "id": "bs-b3-25",
+   "context": "The group project is due and one member disappeared.",
+   "answer": "You ought to email the professor about the missing teammate",
+   "punct": ".",
+   "hint_zh": "建議對方寫信告訴教授有組員失聯。"
+  },
+  {
+   "id": "bs-b3-26",
+   "context": "I'm looking for a part-time job near campus.",
+   "answer": "Have you checked the openings posted at the career center",
+   "punct": "?",
+   "hint_zh": "詢問對方是否看過職涯中心張貼的職缺。"
+  },
+  {
+   "id": "bs-b3-27",
+   "context": "I really struggled with the essay question on the midterm.",
+   "answer": "Everyone found it hard because the wording was so confusing",
+   "punct": ".",
+   "hint_zh": "說明大家都覺得難因為題目敘述太令人困惑。"
+  },
+  {
+   "id": "bs-b3-28",
+   "context": "I want to join a club but don't know which one.",
+   "answer": "Pick one that connects to the field you plan to study",
+   "punct": ".",
+   "hint_zh": "建議對方選擇和打算主修領域相關的社團。"
+  },
+  {
+   "id": "bs-b3-29",
+   "context": "The weather forecast predicts heavy snow this weekend.",
+   "answer": "Should we reschedule the hiking trip we planned for Saturday",
+   "punct": "?",
+   "hint_zh": "詢問是否該改期原定週六的健行。"
+  },
+  {
+   "id": "bs-b3-30",
+   "context": "I forgot to save my document before the computer restarted.",
+   "answer": "Check whether the program kept a backup of your file",
+   "punct": ".",
+   "hint_zh": "建議對方檢查程式是否保留了檔案備份。"
+  },
+  {
+   "id": "bs-b3-31",
+   "context": "I'm worried I won't finish reading before the seminar.",
+   "answer": "Focus on the chapters the professor marked as most important",
+   "punct": ".",
+   "hint_zh": "建議對方專注在教授標為最重要的章節。"
+  },
+  {
+   "id": "bs-b3-32",
+   "context": "I'd like to see the new exhibit at the gallery.",
+   "answer": "Do you want to go together after our afternoon classes end",
+   "punct": "?",
+   "hint_zh": "詢問對方是否想在下午課後一起去。"
+  },
+  {
+   "id": "bs-b3-33",
+   "context": "My presentation slides look boring and plain.",
+   "answer": "Add some charts that help the audience follow your main points",
+   "punct": ".",
+   "hint_zh": "建議對方加入能幫助聽眾理解重點的圖表。"
+  },
+  {
+   "id": "bs-b3-34",
+   "context": "I missed the announcement about the schedule change.",
+   "answer": "Check the email the department sent us earlier this morning",
+   "punct": ".",
+   "hint_zh": "建議對方查看系上今早稍早寄的電子郵件。"
+  },
+  {
+   "id": "bs-b3-35",
+   "context": "I've been feeling stressed about my heavy course load.",
+   "answer": "Have you thought about dropping one of your harder classes",
+   "punct": "?",
+   "hint_zh": "詢問對方是否想過退掉一門較難的課。"
+  },
+  {
+   "id": "bs-b3-36",
+   "context": "The library closes earlier than I expected on weekends.",
+   "answer": "You can study at the cafe that stays open until midnight",
+   "punct": ".",
+   "hint_zh": "建議對方去營業到午夜的咖啡館唸書。"
+  },
+  {
+   "id": "bs-b3-37",
+   "context": "I don't know how to cite sources in this format.",
+   "answer": "The writing center offers workshops that explain every citation style",
+   "punct": ".",
+   "hint_zh": "說明寫作中心有講解各種引用格式的工作坊。"
+  },
+  {
+   "id": "bs-b3-38",
+   "context": "I'm not sure my thesis statement is strong enough.",
+   "answer": "Would you mind reading it before I hand the paper in",
+   "punct": "?",
+   "hint_zh": "詢問對方是否願意在交報告前幫忙看。"
+  },
+  {
+   "id": "bs-b3-39",
+   "context": "The bus to downtown was twenty minutes late again.",
+   "answer": "The subway will get you there faster than the crowded bus",
+   "punct": ".",
+   "hint_zh": "說明地鐵會比擁擠的公車更快到達。"
+  },
+  {
+   "id": "bs-b3-40",
+   "context": "I can't concentrate when I study in my noisy dorm.",
+   "answer": "Move to a study pod where nobody is allowed to talk",
+   "punct": ".",
+   "hint_zh": "建議對方換到不准說話的自習隔間。"
+  },
+  {
+   "id": "bs-b3-41",
+   "context": "I really enjoyed the guest lecture on climate policy.",
+   "answer": "Did you get a chance to ask the speaker any questions",
+   "punct": "?",
+   "hint_zh": "詢問對方是否有機會向講者提問。"
+  },
+  {
+   "id": "bs-b3-42",
+   "context": "I want to thank the professor for writing my recommendation.",
+   "answer": "Send her a note expressing how much the support meant",
+   "punct": ".",
+   "hint_zh": "建議對方寫張紙條表達那份支持對你意義重大。"
+  }
+ ],
+ "lnr_sets": [
+  {
+   "id": "lnr-001",
+   "title": "校園行政（註冊與選課）",
+   "sentences": [
+    "I need to update my address.",
+    "You have to fill out this form first.",
+    "I want to add a couple of new classes.",
+    "Could you tell me when the add-drop deadline is this term?",
+    "You're going to need to get your advisor's signature on this form.",
+    "If you miss the deadline, you will have to pay a late fee.",
+    "I could have submitted everything on time if I had known about the new deadline."
+   ]
+  },
+  {
+   "id": "lnr-002",
+   "title": "課堂學術（討論與作業）",
+   "sentences": [
+    "Let's look at the next chapter.",
+    "I want to focus on the main idea.",
+    "Most of the students seem to struggle with this concept.",
+    "You are going to write a short response paper for tomorrow.",
+    "We could have covered a couple of these topics a lot sooner.",
+    "The results of the experiment did not really match what we had expected.",
+    "If you want to do well on the exam, you have to review all of the readings."
+   ]
+  },
+  {
+   "id": "lnr-003",
+   "title": "日常生活（購物與雜事）",
+   "sentences": [
+    "I have to run some errands.",
+    "Do you want to come along with me?",
+    "I need to pick up a couple of things.",
+    "We are going to stop by the store on the way.",
+    "Most of the shops downtown are going to close early on Sunday.",
+    "I could have saved some money if I had brought a coupon along.",
+    "If we want to avoid the crowds, we should try to get there before noon."
+   ]
+  },
+  {
+   "id": "lnr-004",
+   "title": "社交活動（聚會與邀約）",
+   "sentences": [
+    "We are going to a party.",
+    "Do you want to join us later tonight?",
+    "A couple of my friends are coming over too.",
+    "We are going to meet up at the coffee shop first.",
+    "Most of the group wants to go see the new movie downtown.",
+    "You could have come with us if you had finished a little earlier.",
+    "If you want to come, we are going to leave around eight after we grab dinner."
+   ]
+  },
+  {
+   "id": "lnr-b2-01",
+   "title": "選課註冊",
+   "sentences": [
+    "I want to register for classes.",
+    "I'm going to add a couple of courses.",
+    "I should have signed up for it a lot sooner.",
+    "The registrar could have opened the online portal a little earlier.",
+    "Most of the popular seminars filled up within a couple of minutes.",
+    "I'm definitely going to email my advisor about a couple of schedule conflicts.",
+    "If the class is already full, I could have added my name to the waitlist."
+   ]
+  },
+  {
+   "id": "lnr-b2-02",
+   "title": "圖書館借書",
+   "sentences": [
+    "I need to borrow this book.",
+    "I want to renew a couple of titles.",
+    "The due date is going to be next Friday.",
+    "You could have checked the online catalog from your phone.",
+    "Most of the reserved readings are kept on the second floor.",
+    "I'm going to ask the librarian about a couple of missing pages.",
+    "Since the book is already overdue, I should have returned it a couple of days ago."
+   ]
+  },
+  {
+   "id": "lnr-b2-03",
+   "title": "教授辦公室時間",
+   "sentences": [
+    "I want to visit your office.",
+    "Are you going to hold office hours today?",
+    "I could have come by a little bit earlier.",
+    "I have a couple of quick questions about the midterm.",
+    "Most of the material in the fourth chapter really confused me.",
+    "I'm going to bring my notes and review a couple of problems.",
+    "If you have a minute, I would really like to go over the essay you graded."
+   ]
+  },
+  {
+   "id": "lnr-b2-04",
+   "title": "化學實驗課",
+   "sentences": [
+    "We have to wear safety goggles.",
+    "I'm going to measure the first sample.",
+    "You should have labeled each of the beakers.",
+    "We could have finished the titration a bit faster.",
+    "Most of the reaction is going to happen within seconds.",
+    "We want to record a couple of readings from this final trial.",
+    "Because the acid is dangerous, we are going to handle it under the fume hood."
+   ]
+  },
+  {
+   "id": "lnr-b2-05",
+   "title": "小組報告",
+   "sentences": [
+    "We need to plan our presentation.",
+    "I'm going to make the opening slides.",
+    "We could have divided the topics more evenly.",
+    "Each of the members wants to speak for five minutes.",
+    "We should have practiced our timing a couple of more times.",
+    "I'm going to email everyone the final slides before our rehearsal tonight.",
+    "When the professor asks us questions, we want to sound confident and completely well prepared."
+   ]
+  },
+  {
+   "id": "lnr-b2-06",
+   "title": "期末考週",
+   "sentences": [
+    "Finals week is almost here.",
+    "I'm going to study every single night.",
+    "I should have started reviewing a lot sooner.",
+    "Most of the exams are going to be cumulative.",
+    "I want to reserve a couple of hours for chemistry.",
+    "I could have avoided so much of this last minute stress.",
+    "Since all my tests fall on the same day, I am going to be exhausted."
+   ]
+  },
+  {
+   "id": "lnr-b2-07",
+   "title": "繳交報告",
+   "sentences": [
+    "My essay is due tonight.",
+    "I want to submit it online.",
+    "I'm going to upload the final draft soon.",
+    "I could have proofread the whole thing one more time.",
+    "Most of the sources actually came from the online library database.",
+    "I should have cited a couple of extra articles for the argument.",
+    "If the system crashes before midnight, I am going to email the file to my professor."
+   ]
+  },
+  {
+   "id": "lnr-b2-08",
+   "title": "宿舍申請",
+   "sentences": [
+    "I want to live on campus.",
+    "I'm going to apply for campus housing.",
+    "The deadline is a couple of weeks away.",
+    "I could have picked a much quieter dorm building.",
+    "Most of the affordable single rooms are already completely taken.",
+    "I'm going to request a roommate with a similar daily schedule.",
+    "Because the forms are due soon, I should have submitted my preferences a couple of days ago."
+   ]
+  },
+  {
+   "id": "lnr-b2-09",
+   "title": "助教答疑",
+   "sentences": [
+    "The TA runs a review session.",
+    "I want to ask about the homework.",
+    "I'm going to bring a couple of questions.",
+    "You could have emailed the TA over the weekend.",
+    "Most of the confusion came from the second problem set.",
+    "I should have written down every one of those tricky steps.",
+    "When the TA explains it slowly, the material starts to make a lot more sense."
+   ]
+  },
+  {
+   "id": "lnr-b2-10",
+   "title": "退選課程",
+   "sentences": [
+    "I want to drop this class.",
+    "The workload is going to be overwhelming.",
+    "I should have checked the syllabus more carefully.",
+    "I could have talked to a couple of former students.",
+    "Most of the weekly assignments require a lot of extra reading.",
+    "I'm going to fill out the official drop form this afternoon instead.",
+    "If I drop it now, I would have room for a couple of lighter courses."
+   ]
+  },
+  {
+   "id": "lnr-b2-11",
+   "title": "加簽課程",
+   "sentences": [
+    "I want to add one more course.",
+    "I'm going to ask for a permission code.",
+    "You could have gotten a couple of extra signatures.",
+    "Most of the seats open up after the first week.",
+    "The professor really should have approved my add request by now.",
+    "I'm going to attend the lecture during this entire add drop period.",
+    "Once the professor signs my form, I am going to bring it straight to the registrar."
+   ]
+  },
+  {
+   "id": "lnr-b2-12",
+   "title": "校園導覽",
+   "sentences": [
+    "The campus tour starts soon.",
+    "We're going to see the main library.",
+    "I want to check out the science buildings.",
+    "Most of the freshmen live near the dining hall.",
+    "You could have joined the much earlier tour group instead.",
+    "The guide is going to show us a couple of hidden study spots.",
+    "As we walk across the quad, the guide is going to point out the oldest buildings."
+   ]
+  },
+  {
+   "id": "lnr-b2-13",
+   "title": "註冊組辦公室",
+   "sentences": [
+    "I need to update my records.",
+    "I want to request my official transcript.",
+    "I'm going to fill out this address form.",
+    "You could have submitted the whole request online instead.",
+    "Most of the paperwork is going to take a few days.",
+    "I really should have brought a couple of different forms of identification.",
+    "Since the office closes at four, I am going to come back early tomorrow morning."
+   ]
+  },
+  {
+   "id": "lnr-b2-14",
+   "title": "獎學金申請",
+   "sentences": [
+    "I want to apply for a scholarship.",
+    "The application is going to need two essays.",
+    "I should have asked for a recommendation letter sooner.",
+    "Most of the applicants list at least a couple of references.",
+    "I could have written a much stronger personal statement about my goals.",
+    "I'm going to submit the entire application well before next Monday's official deadline.",
+    "If the committee likes my essay, I could have a good chance at the award."
+   ]
+  },
+  {
+   "id": "lnr-b2-15",
+   "title": "讀書小組",
+   "sentences": [
+    "Let's form a study group.",
+    "We're going to meet on Thursday.",
+    "I want to review a couple of chapters.",
+    "We could have booked a room in the library.",
+    "Most of the group prefers to study in the evening.",
+    "You should have shared your notes with the rest of us.",
+    "When we quiz each other, the tricky concepts are going to stick a lot better."
+   ]
+  },
+  {
+   "id": "lnr-b2-16",
+   "title": "指導教授諮詢",
+   "sentences": [
+    "I want to meet my advisor.",
+    "I'm going to plan next year's courses.",
+    "You could have declared your major a bit earlier.",
+    "Most of the core requirements are going to overlap quite nicely.",
+    "I should have taken at least a couple of prerequisites last spring.",
+    "I want to graduate right on time without overloading any single busy semester.",
+    "Because my schedule is so tight, my advisor is going to suggest a lighter summer plan."
+   ]
+  },
+  {
+   "id": "lnr-b2-17",
+   "title": "電腦教室",
+   "sentences": [
+    "The computer lab is open now.",
+    "I want to print my final assignment.",
+    "I'm going to save it to the cloud.",
+    "You could have booked a couple of hours here.",
+    "Most of the machines already have the design software installed.",
+    "I should have backed up my files a couple of times.",
+    "If the printer jams again, I am going to send the document to the front desk."
+   ]
+  },
+  {
+   "id": "lnr-b2-18",
+   "title": "課堂討論",
+   "sentences": [
+    "Today's class discussion looks interesting.",
+    "I want to share my opinion.",
+    "I'm going to raise a couple of points.",
+    "You could have backed up your claim with data.",
+    "Most of the class seems to agree with the author.",
+    "I should have read the article a couple of times beforehand.",
+    "When the professor calls on me, I want to sound like I actually did the reading."
+   ]
+  },
+  {
+   "id": "lnr-b2-19",
+   "title": "遲交作業",
+   "sentences": [
+    "My assignment is a little late.",
+    "I want to ask for an extension.",
+    "I'm going to email the professor later tonight.",
+    "I could have finished it a couple of days ago.",
+    "Most of the delay actually came from a serious computer problem.",
+    "I should have backed up the whole file to avoid losing everything.",
+    "If the professor says no, I am going to accept the late penalty without complaining."
+   ]
+  },
+  {
+   "id": "lnr-b2-20",
+   "title": "校園書店",
+   "sentences": [
+    "I need to buy my textbooks.",
+    "I want to find a cheaper edition.",
+    "The store is going to price match online.",
+    "I could have rented a couple of these books.",
+    "Most of the cheaper used copies are already sold out.",
+    "I should have compared the prices before coming to the store.",
+    "Because the new edition is expensive, I am going to look for a digital version instead."
+   ]
+  },
+  {
+   "id": "lnr-b2-21",
+   "title": "選論文題目",
+   "sentences": [
+    "I want to pick a topic.",
+    "My advisor is going to guide me.",
+    "I should have narrowed it down a bit sooner.",
+    "I could have chosen from a couple of related questions.",
+    "Most of the strongest ideas actually came from the recent readings.",
+    "I'm going to draft a short proposal for my advisor this week.",
+    "Since the deadline is flexible, I want to explore a couple of angles before deciding."
+   ]
+  },
+  {
+   "id": "lnr-b2-22",
+   "title": "實習申請",
+   "sentences": [
+    "I want to find an internship.",
+    "The career center is going to help.",
+    "I should have updated my resume a while ago.",
+    "I could have applied to a couple of local companies.",
+    "Most of the summer postings still ask for a cover letter.",
+    "I'm going to practice for the interview at least a couple of times.",
+    "When the recruiter calls me back, I want to show that I did my research."
+   ]
+  },
+  {
+   "id": "lnr-b2-23",
+   "title": "預約研究小間",
+   "sentences": [
+    "I want to book a study room.",
+    "We're going to need a really quiet space.",
+    "You could have reserved it a full day earlier.",
+    "Most of the rooms are booked for a couple of hours.",
+    "I should have picked the bigger room right next to the window.",
+    "We're going to split the reserved time evenly among all four group members.",
+    "If someone cancels a slot, we could have the room for the entire afternoon."
+   ]
+  },
+  {
+   "id": "lnr-b2-24",
+   "title": "課程大綱",
+   "sentences": [
+    "Let's look at the syllabus.",
+    "I want to check the grading policy.",
+    "The exams are going to be worth half.",
+    "You should have read the strict attendance rules carefully.",
+    "Most of the grade comes from a couple of projects.",
+    "I could have saved a lot of time by reading the schedule first.",
+    "Because participation counts so much, I am going to speak up in every single class."
+   ]
+  },
+  {
+   "id": "lnr-b2-25",
+   "title": "實地考察",
+   "sentences": [
+    "Our class has a field trip.",
+    "We're going to visit the history museum.",
+    "I want to bring a couple of snacks.",
+    "The bus is going to leave at eight sharp.",
+    "You should have signed the permission form sometime last week.",
+    "Most of the exhibits are going to relate to our current unit.",
+    "While we tour the gallery, we are going to take notes for the follow up essay."
+   ]
+  },
+  {
+   "id": "lnr-b2-26",
+   "title": "補考安排",
+   "sentences": [
+    "I missed the midterm exam.",
+    "I want to schedule a make-up.",
+    "The professor is going to allow it.",
+    "I should have called in sick a day earlier.",
+    "Most of the questions are going to stay the same.",
+    "I could have avoided this whole mess with a doctor's note.",
+    "Once I bring a doctor's note, the office is going to approve my make-up date."
+   ]
+  },
+  {
+   "id": "lnr-b2-27",
+   "title": "論文口試",
+   "sentences": [
+    "My thesis defense is next week.",
+    "I want to review my slides again.",
+    "The committee is going to ask hard questions.",
+    "I should have rehearsed my talk a couple of times.",
+    "Most of the panel has already read my entire full draft.",
+    "I could have prepared much better answers for the tricky methodology section.",
+    "When they challenge my results, I want to defend my methods with a calm voice."
+   ]
+  },
+  {
+   "id": "lnr-b2-28",
+   "title": "學生社團招募",
+   "sentences": [
+    "I want to join a club.",
+    "The fair is going to be tomorrow.",
+    "The booth is going to have free snacks.",
+    "I could have signed up a couple of weeks ago.",
+    "Most of the active members are going to be friendly upperclassmen.",
+    "I should have asked the president about a couple of leadership roles.",
+    "Because I love photography, I want to help run the club's biggest annual exhibition."
+   ]
+  },
+  {
+   "id": "lnr-b2-29",
+   "title": "學習中心輔導",
+   "sentences": [
+    "I want to visit the writing center.",
+    "A tutor is going to read my essay.",
+    "I should have booked an appointment a lot earlier.",
+    "Most of the tutors are going to be graduate students.",
+    "I could have fixed a couple of these grammar mistakes myself.",
+    "The tutor is going to help me organize my confusing thesis paragraph.",
+    "When my draft feels messy, the tutors are going to show me how to tighten it."
+   ]
+  },
+  {
+   "id": "lnr-b2-30",
+   "title": "修改選課",
+   "sentences": [
+    "I want to change my schedule.",
+    "Two of my classes are going to overlap.",
+    "I should have noticed the time conflict much sooner.",
+    "I could have swapped a couple of the sections online.",
+    "Most of the early morning slots are going to be gone.",
+    "I'm going to meet my advisor about all of these possible changes.",
+    "If a better section opens up, I am going to move my lab to the afternoon."
+   ]
+  },
+  {
+   "id": "lnr-b2-31",
+   "title": "學期成績",
+   "sentences": [
+    "Final grades are coming out soon.",
+    "I want to check my report card.",
+    "My average is going to look pretty good.",
+    "I could have earned a couple of higher grades.",
+    "Most of the professors already post the final results online.",
+    "I should have studied harder for a couple of the finals.",
+    "If my grade seems wrong, I am going to email the professor about a possible mistake."
+   ]
+  },
+  {
+   "id": "lnr-b2-32",
+   "title": "畢業審查",
+   "sentences": [
+    "I want to graduate this spring.",
+    "The office is going to check my credits.",
+    "I should have counted my total units more carefully.",
+    "I could have finished a couple of requirements last year.",
+    "Most of the transfer credits are going to count just fine.",
+    "I'm going to double check the list with a couple of advisors.",
+    "Once the dean signs off on my file, I am going to order my cap and gown."
+   ]
+  },
+  {
+   "id": "lnr-b3-01",
+   "title": "植物細胞(生物課)",
+   "sentences": [
+    "All cells share some basic features.",
+    "Today let's look at a plant cell.",
+    "A plant cell has a thick wall around its membrane.",
+    "The nucleus stores all of the genetic information the cell needs.",
+    "During photosynthesis, the green leaves turn sunlight and water into usable energy.",
+    "If you look through the microscope now, you can see the tiny chloroplasts.",
+    "Because plants make their own food, they form the base of almost every food chain."
+   ]
+  },
+  {
+   "id": "lnr-b3-02",
+   "title": "古羅馬帝國(歷史課)",
+   "sentences": [
+    "Let's talk about ancient Rome today.",
+    "The empire kept growing for several hundred years.",
+    "Roads connected the distant cities to the capital in Rome.",
+    "Soldiers often marched along these roads to defend the far borders.",
+    "The Romans borrowed a lot of their ideas from the earlier Greeks.",
+    "Over time, the empire became far too large for one ruler to govern.",
+    "When the borders finally collapsed, the whole western empire broke apart into many smaller kingdoms."
+   ]
+  },
+  {
+   "id": "lnr-b3-03",
+   "title": "加熱反應(化學實驗)",
+   "sentences": [
+    "Put on your safety goggles first.",
+    "We're going to heat this clear liquid slowly.",
+    "Pour a little bit of acid into the test tube.",
+    "Write down the temperature every thirty seconds and record it carefully.",
+    "As soon as the mixture turns blue, add a drop of water.",
+    "Be really careful, because the glass is going to get extremely hot now.",
+    "Once the reaction is finished, we'll compare our results with the other groups in class."
+   ]
+  },
+  {
+   "id": "lnr-b3-04",
+   "title": "自由落體(物理課)",
+   "sentences": [
+    "Force equals mass times acceleration.",
+    "Today let's look at how heavy objects fall.",
+    "A heavy ball and a light ball fall down together.",
+    "Gravity pulls on both of them at exactly the same rate.",
+    "In a vacuum, a feather drops just as fast as a stone.",
+    "If we drop these two objects from the high roof, they land together.",
+    "Although it seems strange at first, air resistance is the only thing that slows the feather down."
+   ]
+  },
+  {
+   "id": "lnr-b3-05",
+   "title": "小說主角(文學課)",
+   "sentences": [
+    "Let's discuss the main character today.",
+    "The author sets the whole story in winter.",
+    "The cold weather reflects the deep sadness of the hero.",
+    "Notice how often the writer repeats the word darkness in it.",
+    "Each of the chapters ends with a question the reader must answer.",
+    "Try to read the final page again and think about its real meaning.",
+    "By the time the novel ends, we understand that the hero has changed completely inside."
+   ]
+  },
+  {
+   "id": "lnr-b3-06",
+   "title": "河流與土地(地理課)",
+   "sentences": [
+    "Rivers shape the land over time.",
+    "This long river starts high in the mountains.",
+    "It flows down through the wide valley to the sea.",
+    "Along the way, it drops a lot of soft mud behind.",
+    "This soft mud makes the soil near the river banks very rich.",
+    "Because of this, many of the world's first cities grew beside big rivers.",
+    "When the rains come too hard, the river can flood the fields that feed the town."
+   ]
+  },
+  {
+   "id": "lnr-b3-07",
+   "title": "分數運算(數學課)",
+   "sentences": [
+    "Let's start with simple fractions today.",
+    "A fraction shows us a part of something.",
+    "The number on the bottom tells you the total parts.",
+    "To add them together, the bottom numbers have to match first.",
+    "Once they match, you just add the tops and keep the bottom.",
+    "Let's work through a couple of these examples on the board together now.",
+    "If you can master these basic steps, the harder problems will feel a lot easier later."
+   ]
+  },
+  {
+   "id": "lnr-b3-08",
+   "title": "調色作畫(美術課)",
+   "sentences": [
+    "Today we'll paint with warm colors.",
+    "Start with a light pencil sketch on paper.",
+    "Don't press too hard, or else you'll tear the paper.",
+    "Mix a little bit of red into the bright yellow paint.",
+    "Notice how the warm colors seem to glow next to each other.",
+    "Let the first layer dry completely before you add another one on top.",
+    "Once your painting is finished, we'll hang all of them along the wall for everyone to see."
+   ]
+  },
+  {
+   "id": "lnr-b3-09",
+   "title": "供給與需求(經濟學課)",
+   "sentences": [
+    "Supply and demand set the price.",
+    "When something is rare, the price goes up.",
+    "When there's plenty of it, the price tends to drop.",
+    "Of course, sellers want a high price for their own goods.",
+    "Buyers, on the other hand, want to pay as little as possible.",
+    "The market slowly settles at a price where both of the sides agree.",
+    "If a sudden shortage hits the market, prices can rise faster than most people expect them to."
+   ]
+  },
+  {
+   "id": "lnr-b3-10",
+   "title": "查找資料(圖書館)",
+   "sentences": [
+    "I need to find some sources.",
+    "Let's search the online catalog for that topic.",
+    "Type a couple of keywords into the little search box.",
+    "The books on that subject are up on the third floor.",
+    "Write down the call number so that you can find the shelf.",
+    "If the book is checked out, you can put a hold on it.",
+    "Once you gather all of your sources, make sure you note where each fact originally came from."
+   ]
+  },
+  {
+   "id": "lnr-b3-11",
+   "title": "分工合作(小組報告)",
+   "sentences": [
+    "Let's split up the work fairly.",
+    "Each of us can take one main part.",
+    "I'll handle the slides if you can write the script.",
+    "We should probably meet again before the end of the week.",
+    "Let's send all of our parts to each other by Friday night.",
+    "If someone gets stuck, just go ahead and ask the rest for help.",
+    "As long as we all do our share, this presentation should come together without much trouble."
+   ]
+  },
+  {
+   "id": "lnr-b3-12",
+   "title": "課後提問(辦公室時間)",
+   "sentences": [
+    "I have a quick question, professor.",
+    "I didn't really get last week's whole lecture.",
+    "Could you explain that second point just one more time?",
+    "I read the chapter, but the math confused me a bit.",
+    "Is there a chance you could go over the homework with me?",
+    "I want to make sure I understand this before the exam next week.",
+    "Thank you so much for taking the time to explain everything that I found so confusing."
+   ]
+  },
+  {
+   "id": "lnr-b3-13",
+   "title": "星空與宇宙(天文課)",
+   "sentences": [
+    "The moon orbits around the earth.",
+    "It takes about a month to circle us.",
+    "The sun is much larger than it looks from here.",
+    "Light from the sun takes about eight minutes to reach us.",
+    "The tiny stars that we see at night are really distant suns.",
+    "A few of those little points of light are actually entire distant galaxies.",
+    "When you look up at a clear night sky, you are really staring deep into the distant past."
+   ]
+  },
+  {
+   "id": "lnr-b3-14",
+   "title": "記憶的形成(心理學課)",
+   "sentences": [
+    "Human memory is not always reliable.",
+    "Our brains often fill in the missing details.",
+    "We tend to remember the feeling more than the facts.",
+    "A strong emotion can make a false memory feel very real.",
+    "Two people can watch the very same event and recall it differently.",
+    "Over the years, our oldest memories slowly change without us even noticing it.",
+    "Because our minds rebuild the past each time, no memory stays exactly the same for long."
+   ]
+  },
+  {
+   "id": "lnr-b3-15",
+   "title": "程式除錯(電腦課)",
+   "sentences": [
+    "Let's open the code editor now.",
+    "Every program here starts with a simple loop.",
+    "A loop just repeats the same steps over and over.",
+    "Check your spelling carefully, because the computer reads every single letter.",
+    "Even one tiny mistake can stop the whole program from running properly.",
+    "Run the whole program again and see whether it prints the right answer.",
+    "If the output still looks wrong, add a print line so you can see what went wrong."
+   ]
+  },
+  {
+   "id": "lnr-b3-16",
+   "title": "合奏練習(音樂課)",
+   "sentences": [
+    "Let's warm up with some scales.",
+    "Keep all your fingers close to the keys.",
+    "Play the notes slowly at first until they feel natural.",
+    "Listen to the steady beat and try to stay in time.",
+    "Don't rush through the ending, even if the whole song feels easy.",
+    "Once you know this piece really well, we can add a second part.",
+    "When the whole class plays together in time, even a simple tune can sound really beautiful."
+   ]
+  },
+  {
+   "id": "lnr-b3-17",
+   "title": "採買清單(超市)",
+   "sentences": [
+    "Let's grab a shopping cart first.",
+    "We need some milk and a dozen eggs.",
+    "The fresh bread is over there by the far wall.",
+    "Could you go check if the apples are on sale today?",
+    "Let's grab a big bag of rice while we're in this aisle.",
+    "Don't forget that we still need to pick up some coffee for tomorrow.",
+    "Once we've got everything on the list, let's head to the shortest line and pay quickly."
+   ]
+  },
+  {
+   "id": "lnr-b3-18",
+   "title": "點餐用餐(餐廳)",
+   "sentences": [
+    "Could we see the menu, please?",
+    "I think I'll have the grilled fish tonight.",
+    "Does this dish come with a small side of rice?",
+    "Could you please bring us a couple of glasses of water?",
+    "I'm not quite sure yet, so give us a few more minutes.",
+    "Everything was really delicious, but I don't think I have room for dessert.",
+    "When you get a chance, could you bring the check and split it between the two of us?"
+   ]
+  },
+  {
+   "id": "lnr-b3-19",
+   "title": "搭乘地鐵(交通)",
+   "sentences": [
+    "Which train line goes to downtown?",
+    "We need to catch the very next one.",
+    "Tap your card on the reader before you go through.",
+    "The platform for our train line is just down those stairs.",
+    "Let's stand back a bit and wait for the doors to open.",
+    "We have to change over to another train at the very third stop.",
+    "If we miss this one, another train should come along in about five or six minutes."
+   ]
+  },
+  {
+   "id": "lnr-b3-20",
+   "title": "看喉嚨痛(診所)",
+   "sentences": [
+    "I'd like to see a doctor.",
+    "I've had a bad sore throat since Monday.",
+    "The pain gets much worse when I try to swallow.",
+    "Have you taken anything for it in the last few days?",
+    "Let me take a look at your throat and check your temperature.",
+    "It looks like a mild throat infection, so I'll write you a prescription.",
+    "Take one pill twice a day, and come back next week if you still feel sick."
+   ]
+  },
+  {
+   "id": "lnr-b3-21",
+   "title": "點一杯咖啡(咖啡店)",
+   "sentences": [
+    "Can I get a small latte?",
+    "I'd like it with some oat milk, please.",
+    "Could you please make that one a little less sweet?",
+    "Are you drinking it in here, or taking it to go?",
+    "I'll also take one of those little chocolate muffins in the case.",
+    "Your order will be ready in just a couple of minutes over there.",
+    "If you find a seat by the window, I'll bring your coffee over when it's ready."
+   ]
+  },
+  {
+   "id": "lnr-b3-22",
+   "title": "開戶存款(銀行)",
+   "sentences": [
+    "I'd like to open an account.",
+    "I need to deposit this small check today.",
+    "Do I have to fill out any of these forms?",
+    "Could you please tell me the balance on my savings account?",
+    "I'd also like to transfer some money over to my other account.",
+    "Your new card should arrive in the mail within about a week or so.",
+    "If you ever lose your card, just call this number and we'll cancel it right away for you."
+   ]
+  },
+  {
+   "id": "lnr-b3-23",
+   "title": "寄送包裹(郵局)",
+   "sentences": [
+    "I need to mail this package.",
+    "How much would it cost to send this?",
+    "I'd like to send it by the very fastest way.",
+    "Do you want to add some tracking and insurance to it?",
+    "Please write the full address clearly on the front of the box.",
+    "It should get there in about three days if you send it now.",
+    "If nobody is home to sign for it, the carrier will leave a slip in your mailbox."
+   ]
+  },
+  {
+   "id": "lnr-b3-24",
+   "title": "重訓熱身(健身房)",
+   "sentences": [
+    "Let's warm up before we start.",
+    "Don't lift too much on the first day.",
+    "Keep your back straight when you pick the weight up.",
+    "Try to breathe out slowly every single time you push up.",
+    "Rest for a minute or two in between each of the sets.",
+    "Drink plenty of water so that you don't get too tired later on.",
+    "As long as you keep showing up each week, you'll get a lot stronger before you know it."
+   ]
+  },
+  {
+   "id": "lnr-b3-25",
+   "title": "登機報到(機場)",
+   "sentences": [
+    "Let's check in at the counter.",
+    "Do you have any bags to check in?",
+    "Our gate is all the way down at the end.",
+    "We should go through security now before it gets too crowded.",
+    "Make sure that you take your laptop out of your bag first.",
+    "Our flight is going to start boarding in about forty minutes from now.",
+    "Once we get through the gate, let's find a quick place to eat before the plane takes off."
+   ]
+  },
+  {
+   "id": "lnr-b3-26",
+   "title": "旅館入住(飯店)",
+   "sentences": [
+    "I have a room reserved tonight.",
+    "The booking should be under my last name.",
+    "Could I get a room up on a higher floor?",
+    "What time do you usually stop serving breakfast in the morning?",
+    "Here's your key card, and the elevator is just around the corner.",
+    "Let us know if you need any extra towels or anything else tonight.",
+    "When you check out tomorrow, just leave the key at the desk and we'll email you the receipt."
+   ]
+  },
+  {
+   "id": "lnr-b3-27",
+   "title": "領藥諮詢(藥局)",
+   "sentences": [
+    "I need to fill a prescription.",
+    "My doctor sent it over here this morning.",
+    "Do you have anything I can take for a cough?",
+    "Take one of these twice a day, right after you eat.",
+    "This kind of medicine might make you feel a little bit sleepy.",
+    "Try not to drink any coffee at all while you're taking these pills.",
+    "If the cough doesn't get better in a few days, go back and see your doctor."
+   ]
+  },
+  {
+   "id": "lnr-b3-28",
+   "title": "找一本書(書店)",
+   "sentences": [
+    "I'm looking for a good novel.",
+    "Do you have anything else by this author?",
+    "The new releases are near the front of the store.",
+    "Is this one just part of a larger series or not?",
+    "I read a review online that said it was really worth reading.",
+    "Could you order in a copy for me if it's out of stock?",
+    "Since you like this kind of story, you might also enjoy the ones on that shelf over there."
+   ]
+  },
+  {
+   "id": "lnr-b3-29",
+   "title": "洗衣做家事(家務)",
+   "sentences": [
+    "Let's sort out the dirty clothes.",
+    "Keep the whites and colors in separate piles.",
+    "Don't put too much soap in the washing machine here.",
+    "Set it to a cold wash so that the colors last.",
+    "Hang the wet shirts up to dry instead of using the dryer.",
+    "Could you fold up the towels while I put the sheets away now?",
+    "Once the laundry is done, let's clean up the kitchen before our friends come over tonight."
+   ]
+  },
+  {
+   "id": "lnr-b3-30",
+   "title": "週末邀約(電話)",
+   "sentences": [
+    "Hey, are you free this weekend?",
+    "I was thinking we could grab some lunch.",
+    "There's a new place that I've been wanting to try.",
+    "Do you want to meet up there around noon or so?",
+    "We could probably invite Sam along too, if he's not too busy.",
+    "Let me know what time works for you, and I'll book us a table.",
+    "If something comes up and you can't make it, just call me and we'll pick another day."
+   ]
+  },
+  {
+   "id": "lnr-b3-31",
+   "title": "野餐時光(公園)",
+   "sentences": [
+    "Let's sit under that big tree.",
+    "The weather is just perfect for a picnic.",
+    "Did you remember to bring the ball and the blanket?",
+    "Let's spread the blanket out right under that big oak tree.",
+    "The little kids can run around while we set up the food.",
+    "Let's pack all of it up before it starts to get dark outside.",
+    "As soon as the sun goes down, it can get pretty chilly, so let's bring a warm jacket."
+   ]
+  },
+  {
+   "id": "lnr-b3-32",
+   "title": "看房租屋(租屋)",
+   "sentences": [
+    "I'm looking for a small apartment.",
+    "Is this apartment still up for rent now?",
+    "How much is the rent going to be each month?",
+    "Does the monthly price include water, gas, and electricity as well?",
+    "Could I come take a look at the place sometime this week?",
+    "The landlord usually wants a month's deposit before you can actually move in.",
+    "If you decide to take it, we can sign the lease and get you the keys next week."
+   ]
+  },
+  {
+   "id": "lnr-b4-01",
+   "title": "派對之夜",
+   "sentences": [
+    "The party starts at eight tonight.",
+    "We want to bring some snacks and drinks.",
+    "A lot of my friends are coming over later.",
+    "I am going to meet all of them near the gate.",
+    "We could have started a bit earlier, but the room stayed locked.",
+    "Someone brought a really huge speaker, so the music sounds much louder now.",
+    "Before everyone heads home tonight, we want to clean up a lot of the mess."
+   ]
+  },
+  {
+   "id": "lnr-b4-02",
+   "title": "社區志工",
+   "sentences": [
+    "I signed up for volunteering.",
+    "We are going to plant trees on Saturday.",
+    "A lot of students want to help this year.",
+    "We could have finished sooner with a much bigger team.",
+    "The coordinator handed out gloves and bags to everyone on site.",
+    "By noon we had already cleared a lot of the roadside trash.",
+    "Although the weather was cold, most of us stayed until the whole park looked clean."
+   ]
+  },
+  {
+   "id": "lnr-b4-03",
+   "title": "攝影社外拍",
+   "sentences": [
+    "The photography club meets weekly.",
+    "We are going to shoot the sunset today.",
+    "A lot of members bring their own new cameras.",
+    "I want to learn how to edit these photos better.",
+    "We could have captured the birds if we had arrived earlier.",
+    "The instructor showed us a lot of really useful lighting tricks today.",
+    "Once the light fades this evening, we are going to head back and review every shot."
+   ]
+  },
+  {
+   "id": "lnr-b4-04",
+   "title": "打工面試",
+   "sentences": [
+    "My interview is tomorrow morning.",
+    "I want to make a good impression.",
+    "I am going to wear my nicest shirt.",
+    "A lot of people applied for the same position.",
+    "I could have practiced my answers a little bit more.",
+    "The manager wants to know why I left my last job.",
+    "If they offer me the role today, I am going to accept it right away."
+   ]
+  },
+  {
+   "id": "lnr-b4-05",
+   "title": "迎新週活動",
+   "sentences": [
+    "Orientation week begins on Monday.",
+    "New students want to meet their advisors.",
+    "We are going to tour the whole campus.",
+    "A lot of clubs set up booths outside today.",
+    "I could have joined more groups if I had time.",
+    "The guide handed out maps and free coffee to every newcomer.",
+    "Since so many events overlap this week, we want to plan our schedule pretty carefully."
+   ]
+  },
+  {
+   "id": "lnr-b4-06",
+   "title": "樂團表演",
+   "sentences": [
+    "Our band plays this Friday.",
+    "We are going to rehearse all afternoon.",
+    "A lot of fans want to hear us.",
+    "I could have tuned my guitar a bit better.",
+    "The drummer wants to add a much longer solo tonight.",
+    "We ran out of time before we finished the last song.",
+    "When the crowd starts cheering tonight, we are going to give them our very best show."
+   ]
+  },
+  {
+   "id": "lnr-b4-07",
+   "title": "讀書會",
+   "sentences": [
+    "Our study group meets tonight.",
+    "We want to review the whole chapter.",
+    "A lot of questions came up last week.",
+    "I am going to explain the hardest problems first.",
+    "We could have booked a much quieter room upstairs instead.",
+    "Everyone brought a lot of notes to share with the group.",
+    "Because the exam covers so much material, we are going to meet again this weekend."
+   ]
+  },
+  {
+   "id": "lnr-b4-08",
+   "title": "校園導覽",
+   "sentences": [
+    "I lead campus tours now.",
+    "Visitors want to see the old library.",
+    "A lot of families come by every weekend.",
+    "We are going to walk past the science building.",
+    "I could have shown them the lovely rooftop garden too.",
+    "Some guests ran out of energy long before the tour ended.",
+    "Whenever the weather turns nice, a lot of prospective students want to visit our campus."
+   ]
+  },
+  {
+   "id": "lnr-b4-09",
+   "title": "校內球賽",
+   "sentences": [
+    "Our game is this weekend.",
+    "We are going to practice tonight.",
+    "A lot of teammates want to win.",
+    "I could have scored twice in the last match.",
+    "The coach wants to change our whole starting lineup again.",
+    "We ran out of substitutes right near the end of overtime.",
+    "If we win the final tomorrow, a lot of our classmates are going to celebrate with us."
+   ]
+  },
+  {
+   "id": "lnr-b4-10",
+   "title": "電影之夜",
+   "sentences": [
+    "Movie night is this Friday.",
+    "We are going to watch two films.",
+    "A lot of people want to come along.",
+    "I could have booked the much bigger lounge upstairs.",
+    "Someone is going to bring some popcorn and warm blankets.",
+    "We nearly ran out of seats right before the show started.",
+    "After the second movie ends tonight, we want to grab a lot of late-night snacks."
+   ]
+  },
+  {
+   "id": "lnr-b4-11",
+   "title": "生日驚喜",
+   "sentences": [
+    "Her birthday is next week.",
+    "We want to throw a surprise party.",
+    "A lot of her close friends already know.",
+    "I am going to bake a big chocolate cake.",
+    "We could have hidden the gifts inside my dorm room.",
+    "Everyone is going to hide quietly until she finally walks inside.",
+    "As soon as she opens the door, we want to jump out and yell surprise."
+   ]
+  },
+  {
+   "id": "lnr-b4-12",
+   "title": "畢業舞會",
+   "sentences": [
+    "The dance is next month.",
+    "We are going to rent a hall.",
+    "A lot of seniors want to attend it.",
+    "I could have ordered my new suit much earlier.",
+    "The committee wants to decorate the whole stage with lights.",
+    "We nearly ran out of tickets within the very first hour.",
+    "Once the music finally starts that night, a lot of us are going to dance for hours."
+   ]
+  },
+  {
+   "id": "lnr-b4-13",
+   "title": "校友聚會",
+   "sentences": [
+    "The alumni meet each spring.",
+    "They want to share old memories.",
+    "A lot of graduates are flying back.",
+    "We are going to host a small dinner.",
+    "I could have invited more of my old classmates.",
+    "Some of them ran out of stories to tell us.",
+    "Even though many years have passed, a lot of them still remember every professor clearly."
+   ]
+  },
+  {
+   "id": "lnr-b4-14",
+   "title": "話劇社排練",
+   "sentences": [
+    "Our play opens next Thursday.",
+    "We are going to rehearse tonight.",
+    "A lot of lines are hard to memorize.",
+    "I want to practice my final scene once again.",
+    "I could have delivered that long speech with more feeling.",
+    "The director wants to change the whole ending one more time.",
+    "When the curtain rises on opening night, a lot of nervous actors are going to freeze."
+   ]
+  },
+  {
+   "id": "lnr-b4-15",
+   "title": "辯論比賽",
+   "sentences": [
+    "The debate is on Friday.",
+    "We want to prepare strong arguments.",
+    "A lot of research is still left.",
+    "I am going to lead our opening statement.",
+    "We could have rehearsed our rebuttals a bit more.",
+    "The other team wants to focus on tricky economic issues.",
+    "Because the topic is quite broad, we are going to split a lot of the work."
+   ]
+  },
+  {
+   "id": "lnr-b4-16",
+   "title": "國際交流",
+   "sentences": [
+    "The exchange event is tonight.",
+    "Students want to meet people abroad.",
+    "A lot of languages will be spoken.",
+    "We are going to cook dishes from home.",
+    "I could have brought photos from my hometown too.",
+    "Many of us really want to make new international friends.",
+    "As the evening goes on, a lot of shy students are going to open up more."
+   ]
+  },
+  {
+   "id": "lnr-b4-17",
+   "title": "圖書館服務",
+   "sentences": [
+    "The library closes at midnight.",
+    "I want to renew these books.",
+    "A lot of study rooms are booked.",
+    "I am going to return them by Friday.",
+    "You could have reserved a quiet desk online instead.",
+    "The librarian ran out of printing paper early this morning.",
+    "If you need a quiet spot to study, a lot of seats open up after lunch."
+   ]
+  },
+  {
+   "id": "lnr-b4-18",
+   "title": "健身房",
+   "sentences": [
+    "The gym opens at six.",
+    "I want to lift weights today.",
+    "A lot of machines are being used.",
+    "I am going to join a spin class.",
+    "You could have signed up for a personal trainer.",
+    "The staff ran out of clean towels right by noon.",
+    "Since the evening hours get so crowded, a lot of members want to come early instead."
+   ]
+  },
+  {
+   "id": "lnr-b4-19",
+   "title": "餐廳打工",
+   "sentences": [
+    "My shift starts at five.",
+    "I want to learn the menu.",
+    "A lot of customers come on weekends.",
+    "I am going to wait on tables tonight.",
+    "We could have handled the rush with more staff.",
+    "The kitchen ran out of fresh salmon at around eight.",
+    "Whenever a big group walks in, we are going to need a lot of extra hands."
+   ]
+  },
+  {
+   "id": "lnr-b4-20",
+   "title": "宿舍生活",
+   "sentences": [
+    "My roommate moved in today.",
+    "We want to decorate our room.",
+    "A lot of boxes are still unpacked.",
+    "I am going to hang some posters up.",
+    "We could have picked a slightly bigger room downstairs.",
+    "We nearly ran out of space for all our clothes.",
+    "Before the semester gets busy, we want to make our room feel a lot cozier."
+   ]
+  },
+  {
+   "id": "lnr-b4-21",
+   "title": "校園書店",
+   "sentences": [
+    "The bookstore has a sale.",
+    "I want to buy my textbooks.",
+    "A lot of titles are already gone.",
+    "I am going to check the used shelf.",
+    "You could have ordered that same book online cheaper.",
+    "They ran out of the biology study guide last week.",
+    "Since new editions cost so much, a lot of students want to rent their books instead."
+   ]
+  },
+  {
+   "id": "lnr-b4-22",
+   "title": "學生餐廳",
+   "sentences": [
+    "The dining hall serves breakfast.",
+    "I want to try the omelet.",
+    "A lot of tables are already full.",
+    "I am going to grab a salad too.",
+    "They could have added a few more vegetarian options.",
+    "The kitchen ran out of fresh pancakes before nine o'clock.",
+    "Whenever exams get close, a lot of students want to eat here late at night."
+   ]
+  },
+  {
+   "id": "lnr-b4-23",
+   "title": "諮商中心",
+   "sentences": [
+    "The center offers free sessions.",
+    "I want to talk to someone.",
+    "A lot of students feel stressed lately.",
+    "I am going to book an appointment today.",
+    "You could have called their support hotline last night.",
+    "The counselors ran out of open slots for this week.",
+    "If the pressure feels too heavy, a lot of people want to reach out for help."
+   ]
+  },
+  {
+   "id": "lnr-b4-24",
+   "title": "校醫室",
+   "sentences": [
+    "The clinic opens at nine.",
+    "I want to see a nurse.",
+    "A lot of students caught the flu.",
+    "I am going to get a quick checkup.",
+    "You could have booked a doctor a lot sooner.",
+    "The pharmacy ran out of that strong cough syrup today.",
+    "Because so many people are sick, a lot of appointments are going to fill up fast."
+   ]
+  },
+  {
+   "id": "lnr-b4-25",
+   "title": "收發室",
+   "sentences": [
+    "The mail room closes early.",
+    "I want to pick up a package.",
+    "A lot of parcels arrived here this morning.",
+    "I am going to check my own mailbox first.",
+    "You could have picked that box up much sooner yesterday.",
+    "The staff ran out of paper slips to notify busy students.",
+    "When your tracking says delivered, a lot of packages are going to sit here for days."
+   ]
+  },
+  {
+   "id": "lnr-b4-26",
+   "title": "電腦教室",
+   "sentences": [
+    "The lab has new computers.",
+    "I want to print my essay.",
+    "A lot of screens are turned off.",
+    "I am going to save my files first.",
+    "You could have used the scanner near the door.",
+    "The printer ran out of black ink during my project.",
+    "Since the deadline is tonight, a lot of students are going to stay here until late."
+   ]
+  },
+  {
+   "id": "lnr-b4-27",
+   "title": "職涯中心",
+   "sentences": [
+    "The career center hosts workshops.",
+    "I want to fix my resume.",
+    "A lot of firms are hiring interns.",
+    "I am going to attend the job fair.",
+    "You could have practiced with a quick mock interview.",
+    "The advisor handed out a lot of really useful tips.",
+    "Before you send your application out, we are going to review your cover letter together."
+   ]
+  },
+  {
+   "id": "lnr-b4-28",
+   "title": "註冊組",
+   "sentences": [
+    "The registrar handles course changes.",
+    "I want to drop one class.",
+    "A lot of sections are already full.",
+    "I am going to add a seminar instead.",
+    "You could have submitted that request form last week.",
+    "The office ran out of time right before the deadline.",
+    "If you miss the add-drop window, a lot of options are going to disappear pretty quickly."
+   ]
+  },
+  {
+   "id": "lnr-b4-29",
+   "title": "停車服務",
+   "sentences": [
+    "Parking permits go on sale.",
+    "I want to park on campus.",
+    "A lot of spots fill up fast.",
+    "I am going to apply for one soon.",
+    "You could have parked inside the covered garage instead.",
+    "The office ran out of permits by early last September.",
+    "Because the lots stay so full, a lot of drivers are going to circle around forever."
+   ]
+  },
+  {
+   "id": "lnr-b4-30",
+   "title": "洗衣房",
+   "sentences": [
+    "The laundry room stays busy.",
+    "I want to wash my clothes.",
+    "A lot of machines are in use.",
+    "I am going to dry these towels next.",
+    "You could have started your first load much earlier.",
+    "The dispenser ran out of laundry soap again this week.",
+    "Whenever the weekend arrives, a lot of students are going to fight over the free dryers."
+   ]
+  },
+  {
+   "id": "lnr-b4-31",
+   "title": "助學金辦公室",
+   "sentences": [
+    "The aid office reviews applications.",
+    "I want to check my status.",
+    "A lot of forms are due soon.",
+    "I am going to submit my paperwork today.",
+    "You could have applied for that special grant earlier.",
+    "The fund ran out of money before the spring term.",
+    "If your documents are missing, a lot of your aid is going to be delayed unfortunately."
+   ]
+  },
+  {
+   "id": "lnr-b4-32",
+   "title": "IT 服務台",
+   "sentences": [
+    "The help desk fixes laptops.",
+    "I want to reset my password.",
+    "A lot of students lost their access.",
+    "I am going to bring my broken charger.",
+    "You could have backed up your important files sooner.",
+    "The team ran out of spare loaner laptops earlier today.",
+    "When the network goes down, a lot of tickets are going to pile up very quickly."
+   ]
+  }
+ ]
 }

@@ -3,9 +3,10 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { validators } from '../server/bankValidate.ts';
 
-const SEEDS = path.resolve(import.meta.dirname ?? '.', '../seeds');
+const SEEDS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../seeds');
 const EXT = path.join(SEEDS, 'ext');
 const CAP = 100;
 
