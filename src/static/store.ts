@@ -126,9 +126,23 @@ export const speakingStore = {
   saveAll: (rows: StoredSpeaking[]) => save('speaking', rows),
 };
 
+export interface WebSettings {
+  aiSource: 'server' | 'api'; // server=本機伺服器(Claude 訂閱,免費) api=直連(金鑰)
+  serverUrl: string;
+  apiKey: string;
+  model: string;
+}
+
+const DEFAULT_SETTINGS: WebSettings = {
+  aiSource: 'server',
+  serverUrl: 'http://localhost:3001',
+  apiKey: '',
+  model: 'claude-sonnet-4-6',
+};
+
 export const settingsStore = {
-  get: () => load<{ apiKey: string; model: string }>('settings', { apiKey: '', model: 'claude-sonnet-4-6' }),
-  set: (s: { apiKey: string; model: string }) => save('settings', s),
+  get: (): WebSettings => ({ ...DEFAULT_SETTINGS, ...load<Partial<WebSettings>>('settings', {}) }),
+  set: (s: WebSettings) => save('settings', s),
 };
 
 /** AI 出的題(擴充內建題庫) */

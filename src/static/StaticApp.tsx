@@ -775,18 +775,23 @@ function StaticSettings() {
   const [toast, showToast] = useToast();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // 一鍵搬金鑰:開啟含 ?setup= 的連結自動匯入(金鑰在 # 之後,不會傳到任何伺服器)
+  // 一鍵搬設定:開啟含 ?setup= 的連結自動匯入(內容在 # 之後,不會傳到任何伺服器)
   useEffect(() => {
     const setup = searchParams.get('setup');
     if (!setup) return;
     try {
-      const parsed = JSON.parse(atob(setup)) as { k?: string; m?: string };
-      if (parsed.k) {
-        const next = { apiKey: parsed.k, model: parsed.m || 'claude-sonnet-4-6' };
-        settingsStore.set(next);
-        setS(next);
-        showToast('✓ 金鑰已從設定連結匯入這台裝置');
-      }
+      const parsed = JSON.parse(atob(setup)) as Partial<ReturnType<typeof settingsStore.get>> & {
+        k?: string;
+        m?: string;
+      };
+      const next = {
+        ...settingsStore.get(),
+        ...(parsed.aiSource ? parsed : {}),
+        ...(parsed.k ? { apiKey: parsed.k, model: parsed.m || 'claude-sonnet-4-6' } : {}),
+      };
+      settingsStore.set(next);
+      setS(next);
+      showToast('✓ 設定已從連結匯入這台裝置');
     } catch {
       showToast('設定連結格式不正確', 'err');
     }
@@ -795,12 +800,8 @@ function StaticSettings() {
   }, []);
 
   async function copySetupLink() {
-    if (!s.apiKey.trim()) {
-      showToast('先填好金鑰再產生連結', 'err');
-      return;
-    }
     settingsStore.set(s);
-    const payload = btoa(JSON.stringify({ k: s.apiKey.trim(), m: s.model }));
+    const payload = btoa(JSON.stringify(s));
     const url = `${location.origin}${location.pathname}#/settings?setup=${payload}`;
     try {
       await navigator.clipboard.writeText(url);
@@ -828,22 +829,46 @@ function StaticSettings() {
     <div>
       {toast}
       <PageTitle title="設定" sub="API 金鑰只存在這台裝置的瀏覽器,不會上傳到任何伺服器" />
-      <Card title="AI 批改(Anthropic API)" className="mb-3">
+      <Card title="AI 批改來源" className="mb-3">
         <div className="space-y-2">
-          <div>
-            <div className="label mb-1">API Key(sk-ant-...)</div>
-            <input
-              className="input w-full font-mono text-xs"
-              type="password"
-              value={s.apiKey}
-              onChange={(e) => setS({ ...s, apiKey: e.target.value })}
-              placeholder="到 console.anthropic.com 建立"
-            />
-          </div>
-          <div>
-            <div className="label mb-1">模型</div>
-            <input className="input w-64 text-xs" value={s.model} onChange={(e) => setS({ ...s, model: e.target.value })} />
-          </div>
+          <label
+            className={`flex items-start gap-3 rounded-xl border-2 p-3 cursor-pointer ${s.aiSource === 'server' ? 'border-brand-600 bg-brand-50' : 'border-slate-200'}`}
+          >
+            <input type="radio" checked={s.aiSource === 'server'} onChange={() => setS({ ...s, aiSource: 'server' })} className="mt-1" />
+            <div className="flex-1">
+              <div className="font-medium text-slate-800">A|本機伺服器(你的 Claude 訂閱,免費)</div>
+              <div className="text-xs text-slate-500 mt-0.5">
+                同一台電腦上 <code className="bg-slate-100 px-1 rounded">npm run dev</code> 開著就能用,批改走 Claude Code
+                訂閱、零 API 費用。換到手機/其他電腦時連不到,要改用 B。
+              </div>
+              <div className="mt-1.5 flex items-center gap-2">
+                <span className="label">伺服器位址</span>
+                <input className="input w-56 text-xs" value={s.serverUrl} onChange={(e) => setS({ ...s, serverUrl: e.target.value })} />
+              </div>
+            </div>
+          </label>
+          <label
+            className={`flex items-start gap-3 rounded-xl border-2 p-3 cursor-pointer ${s.aiSource === 'api' ? 'border-brand-600 bg-brand-50' : 'border-slate-200'}`}
+          >
+            <input type="radio" checked={s.aiSource === 'api'} onChange={() => setS({ ...s, aiSource: 'api' })} className="mt-1" />
+            <div className="flex-1">
+              <div className="font-medium text-slate-800">B|直連 Anthropic API(任何裝置可用,需金鑰)</div>
+              <div className="mt-1.5">
+                <div className="label mb-1">API Key(sk-ant-...)</div>
+                <input
+                  className="input w-full font-mono text-xs"
+                  type="password"
+                  value={s.apiKey}
+                  onChange={(e) => setS({ ...s, apiKey: e.target.value })}
+                  placeholder="到 console.anthropic.com 建立"
+                />
+              </div>
+              <div className="mt-1.5">
+                <div className="label mb-1">模型</div>
+                <input className="input w-64 text-xs" value={s.model} onChange={(e) => setS({ ...s, model: e.target.value })} />
+              </div>
+            </div>
+          </label>
           <div className="flex flex-wrap gap-2">
             <button
               className="btn-primary"
@@ -854,17 +879,17 @@ function StaticSettings() {
             >
               儲存
             </button>
-            <button className="btn-secondary" onClick={test} disabled={testing || !s.apiKey.trim()}>
+            <button className="btn-secondary" onClick={test} disabled={testing || (s.aiSource === 'api' && !s.apiKey.trim())}>
               {testing ? '測試中...' : '連線測試'}
             </button>
-            <button className="btn-secondary" onClick={copySetupLink} disabled={!s.apiKey.trim()} title="在手機/其他電腦開這個連結,金鑰自動設定好">
+            <button className="btn-secondary" onClick={copySetupLink} title="在手機/其他電腦開這個連結,設定自動完成">
               📲 複製「一鍵設定連結」給其他裝置
             </button>
           </div>
           {testMsg && <div className={`text-sm ${testMsg.startsWith('✓') ? 'text-emerald-600' : 'text-rose-600'}`}>{testMsg}</div>}
           <div className="text-xs text-slate-400">
-            沒有金鑰也能用:所有客觀題(閱讀/聽力/組織句子/L&R 比對/拼寫)完全免金鑰;金鑰只用於寫作批改、口說回饋、AI 出題。
-            {hasApiKey() && ' 目前已設定 ✓'}
+            不設 AI 也能用:所有客觀題(閱讀/聽力/組織句子/L&R 比對/拼寫)完全不需要 AI;AI 只用於寫作批改、口說回饋、AI 出題。
+            {hasApiKey() && ' 目前 AI 已可用 ✓'}
           </div>
         </div>
       </Card>

@@ -27,6 +27,23 @@ seedBanks();
 const app = express();
 app.use(express.json({ limit: '10mb' }));
 
+// 允許網頁版(GitHub Pages)呼叫本機 AI 通道(走 Claude 訂閱)
+const ALLOWED_ORIGINS = new Set([
+  'https://arthur031221.github.io',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+]);
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  }
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
 // 錄音與上傳素材靜態服務
 app.use('/recordings', express.static(RECORDINGS_DIR));
 app.use('/uploads', express.static(UPLOADS_DIR));

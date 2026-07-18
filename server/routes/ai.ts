@@ -1,8 +1,33 @@
 import { Router } from 'express';
 import { db, setSetting } from '../db.ts';
-import { testProvider } from '../aiService.ts';
+import { getFeedback, testProvider, type FeedbackKind } from '../aiService.ts';
 
 export const aiRouter = Router();
+
+const FEEDBACK_KINDS = new Set<string>([
+  'grade_email', 'grade_discussion', 'speaking_feedback',
+  'gen_email', 'gen_discussion', 'gen_repeat',
+  'gen_ctw', 'gen_daily_life', 'gen_academic', 'gen_lcr',
+  'gen_conversation', 'gen_announcement', 'gen_talk', 'gen_build_sentence',
+]);
+
+/** 網頁版的 AI 通道:讓 GitHub Pages 版走本機 Claude 訂閱 */
+aiRouter.post('/ai/feedback', async (req, res) => {
+  const { kind, vars } = req.body as { kind?: string; vars?: Record<string, unknown> };
+  if (!kind || !FEEDBACK_KINDS.has(kind)) {
+    return res.status(400).json({ error: `不支援的 kind:${kind}` });
+  }
+  const safeVars: Record<string, string> = {};
+  for (const [k, v] of Object.entries(vars ?? {})) {
+    if (typeof v === 'string' && k.length <= 32) safeVars[k] = v.slice(0, 20000);
+  }
+  try {
+    const r = await getFeedback(kind as FeedbackKind, safeVars);
+    res.json({ text: r.text, parsed: r.parsed, provider: r.provider, ms: r.ms });
+  } catch (e) {
+    res.status(502).json({ error: (e as Error).message });
+  }
+});
 
 /** prompt 模板列表 */
 aiRouter.get('/ai/templates', (_req, res) => {

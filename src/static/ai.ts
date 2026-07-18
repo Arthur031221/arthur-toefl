@@ -7,7 +7,8 @@ type TemplateKey = keyof typeof templates;
 const JSON_SUFFIX = '\n\n請直接輸出單一 JSON 物件,不要 markdown code fence、不要任何其他文字。';
 
 export function hasApiKey(): boolean {
-  return settingsStore.get().apiKey.trim().length > 0;
+  const s = settingsStore.get();
+  return s.aiSource === 'server' || s.apiKey.trim().length > 0;
 }
 
 function fill(template: string, vars: Record<string, string>): string {
@@ -58,9 +59,33 @@ export function extractJson(text: string): unknown | null {
 }
 
 export async function aiCall(kind: TemplateKey, vars: Record<string, string>): Promise<{ text: string; parsed: unknown | null }> {
-  const { apiKey, model } = settingsStore.get();
+  const { aiSource, serverUrl, apiKey, model } = settingsStore.get();
+
+  // 路線 1:本機伺服器通道(走你的 Claude 訂閱,免費;需要家裡的 npm run dev 開著)
+  if (aiSource === 'server') {
+    let res: Response;
+    try {
+      res = await fetch(`${serverUrl.replace(/\/$/, '')}/api/ai/feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ kind, vars }),
+      });
+    } catch {
+      throw new Error(
+        `連不到本機伺服器(${serverUrl})。請確認:①同一台電腦上 npm run dev 正在跑 ②或到「設定」切換成「直連 API」`
+      );
+    }
+    if (!res.ok) {
+      const err = (await res.json().catch(() => ({}))) as { error?: string };
+      throw new Error(err.error ?? `本機伺服器錯誤(${res.status})`);
+    }
+    const data = (await res.json()) as { text: string; parsed: unknown | null };
+    return { text: data.text, parsed: data.parsed ?? extractJson(data.text) };
+  }
+
+  // 路線 2:直連 Anthropic API(金鑰)
   if (!apiKey.trim()) {
-    throw new Error('尚未設定 API 金鑰。到「設定」貼上你的 Anthropic API key(只存在這台裝置的瀏覽器)。');
+    throw new Error('尚未設定 AI:到「設定」選「本機伺服器(訂閱)」並在電腦開 npm run dev,或改「直連 API」貼金鑰。');
   }
   const template = templates[kind]?.template;
   if (!template) throw new Error(`找不到模板 ${String(kind)}`);
