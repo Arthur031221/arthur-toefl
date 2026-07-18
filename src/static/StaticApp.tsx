@@ -1,6 +1,6 @@
 /** GitHub Pages 網頁版:免伺服器,資料存瀏覽器 localStorage */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { HashRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { HashRouter, NavLink, Route, Routes, useSearchParams } from 'react-router-dom';
 import interviewQs from '../../seeds/interview_questions.json';
 import seedErrors from '../../seeds/errors.json';
 import seedSpelling from '../../seeds/spelling.json';
@@ -773,6 +773,42 @@ function StaticSettings() {
   const [testMsg, setTestMsg] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
   const [toast, showToast] = useToast();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // 一鍵搬金鑰:開啟含 ?setup= 的連結自動匯入(金鑰在 # 之後,不會傳到任何伺服器)
+  useEffect(() => {
+    const setup = searchParams.get('setup');
+    if (!setup) return;
+    try {
+      const parsed = JSON.parse(atob(setup)) as { k?: string; m?: string };
+      if (parsed.k) {
+        const next = { apiKey: parsed.k, model: parsed.m || 'claude-sonnet-4-6' };
+        settingsStore.set(next);
+        setS(next);
+        showToast('✓ 金鑰已從設定連結匯入這台裝置');
+      }
+    } catch {
+      showToast('設定連結格式不正確', 'err');
+    }
+    setSearchParams({}, { replace: true }); // 立刻從網址列清掉
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function copySetupLink() {
+    if (!s.apiKey.trim()) {
+      showToast('先填好金鑰再產生連結', 'err');
+      return;
+    }
+    settingsStore.set(s);
+    const payload = btoa(JSON.stringify({ k: s.apiKey.trim(), m: s.model }));
+    const url = `${location.origin}${location.pathname}#/settings?setup=${payload}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast('✓ 設定連結已複製!在新裝置開這個連結即完成設定(只能傳給你自己)');
+    } catch {
+      prompt('複製這個連結,到新裝置開啟:', url);
+    }
+  }
 
   async function test() {
     settingsStore.set(s);
@@ -808,7 +844,7 @@ function StaticSettings() {
             <div className="label mb-1">模型</div>
             <input className="input w-64 text-xs" value={s.model} onChange={(e) => setS({ ...s, model: e.target.value })} />
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <button
               className="btn-primary"
               onClick={() => {
@@ -820,6 +856,9 @@ function StaticSettings() {
             </button>
             <button className="btn-secondary" onClick={test} disabled={testing || !s.apiKey.trim()}>
               {testing ? '測試中...' : '連線測試'}
+            </button>
+            <button className="btn-secondary" onClick={copySetupLink} disabled={!s.apiKey.trim()} title="在手機/其他電腦開這個連結,金鑰自動設定好">
+              📲 複製「一鍵設定連結」給其他裝置
             </button>
           </div>
           {testMsg && <div className={`text-sm ${testMsg.startsWith('✓') ? 'text-emerald-600' : 'text-rose-600'}`}>{testMsg}</div>}
