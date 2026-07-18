@@ -10,7 +10,7 @@ import {
   YAxis,
 } from 'recharts';
 import { api } from '../api';
-import { speakEn } from '../audio-utils';
+import { hashSeed, pickVoice, speakEn } from '../audio-utils';
 import { Card, EmptyState, PageTitle, Spinner, useToast } from '../components/ui';
 import { BankTypePanel } from '../practice/BankPage';
 import { useRecorder, useWebSpeech, webSpeechSupported } from '../hooks/useRecorder';
@@ -1083,7 +1083,7 @@ function ShadowFlow({
   const finished = history.length >= sentences.length;
 
   function play(text: string) {
-    speakEn(text, rate);
+    speakEn(text, rate, undefined, pickVoice('any', hashSeed(String(material.id))));
     setPlayed(true);
   }
 

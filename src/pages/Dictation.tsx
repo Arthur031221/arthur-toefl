@@ -11,7 +11,7 @@ import {
   YAxis,
 } from 'recharts';
 import { api } from '../api';
-import { speakEn } from '../audio-utils';
+import { hashSeed, pickVoice, speakEn } from '../audio-utils';
 import { Card, EmptyState, PageTitle, Spinner, useToast } from '../components/ui';
 import type { DictationMaterial } from '../types';
 
@@ -244,7 +244,7 @@ function DictationSession({ material, onExit }: { material: DictationMaterial; o
       </div>
 
       {material.kind === 'tts' ? (
-        <TtsPlayer sentences={material.transcript.split('\n').filter((s) => s.trim())} />
+        <TtsPlayer sentences={material.transcript.split('\n').filter((s) => s.trim())} voiceSeed={material.id} />
       ) : (
         <AbPlayer src={material.audio_path} />
       )}
@@ -422,14 +422,14 @@ function AbPlayer({ src }: { src: string }) {
 
 /* ---- TTS 逐句播放器 ---- */
 
-function TtsPlayer({ sentences }: { sentences: string[] }) {
+function TtsPlayer({ sentences, voiceSeed = 0 }: { sentences: string[]; voiceSeed?: number }) {
   const [idx, setIdx] = useState(0);
   const [rate, setRate] = useState(0.9);
   const [speaking, setSpeaking] = useState(false);
 
   function speak(text: string) {
     setSpeaking(true);
-    speakEn(text, rate, () => setSpeaking(false));
+    speakEn(text, rate, () => setSpeaking(false), pickVoice('any', hashSeed(String(voiceSeed))));
   }
 
   useEffect(() => () => speechSynthesis.cancel(), []);

@@ -1,5 +1,6 @@
 /** Listen and Repeat 正式考模式:7 句連發、播完約 2 秒就得複誦、句子越來越長 */
 import { useEffect, useRef, useState } from 'react';
+import { hashSeed, pickVoice } from '../audio-utils';
 import { useRecorder, useWebSpeech, webSpeechSupported } from '../hooks/useRecorder';
 import type { LnrSetItem, ShadowScore } from './types';
 import { usePractice } from './context';
@@ -39,7 +40,13 @@ export function LnrExam({ item, onDone, onExit }: { item: LnrSetItem; onDone: (r
     try {
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'en-US';
+      const narrator = pickVoice('any', hashSeed(item.id)); // 每組固定講者,不同組輪換
+      if (narrator) {
+        u.voice = narrator;
+        u.lang = narrator.lang;
+      } else {
+        u.lang = 'en-US';
+      }
       u.rate = 0.95;
       u.onend = proceed;
       setTimeout(() => speechSynthesis.speak(u), 180);

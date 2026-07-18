@@ -24,15 +24,80 @@ export function armAudioKeepAlive(): void {
   }
 }
 
+/* ---------------- 語音庫:讓聽力有不同的聲音 ---------------- */
+
+let enVoices: SpeechSynthesisVoice[] = [];
+
+function refreshVoices(): void {
+  try {
+    enVoices = speechSynthesis.getVoices().filter((v) => /^en[-_]/i.test(v.lang));
+  } catch {
+    enVoices = [];
+  }
+}
+
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  refreshVoices();
+  try {
+    speechSynthesis.addEventListener('voiceschanged', refreshVoices);
+  } catch {
+    /* 舊瀏覽器 */
+  }
+}
+
+// 常見語音名稱的性別判斷(先驗 female,因為 "female" 內含 "male")
+const FEMALE_RE =
+  /female|woman|samantha|victoria|karen|moira|tessa|zira|jenny|aria|michelle|susan|hazel|kate|serena|allison|ava|emma|joanna|salli|kendra|kimberly|ivy|amy|nicole|olivia|lucy|libby|sonia|natasha|catherine|fiona|veena/i;
+const MALE_RE =
+  /male|alex\b|daniel|fred|david|mark|george|james|ryan|guy\b|matthew|joey|justin|kevin|brian|russell|oliver|thomas|william|christopher|eric|liam|aaron/i;
+
+export function voiceGender(v: SpeechSynthesisVoice): 'female' | 'male' | 'unknown' {
+  if (FEMALE_RE.test(v.name)) return 'female';
+  if (MALE_RE.test(v.name)) return 'male';
+  return 'unknown';
+}
+
+/** 依題目 id 產生穩定種子,讓同一題永遠是同一位講者、不同題輪換 */
+export function hashSeed(s: string): number {
+  let h = 7;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
+}
+
+/**
+ * 挑語音:male/female 給對話的兩個角色;any 讓各題輪換不同講者。
+ * 裝置只有一種英文語音時回傳同一個(呼叫端用音高區分)。
+ */
+export function pickVoice(kind: 'male' | 'female' | 'any', seed = 0): SpeechSynthesisVoice | undefined {
+  if (enVoices.length === 0) refreshVoices();
+  if (enVoices.length === 0) return undefined;
+  const fem = enVoices.filter((v) => voiceGender(v) === 'female');
+  const mal = enVoices.filter((v) => voiceGender(v) === 'male');
+  const unk = enVoices.filter((v) => voiceGender(v) === 'unknown');
+  if (kind === 'female') {
+    return fem[seed % Math.max(1, fem.length)] ?? unk[1] ?? enVoices[enVoices.length - 1];
+  }
+  if (kind === 'male') {
+    return mal[seed % Math.max(1, mal.length)] ?? unk[0] ?? enVoices[0];
+  }
+  return enVoices[seed % enVoices.length];
+}
+
 /**
  * TTS 朗讀:cancel 後立刻 speak 在部分引擎會吃掉第一個字,
- * 統一延遲一拍再起音。
+ * 統一延遲一拍再起音。可指定語音(聽力多聲線用)。
  */
-export function speakEn(text: string, rate = 0.9, onend?: () => void): void {
+export function speakEn(
+  text: string,
+  rate = 0.9,
+  onend?: () => void,
+  voice?: SpeechSynthesisVoice
+): void {
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
+    u.lang = voice?.lang ?? 'en-US';
+    if (voice) u.voice = voice;
     u.rate = rate;
     if (onend) u.onend = onend;
     setTimeout(() => speechSynthesis.speak(u), 180);

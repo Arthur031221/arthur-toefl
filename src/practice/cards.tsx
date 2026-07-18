@@ -1,6 +1,6 @@
 /** 共用練習元件:CTW 打字 / MCQ(閱讀+聽力) / 句子重組。純 props 驅動,雙模式共用 */
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { speakEn } from '../audio-utils';
+import { hashSeed, pickVoice, speakEn } from '../audio-utils';
 import type {
   AcademicItem,
   AnnouncementItem,
@@ -34,6 +34,12 @@ export function useElapsed(running: boolean) {
     return () => clearInterval(t);
   }, [running]);
   return sec;
+}
+
+/** 語音名稱太長時截短(如 Microsoft Zira - English (United States) → Zira) */
+function shortName(name?: string): string {
+  if (!name) return '預設';
+  return name.replace(/Microsoft |Google |Desktop|- English.*$|\(.*\)/g, '').trim().slice(0, 22) || name.slice(0, 22);
 }
 
 function Timer({ sec, limit }: { sec: number; limit?: number }) {
@@ -183,10 +189,16 @@ export function McqCard({ material, onDone }: { material: McqMaterial; onDone: (
   const timeLimit =
     material.kind === 'daily_life' ? questions.length * 45 : material.kind === 'academic' ? 300 : undefined;
 
+  const seed = hashSeed(material.item.id);
+
   function playAudio() {
     setPlays((p) => p + 1);
     setSpeaking(true);
     if (material.kind === 'conversation') {
+      // 一男一女:選真正不同的語音;裝置只有一種聲音才退回音高區分
+      const mv = pickVoice('male', seed);
+      const fv = pickVoice('female', seed);
+      const sameVoice = !mv || !fv || mv.name === fv.name;
       const turns = material.item.turns;
       let i = 0;
       const next = () => {
@@ -198,9 +210,15 @@ export function McqCard({ material, onDone }: { material: McqMaterial; onDone: (
         try {
           speechSynthesis.cancel();
           const u = new SpeechSynthesisUtterance(t.text);
-          u.lang = 'en-US';
+          const v = t.spk === 'M' ? mv : fv;
+          if (v) {
+            u.voice = v;
+            u.lang = v.lang;
+          } else {
+            u.lang = 'en-US';
+          }
           u.rate = 0.95;
-          u.pitch = t.spk === 'M' ? 0.75 : 1.2; // 兩個角色用音高區分
+          u.pitch = sameVoice ? (t.spk === 'M' ? 0.7 : 1.25) : 1;
           u.onend = () => setTimeout(next, 350);
           setTimeout(() => speechSynthesis.speak(u), i === 1 ? 180 : 0);
         } catch {
@@ -209,11 +227,26 @@ export function McqCard({ material, onDone }: { material: McqMaterial; onDone: (
       };
       next();
     } else {
+      // 其他聽力題型:依題目輪換講者(含英式口音,對標新制口音多元)
+      const narrator = pickVoice('any', seed);
       const text =
         material.kind === 'lcr' ? material.item.stimulus : material.kind === 'announcement' || material.kind === 'talk' ? material.item.text : '';
-      speakEn(text, 0.95, () => setSpeaking(false));
+      speakEn(text, 0.95, () => setSpeaking(false), narrator);
     }
   }
+
+  const voiceLabel = useMemo(() => {
+    if (material.mode !== 'listen') return '';
+    if (material.kind === 'conversation') {
+      const mv = pickVoice('male', seed);
+      const fv = pickVoice('female', seed);
+      if (!mv && !fv) return '';
+      return `男:${shortName(mv?.name)}·女:${shortName(fv?.name)}`;
+    }
+    const n = pickVoice('any', seed);
+    return n ? `講者:${shortName(n.name)}` : '';
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [material.kind, seed, plays]);
 
   useEffect(() => () => speechSynthesis.cancel(), []);
 
@@ -262,7 +295,10 @@ export function McqCard({ material, onDone }: { material: McqMaterial; onDone: (
           <button className="btn bg-white text-slate-800 hover:bg-slate-100" onClick={playAudio} disabled={speaking}>
             {speaking ? '🔊 播放中...' : plays === 0 ? '🔊 播放音檔' : `🔊 再聽一次(已播 ${plays} 次)`}
           </button>
-          <div className="mt-1.5 text-[11px] text-slate-400">正式考只能聽一次,練習時盡量一次作答;交卷後顯示原文</div>
+          <div className="mt-1.5 text-[11px] text-slate-400">
+            正式考只能聽一次,練習時盡量一次作答;交卷後顯示原文
+            {voiceLabel && <span className="ml-2 text-slate-500">|{voiceLabel}</span>}
+          </div>
           {checked && <div className="mt-2 whitespace-pre-wrap rounded bg-slate-700 p-2 text-left text-xs text-slate-200">{scriptText}</div>}
         </div>
       )}
