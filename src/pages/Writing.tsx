@@ -59,6 +59,7 @@ function Practice() {
   const [prompts, setPrompts] = useState<WritingPrompt[]>([]);
   const [selectedPrompt, setSelectedPrompt] = useState<WritingPrompt | null>(null);
   const [customText, setCustomText] = useState('');
+  const [customTitle, setCustomTitle] = useState('');
   const [source, setSource] = useState<'bank' | 'custom'>('bank');
   const [generating, setGenerating] = useState(false);
   const [sessionId, setSessionId] = useState<number | null>(null);
@@ -172,27 +173,69 @@ function Practice() {
           </button>
         </div>
         {source === 'custom' ? (
-          <textarea
-            className="input w-full"
-            rows={6}
-            placeholder="貼上完整題目(例如從 TestReady 抄下的題)"
-            value={customText}
-            onChange={(e) => setCustomText(e.target.value)}
-          />
+          <>
+            <input
+              className="input w-full mb-2"
+              placeholder="題目名稱(選填,存入題庫時顯示用)"
+              value={customTitle}
+              onChange={(e) => setCustomTitle(e.target.value)}
+            />
+            <textarea
+              className="input w-full"
+              rows={6}
+              placeholder="貼上或自己寫完整題目(例如從 TestReady 抄下的題、老師出的題)"
+              value={customText}
+              onChange={(e) => setCustomText(e.target.value)}
+            />
+            <button
+              className="btn-secondary mt-2"
+              disabled={!customText.trim()}
+              onClick={async () => {
+                const p = await api.post<WritingPrompt>('/api/writing/prompts', {
+                  kind,
+                  title: customTitle.trim() || `自訂題 ${new Date().toLocaleDateString('zh-TW')}`,
+                  prompt: customText.trim(),
+                });
+                await loadPrompts(kind);
+                setSelectedPrompt(p);
+                setSource('bank');
+                setCustomTitle('');
+                showToast('已存入題庫,之後可重複使用(★ 標記)');
+              }}
+            >
+              ★ 存入題庫(可重複使用)
+            </button>
+          </>
         ) : (
           <>
-            <select
-              className="input w-full mb-2"
-              value={selectedPrompt?.id ?? ''}
-              onChange={(e) => setSelectedPrompt(prompts.find((p) => p.id === Number(e.target.value)) ?? null)}
-            >
-              {prompts.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.source === 'ai' ? '🤖 ' : ''}
-                  {p.title}
-                </option>
-              ))}
-            </select>
+            <div className="mb-2 flex gap-2">
+              <select
+                className="input flex-1"
+                value={selectedPrompt?.id ?? ''}
+                onChange={(e) => setSelectedPrompt(prompts.find((p) => p.id === Number(e.target.value)) ?? null)}
+              >
+                {prompts.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.source === 'ai' ? '🤖 ' : p.source === 'custom' ? '★ ' : ''}
+                    {p.title}
+                  </option>
+                ))}
+              </select>
+              {selectedPrompt && selectedPrompt.source !== 'seed' && (
+                <button
+                  className="btn-ghost text-rose-500"
+                  title="刪除這題(內建題不能刪)"
+                  onClick={async () => {
+                    if (!confirm(`刪除「${selectedPrompt.title}」?`)) return;
+                    await api.del(`/api/writing/prompts/${selectedPrompt.id}`);
+                    setSelectedPrompt(null);
+                    await loadPrompts(kind);
+                  }}
+                >
+                  刪除
+                </button>
+              )}
+            </div>
             {selectedPrompt && (
               <div className="rounded-lg bg-slate-50 border border-slate-200 p-3 text-sm whitespace-pre-wrap text-slate-700 max-h-56 overflow-y-auto">
                 {selectedPrompt.prompt}

@@ -145,6 +145,30 @@ export const settingsStore = {
   set: (s: WebSettings) => save('settings', s),
 };
 
+/** 自訂/AI 生成的寫作題目 */
+export interface StoredPrompt {
+  id: number;
+  kind: string; // email | discussion
+  title: string;
+  prompt: string;
+  source: 'custom' | 'ai';
+}
+
+export const promptsStore = {
+  all: () => load<StoredPrompt[]>('customPrompts', []),
+  saveAll: (rows: StoredPrompt[]) => save('customPrompts', rows),
+  add(kind: string, title: string, prompt: string, source: 'custom' | 'ai'): StoredPrompt {
+    const rows = promptsStore.all();
+    const row: StoredPrompt = { id: Date.now(), kind, title, prompt, source };
+    rows.push(row);
+    promptsStore.saveAll(rows);
+    return row;
+  },
+  remove(id: number): void {
+    promptsStore.saveAll(promptsStore.all().filter((p) => p.id !== id));
+  },
+};
+
 /** AI 出的題(擴充內建題庫) */
 export const aiBankStore = {
   all: () => load<Record<string, { item_id: string; title: string; data: unknown }[]>>('aiBank', {}),

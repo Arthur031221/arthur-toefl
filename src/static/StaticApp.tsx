@@ -18,6 +18,7 @@ import {
   exportAll,
   importAll,
   load,
+  promptsStore,
   save,
   settingsStore,
   speakingStore,
@@ -224,9 +225,38 @@ function StaticWriting() {
   );
 }
 
+interface EssayPrompt {
+  key: string;
+  title: string;
+  prompt: string;
+  source: 'seed' | 'custom' | 'ai';
+  storeId?: number;
+}
+
 function StaticEssay({ kind }: { kind: 'email' | 'discussion' }) {
-  const prompts = useMemo(() => (seedPrompts as { kind: string; title: string; prompt: string }[]).filter((p) => p.kind === kind), [kind]);
+  const [promptVer, setPromptVer] = useState(0); // 自訂題增刪後刷新
+  const prompts = useMemo<EssayPrompt[]>(() => {
+    const seeds = (seedPrompts as { kind: string; title: string; prompt: string }[])
+      .filter((p) => p.kind === kind)
+      .map((p, i) => ({ key: `seed-${i}`, title: p.title, prompt: p.prompt, source: 'seed' as const }));
+    const mine = promptsStore
+      .all()
+      .filter((p) => p.kind === kind)
+      .map((p) => ({
+        key: `store-${p.id}`,
+        title: p.title,
+        prompt: p.prompt,
+        source: p.source,
+        storeId: p.id,
+      }));
+    return [...seeds, ...mine];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [kind, promptVer]);
   const [pi, setPi] = useState(0);
+  const [showCustom, setShowCustom] = useState(false);
+  const [customTitle, setCustomTitle] = useState('');
+  const [customText, setCustomText] = useState('');
+  const [genLoading, setGenLoading] = useState(false);
   const [stage, setStage] = useState<'pick' | 'write' | 'done'>('pick');
   const [answer, setAnswer] = useState('');
   const [secondsLeft, setSecondsLeft] = useState<number>(KIND_SEC[kind]);
@@ -253,9 +283,10 @@ function StaticEssay({ kind }: { kind: 'email' | 'discussion' }) {
 
   async function grade() {
     setGrading(true);
+    const cur = prompts[Math.min(pi, prompts.length - 1)];
     try {
       const r = await aiCall(kind === 'email' ? 'grade_email' : 'grade_discussion', {
-        prompt: prompts[pi].prompt,
+        prompt: cur.prompt,
         answer,
       });
       const fb = (r.parsed ?? { comment: r.text }) as Record<string, unknown>;
@@ -264,7 +295,7 @@ function StaticEssay({ kind }: { kind: 'email' | 'discussion' }) {
       rows.push({
         id: Date.now(),
         kind,
-        prompt: prompts[pi].title,
+        prompt: cur.title,
         answer,
         seconds: KIND_SEC[kind] - secondsLeft,
         score: typeof fb.score === 'number' ? (fb.score as number) : null,
@@ -282,19 +313,103 @@ function StaticEssay({ kind }: { kind: 'email' | 'discussion' }) {
   }
 
   if (stage === 'pick') {
+    const cur = prompts[Math.min(pi, prompts.length - 1)];
     return (
       <div className="space-y-3">
         {toast}
         <Card title="選題">
-          <select className="input w-full mb-2" value={pi} onChange={(e) => setPi(Number(e.target.value))}>
-            {prompts.map((p, i) => (
-              <option key={i} value={i}>
-                {p.title}
-              </option>
-            ))}
-          </select>
+          <div className="mb-2 flex gap-2">
+            <select className="input flex-1" value={pi} onChange={(e) => setPi(Number(e.target.value))}>
+              {prompts.map((p, i) => (
+                <option key={p.key} value={i}>
+                  {p.source === 'ai' ? '🤖 ' : p.source === 'custom' ? '★ ' : ''}
+                  {p.title}
+                </option>
+              ))}
+            </select>
+            {cur?.storeId !== undefined && (
+              <button
+                className="btn-ghost text-rose-500"
+                title="刪除這題自訂題目"
+                onClick={() => {
+                  if (!confirm(`刪除「${cur.title}」?`)) return;
+                  promptsStore.remove(cur.storeId!);
+                  setPi(0);
+                  setPromptVer((v) => v + 1);
+                }}
+              >
+                刪除
+              </button>
+            )}
+          </div>
+          <div className="mb-2 flex flex-wrap gap-2">
+            <button
+              className="btn-secondary"
+              disabled={genLoading}
+              onClick={async () => {
+                setGenLoading(true);
+                try {
+                  const exclude = prompts.map((p) => p.title).slice(-15).join('、') || '(無)';
+                  const r = await aiCall(kind === 'email' ? 'gen_email' : 'gen_discussion', { exclude });
+                  const parsed = r.parsed as { title?: string; prompt?: string } | null;
+                  if (!parsed?.prompt) throw new Error('AI 回傳格式不符,請重試');
+                  const row = promptsStore.add(kind, parsed.title || 'AI 出題', parsed.prompt, 'ai');
+                  setPromptVer((v) => v + 1);
+                  // 選到新題(seeds 數 + 自訂題中的位置)
+                  setPi(prompts.length); // 新題會補在清單最後
+                  showToast(`AI 出題完成:${row.title}`);
+                } catch (e) {
+                  showToast((e as Error).message, 'err');
+                } finally {
+                  setGenLoading(false);
+                }
+              }}
+            >
+              {genLoading ? 'AI 出題中(最長 90 秒)...' : '🤖 AI 出一題新的'}
+            </button>
+            <button className={showCustom ? 'btn-primary' : 'btn-secondary'} onClick={() => setShowCustom(!showCustom)}>
+              ＋ 自訂題目
+            </button>
+          </div>
+          {showCustom && (
+            <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/50 p-3">
+              <input
+                className="input w-full mb-2"
+                placeholder="題目名稱(例:老師出的 Email 題#1)"
+                value={customTitle}
+                onChange={(e) => setCustomTitle(e.target.value)}
+              />
+              <textarea
+                className="input w-full mb-2"
+                rows={5}
+                placeholder="貼上或自己寫完整題目(英文題幹;Discussion 記得含教授問題與兩位學生立場)"
+                value={customText}
+                onChange={(e) => setCustomText(e.target.value)}
+              />
+              <button
+                className="btn-primary"
+                disabled={!customText.trim()}
+                onClick={() => {
+                  promptsStore.add(
+                    kind,
+                    customTitle.trim() || `自訂題 ${new Date().toLocaleDateString('zh-TW')}`,
+                    customText.trim(),
+                    'custom'
+                  );
+                  setPromptVer((v) => v + 1);
+                  setPi(prompts.length); // 新題在清單最後
+                  setCustomTitle('');
+                  setCustomText('');
+                  setShowCustom(false);
+                  showToast('已加入你的題庫(★ 標記,存在這台裝置)');
+                }}
+              >
+                ★ 儲存到我的題庫
+              </button>
+            </div>
+          )}
           <div className="max-h-52 overflow-y-auto whitespace-pre-wrap rounded-lg bg-slate-50 p-3 text-sm text-slate-700">
-            {prompts[pi]?.prompt}
+            {cur?.prompt}
           </div>
           <button
             className="btn-primary mt-3"

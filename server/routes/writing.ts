@@ -38,6 +38,17 @@ writingRouter.post('/writing/prompts', (req, res) => {
   res.json(db.prepare('SELECT * FROM writing_prompts WHERE id = ?').get(r.lastInsertRowid));
 });
 
+/** 刪除自訂/AI 題目(內建種子題保護不可刪) */
+writingRouter.delete('/writing/prompts/:id', (req, res) => {
+  const p = db.prepare('SELECT source FROM writing_prompts WHERE id = ?').get(req.params.id) as
+    | { source: string }
+    | undefined;
+  if (!p) return res.status(404).json({ error: '找不到題目' });
+  if (p.source === 'seed') return res.status(400).json({ error: '內建題庫不能刪除' });
+  db.prepare('DELETE FROM writing_prompts WHERE id = ?').run(req.params.id);
+  res.json({ ok: true });
+});
+
 /** AI 出題(不耗 Flex) */
 writingRouter.post('/writing/generate', async (req, res) => {
   const { kind } = req.body as { kind?: string };
