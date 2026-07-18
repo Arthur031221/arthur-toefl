@@ -27,7 +27,8 @@ export interface FeedbackResult {
   ms: number;
 }
 
-const TIMEOUT_MS = 90_000;
+// 批改實測 25-50 秒;系統忙(多個 Claude 程序並行)時會更久,放寬到 150 秒
+const TIMEOUT_MS = 150_000;
 const JSON_SUFFIX = '\n\n請直接輸出單一 JSON 物件,不要 markdown code fence、不要任何其他文字。';
 
 /** 併發上鎖:同時只跑一個 AI 請求,其餘排隊 */
@@ -74,7 +75,11 @@ function callCli(prompt: string): Promise<string> {
             );
           }
           if (e.killed) {
-            return reject(new Error(`Claude CLI 逾時(${TIMEOUT_MS / 1000} 秒),請重試。`));
+            return reject(
+              new Error(
+                `Claude CLI 逾時(${TIMEOUT_MS / 1000} 秒)。通常是系統暫時壅塞,你的作答已保存,再按一次批改即可;若連續失敗,檢查 claude 訂閱用量是否達上限。`
+              )
+            );
           }
           return reject(new Error(`Claude CLI 執行失敗:${(stderr || e.message || '').slice(0, 300)}`));
         }
